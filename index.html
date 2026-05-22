@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>David Ndungu — AI Agent & Automation Engineer</title>
+  <meta name="description" content="Senior engineer building AI agent automations that survive production: durable workflows, multi-step agents, and the integrations that connect AI to your real tools (APIs, MCP, n8n, Make)." />
+  <meta name="author" content="David Ndungu" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="David Ndungu — AI Agent & Automation Engineer" />
+  <meta property="og:description" content="I build AI automations that survive production — durable agent workflows, multi-step automations, and the integrations that connect AI to your real tools." />
+  <meta property="og:url" content="https://ndungu.dev" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%234f46e5'/%3E%3Ctext x='50%25' y='52%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial,sans-serif' font-size='30' font-weight='700' fill='white'%3EDN%3C/text%3E%3C/svg%3E" />
+
+  <style>
+    :root {
+      --bg: #ffffff;
+      --bg-alt: #f7f8fa;
+      --ink: #14161a;
+      --ink-soft: #4b515c;
+      --ink-faint: #8a909c;
+      --border: #e6e8ec;
+      --accent: #4f46e5;
+      --accent-soft: #eef0fe;
+      --radius: 14px;
+      --maxw: 920px;
+      --shadow: 0 1px 2px rgba(20,22,26,.04), 0 8px 24px rgba(20,22,26,.05);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0e0f12;
+        --bg-alt: #15171c;
+        --ink: #f2f3f5;
+        --ink-soft: #b6bcc7;
+        --ink-faint: #767d8a;
+        --border: #24272f;
+        --accent: #818cf8;
+        --accent-soft: #1b1d2b;
+        --shadow: 0 1px 2px rgba(0,0,0,.4), 0 10px 30px rgba(0,0,0,.35);
+      }
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Helvetica, Arial, sans-serif;
+      font-size: 17px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+
+    /* Nav */
+    header.nav {
+      position: sticky; top: 0; z-index: 20;
+      background: color-mix(in srgb, var(--bg) 85%, transparent);
+      backdrop-filter: saturate(180%) blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 62px; }
+    .brand { font-weight: 700; letter-spacing: -.02em; color: var(--ink); font-size: 17px; }
+    .brand:hover { text-decoration: none; }
+    .nav-links { display: flex; gap: 26px; align-items: center; }
+    .nav-links a { color: var(--ink-soft); font-size: 15px; font-weight: 500; }
+    .nav-links a:hover { color: var(--ink); text-decoration: none; }
+    .btn {
+      display: inline-block; background: var(--accent); color: #fff;
+      padding: 10px 18px; border-radius: 10px; font-weight: 600; font-size: 15px;
+      border: 1px solid transparent; transition: transform .08s ease, opacity .15s ease;
+    }
+    .btn:hover { text-decoration: none; opacity: .92; transform: translateY(-1px); }
+    .btn.secondary { background: transparent; color: var(--ink); border-color: var(--border); }
+    @media (max-width: 640px) { .nav-links a:not(.btn) { display: none; } }
+
+    /* Hero */
+    .hero { padding: 84px 0 56px; }
+    .eyebrow {
+      display: inline-block; font-size: 13px; font-weight: 600; letter-spacing: .04em;
+      text-transform: uppercase; color: var(--accent);
+      background: var(--accent-soft); padding: 6px 12px; border-radius: 999px; margin-bottom: 22px;
+    }
+    h1 {
+      font-size: clamp(34px, 6vw, 52px); line-height: 1.08; letter-spacing: -.03em;
+      margin: 0 0 20px; font-weight: 760;
+    }
+    .lede { font-size: clamp(18px, 2.4vw, 21px); color: var(--ink-soft); max-width: 640px; margin: 0 0 18px; }
+    .cred { color: var(--ink-faint); font-size: 15px; margin: 0 0 30px; }
+    .cred strong { color: var(--ink-soft); font-weight: 600; }
+    .cta-row { display: flex; gap: 12px; flex-wrap: wrap; }
+
+    /* Sections */
+    section { padding: 56px 0; border-top: 1px solid var(--border); }
+    .section-head { margin-bottom: 34px; }
+    h2 { font-size: clamp(24px, 3.6vw, 31px); letter-spacing: -.02em; margin: 0 0 8px; font-weight: 700; }
+    .section-head p { color: var(--ink-soft); margin: 0; max-width: 620px; }
+
+    /* Service / work grid */
+    .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+    @media (max-width: 680px) { .grid { grid-template-columns: 1fr; } }
+    .card {
+      background: var(--bg-alt); border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 24px; transition: border-color .15s ease, transform .1s ease;
+    }
+    .card:hover { border-color: color-mix(in srgb, var(--accent) 40%, var(--border)); }
+    .card h3 { margin: 0 0 8px; font-size: 18px; letter-spacing: -.01em; }
+    .card h3 a { color: var(--ink); }
+    .card p { margin: 0; color: var(--ink-soft); font-size: 15.5px; }
+    .card .meta { margin-top: 14px; font-size: 13px; color: var(--ink-faint); }
+    .tag { color: var(--accent); font-weight: 600; font-size: 13px; }
+
+    /* Experience */
+    .xp { display: grid; gap: 4px; }
+    .xp-item {
+      display: flex; justify-content: space-between; gap: 16px; align-items: baseline;
+      padding: 14px 0; border-bottom: 1px solid var(--border);
+    }
+    .xp-item:last-child { border-bottom: 0; }
+    .xp-role { font-weight: 600; color: var(--ink); }
+    .xp-org { color: var(--ink-soft); }
+    .xp-date { color: var(--ink-faint); font-size: 14px; white-space: nowrap; }
+    @media (max-width: 560px) { .xp-item { flex-direction: column; gap: 2px; } }
+
+    /* Contact */
+    .contact { text-align: center; }
+    .contact h2 { margin-bottom: 12px; }
+    .contact p { color: var(--ink-soft); max-width: 560px; margin: 0 auto 26px; }
+    .links { display: flex; gap: 22px; justify-content: center; flex-wrap: wrap; margin-top: 30px; font-size: 15px; }
+    .links a { color: var(--ink-soft); font-weight: 500; }
+
+    footer { padding: 40px 0; border-top: 1px solid var(--border); color: var(--ink-faint); font-size: 14px; text-align: center; }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a href="#top" class="brand">David Ndungu</a>
+      <nav class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#work">Work</a>
+        <a href="#contact">Contact</a>
+        <a href="mailto:david@sire.run" class="btn">Start a project</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero" style="border-top:0;">
+      <div class="wrap">
+        <span class="eyebrow">AI Agent &amp; Automation Engineer</span>
+        <h1>I build AI automations<br>that survive production.</h1>
+        <p class="lede">Most AI automations work in a demo and quietly break under real traffic. I build the ones that don't — durable agent workflows, multi-step automations, and the integrations that connect AI to your real tools.</p>
+        <p class="cred"><strong>20+ years</strong> building backend systems · Founder of <strong>Sire</strong> · ex-<strong>Zendesk</strong> · Go · Python · MCP · n8n / Make</p>
+        <div class="cta-row">
+          <a href="mailto:david@sire.run" class="btn">Start a project</a>
+          <a href="#work" class="btn secondary">See my work</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>What I can build for you</h2>
+          <p>From a single reliable workflow to a full multi-tenant agent platform — shipped production-ready, not as a fragile demo.</p>
+        </div>
+        <div class="grid">
+          <div class="card">
+            <h3>AI workflow automation, production-ready</h3>
+            <p>Multi-step automations and AI agents that connect your tools — APIs, CRMs, n8n / Make — with real error handling and retries. A working, documented system you can rely on.</p>
+          </div>
+          <div class="card">
+            <h3>Turn an AI prototype into a real product</h3>
+            <p>Have a ChatGPT or LangChain demo that isn't production-ready? I re-architect it for reliability: state, retries, logging, and deployment — so it survives real users.</p>
+          </div>
+          <div class="card">
+            <h3>Agent orchestration &amp; platform builds</h3>
+            <p>Need durable, multi-tenant agent orchestration built from scratch? I've built exactly that — and can architect and build yours, avoiding the demo-to-production traps.</p>
+          </div>
+          <div class="card">
+            <h3>Integrations &amp; MCP</h3>
+            <p>Connect AI agents to your real systems via the Model Context Protocol and custom API integrations — so agents act on the world, not just chat about it.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="work">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Selected work</h2>
+          <p>Things I've built and shipped. Most are public — click through and see the code.</p>
+        </div>
+        <div class="grid">
+          <div class="card">
+            <span class="tag">Flagship · Platform</span>
+            <h3><a href="https://sire.run" target="_blank" rel="noopener">Sire ↗</a></h3>
+            <p>A platform for building and running autonomous AI agents as durable workflows — surviving crashes, enforcing human-in-the-loop safety gates, and connecting to your tools via MCP. Multi-tenant, Go + Next.js.</p>
+            <div class="meta">Go · Next.js · PostgreSQL · MCP · multi-tenant RBAC</div>
+          </div>
+          <div class="card">
+            <span class="tag">Open source · ML systems</span>
+            <h3><a href="https://github.com/zerfoo/zerfoo" target="_blank" rel="noopener">Zerfoo ↗</a></h3>
+            <p>A from-scratch ML inference framework in pure Go (zero CGo) that runs LLMs faster than Ollama, supports 41 model architectures, and serves models larger than RAM via memory-mapped I/O. Proof I understand AI at the metal.</p>
+            <div class="meta">Go · CUDA · Metal · GGUF · quantization</div>
+          </div>
+          <div class="card">
+            <span class="tag">Open source · Tooling</span>
+            <h3><a href="https://github.com/sirerun/mint" target="_blank" rel="noopener">Mint ↗</a></h3>
+            <p>An open-source CLI that converts any OpenAPI 3.x spec into a working MCP server — discover, generate, publish, and deploy with one command. The bridge between AI agents and real APIs.</p>
+            <div class="meta">Go · MCP · OpenAPI 3.x · code generation</div>
+          </div>
+          <div class="card">
+            <span class="tag">Open source · Infrastructure</span>
+            <h3><a href="https://github.com/sirerun/gist" target="_blank" rel="noopener">Gist ↗</a></h3>
+            <p>A Go library that indexes content and retrieves the most relevant snippets within a token budget (stemming → trigram → fuzzy). The context/RAG plumbing that makes AI apps accurate and cheap to run.</p>
+            <div class="meta">Go · RAG · retrieval · LLM context</div>
+          </div>
+          <div class="card">
+            <span class="tag">Real-time systems</span>
+            <h3>Wolf</h3>
+            <p>An end-to-end autonomous decision system: Go microservices over NATS, a JWT-secured gateway, a real-time ingest → strategy → risk → execution pipeline, and on-device LLM inference — plus a SwiftUI companion app.</p>
+            <div class="meta">Go · NATS · GGUF inference · microservices · SwiftUI</div>
+          </div>
+          <div class="card">
+            <span class="tag">Open source · GPU infra</span>
+            <h3><a href="https://github.com/feza-ai/spark" target="_blank" rel="noopener">Spark ↗</a></h3>
+            <p>A Podman-backed, Kubernetes-style orchestrator for running GPU/ML workloads on a single machine — submit standard manifests and get tracked, logged, reproducible runs.</p>
+            <div class="meta">Go · Podman · Kubernetes API · GPU/ML</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Experience</h2>
+          <p>Two decades shipping backend systems — the last year building AI agent infrastructure full-time.</p>
+        </div>
+        <div class="xp">
+          <div class="xp-item">
+            <div><span class="xp-role">Founder &amp; Principal Engineer</span> · <span class="xp-org">Sire</span></div>
+            <div class="xp-date">2024 – Present</div>
+          </div>
+          <div class="xp-item">
+            <div><span class="xp-role">Senior Software Engineer</span> · <span class="xp-org">Zendesk</span></div>
+            <div class="xp-date">2017 – 2020</div>
+          </div>
+          <div class="xp-item">
+            <div><span class="xp-role">Senior Software Engineer in Test</span> · <span class="xp-org">Zendesk</span></div>
+            <div class="xp-date">2016 – 2017</div>
+          </div>
+          <div class="xp-item">
+            <div><span class="xp-role">Stack Developer</span> · <span class="xp-org">Refunite</span></div>
+            <div class="xp-date">2014 – 2015</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="wrap">
+        <h2>Let's build something that lasts</h2>
+        <p>Tell me what you're trying to automate and I'll tell you exactly how I'd build it. No jargon, no fragile demos — just a system that works.</p>
+        <a href="mailto:david@sire.run" class="btn">Email me</a>
+        <div class="links">
+          <a href="mailto:david@sire.run">david@sire.run</a>
+          <a href="https://github.com/dndungu" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://sire.run" target="_blank" rel="noopener">Sire</a>
+          <!-- Add your Upwork & LinkedIn profile URLs once created -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      © <span id="year"></span> David Ndungu · BSc Computer Science, Egerton University · Built with plain HTML &amp; CSS.
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
