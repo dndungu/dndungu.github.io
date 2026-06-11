@@ -1,0 +1,22 @@
+<!--
+  Sire Worker embed for ndungu.dev.
+  Paste this block immediately BEFORE the closing </body> tag in index.html
+  (currently line ~408, right after the year <script> line).
+
+  Replace the two placeholders with the real values from the Sire dashboard
+  after you create the Worker and mint a publishable key:
+    WORKER_ID_HERE          -> the Worker's id (workers/<id> in the dashboard URL)
+    PUBLISHABLE_KEY_HERE     -> the key minted via "Get embed code" with
+                                allowed_origins = [https://ndungu.dev]
+
+  This is the exact snippet format Sire's embed-code modal emits
+  (cdn.sire.run/chat.js, data-worker-id, data-publishable-key, async).
+  Do NOT ship this with the placeholders unfilled — the script will no-op /
+  log a console error until both values are real.
+-->
+<script
+  src="https://cdn.sire.run/chat.js"
+  data-worker-id="WORKER_ID_HERE"
+  data-publishable-key="PUBLISHABLE_KEY_HERE"
+  async
+></script>
