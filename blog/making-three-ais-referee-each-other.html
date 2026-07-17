@@ -1,0 +1,206 @@
+<!-- copy to <slug>.html, fill title/date/body -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-28JM2750VX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-28JM2750VX');
+  </script>
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <title>Making three AIs referee each other — David Ndungu</title>
+  <meta name="description" content="Why one model reviewing its own work is worthless, and what changes when you make three of them argue." />
+  <meta name="author" content="David Ndungu" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Making three AIs referee each other — David Ndungu" />
+  <meta property="og:description" content="Why one model reviewing its own work is worthless, and what changes when you make three of them argue." />
+  <meta property="og:url" content="https://ndungu.dev/blog/making-three-ais-referee-each-other.html" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230ee510'/%3E%3Ctext x='50%25' y='52%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial,sans-serif' font-size='30' font-weight='700' fill='%230a0a0a'%3EDN%3C/text%3E%3C/svg%3E" />
+
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: hsl(0, 0%, 10%);
+      --bg-alt: hsl(0, 0%, 16%);
+      --ink: hsl(0, 0%, 96%);
+      --ink-soft: hsl(0, 0%, 75%);
+      --ink-faint: hsl(0, 0%, 60%);
+      --border: hsl(0, 0%, 20%);
+      --accent: hsl(119, 99%, 46%);
+      --accent-soft: hsl(119 99% 46% / 12%);
+      --accent-foreground: hsl(0, 0%, 4%);
+      --nav-button: hsl(0, 0%, 18%);
+      --hero-bg: hsl(0, 0%, 8%);
+      --radius: 14px;
+      --maxw: 920px;
+      --measure: 65ch;
+    }
+
+    @keyframes fade-up {
+      0% { opacity: 0; transform: translateY(20px); filter: blur(4px); }
+      100% { opacity: 1; transform: translateY(0); filter: blur(0); }
+    }
+    .animate-fade-up { opacity: 0; animation: fade-up .7s cubic-bezier(.16,1,.3,1) forwards; }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: "Sora", -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Helvetica, Arial, sans-serif;
+      font-size: 17px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+
+    header.nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+      background: color-mix(in srgb, var(--hero-bg) 55%, transparent);
+      backdrop-filter: saturate(160%) blur(14px);
+      -webkit-backdrop-filter: saturate(160%) blur(14px);
+      border-bottom: 1px solid color-mix(in srgb, var(--border) 60%, transparent);
+    }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 62px; gap: 24px; }
+    .brand { font-weight: 600; letter-spacing: -.02em; color: var(--ink); font-size: 17px; }
+    .brand:hover { text-decoration: none; }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a {
+      font-size: 13px; color: var(--ink-faint); text-transform: uppercase; letter-spacing: .12em;
+      font-weight: 500; transition: color .15s ease;
+    }
+    .nav-links a:hover { color: var(--ink); text-decoration: none; }
+    .nav-links a.active { color: var(--accent); }
+    @media (max-width: 768px) { .nav-links { display: none; } }
+
+    .btn.nav-cta {
+      background: var(--nav-button); color: var(--ink); padding: 10px 22px;
+      border-radius: 8px; font-size: 12px; text-transform: uppercase; letter-spacing: .1em;
+      display: inline-block; border: 1px solid transparent;
+    }
+    .btn.nav-cta:hover { background: color-mix(in srgb, var(--nav-button) 80%, white 10%); text-decoration: none; }
+    @media (max-width: 768px) { .btn.nav-cta { display: none; } }
+
+    /* Article */
+    article { padding: 148px 0 80px; }
+    @media (max-width: 640px) { article { padding: 100px 0 60px; } }
+    .article-inner { max-width: var(--measure); margin: 0 auto; padding: 0 24px; }
+
+    .back-link { display: inline-block; margin-bottom: 28px; font-size: 13.5px; color: var(--ink-faint); }
+    .back-link:hover { color: var(--accent); text-decoration: none; }
+    .back-link::before { content: "← "; }
+
+    h1.post-title {
+      font-size: clamp(1.9rem, 5vw, 2.6rem); line-height: 1.15; letter-spacing: -.03em;
+      margin: 0 0 14px; font-weight: 700; color: var(--ink);
+    }
+    .byline { color: var(--ink-faint); font-size: 14px; margin: 0 0 44px; }
+
+    .post-body { font-size: 17.5px; line-height: 1.75; color: var(--ink-soft); }
+    .post-body p { margin: 0 0 22px; }
+    .post-body h2 { color: var(--ink); font-size: 24px; letter-spacing: -.01em; margin: 40px 0 16px; font-weight: 650; }
+    .post-body h3 { color: var(--ink); font-size: 19px; margin: 32px 0 12px; font-weight: 650; }
+    .post-body a { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
+    .post-body strong { color: var(--ink); }
+    .post-body code {
+      background: var(--bg-alt); border: 1px solid var(--border); border-radius: 4px;
+      padding: 2px 6px; font-size: .9em; font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    }
+    .post-body pre {
+      background: var(--bg-alt); border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 18px 20px; overflow-x: auto; font-size: 14.5px; line-height: 1.6;
+    }
+    .post-body pre code { background: none; border: none; padding: 0; }
+    .post-body blockquote {
+      margin: 24px 0; padding: 4px 0 4px 18px; border-left: 3px solid var(--accent);
+      color: var(--ink-faint); font-style: italic;
+    }
+    .post-body ul, .post-body ol { margin: 0 0 22px; padding-left: 24px; }
+    .post-body li { margin-bottom: 8px; }
+
+    .post-footer { margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--border); }
+
+    footer.site-footer { padding: 40px 0; border-top: 1px solid var(--border); color: var(--ink-faint); font-size: 14px; text-align: center; }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a href="/" class="brand">David Ndungu</a>
+      <nav class="nav-links">
+        <a href="/#pain">Problem</a>
+        <a href="/#how">How it works</a>
+        <a href="/#pricing">Pricing</a>
+        <a href="/#work">The work</a>
+        <a href="/blog/" class="active">Blog</a>
+      </nav>
+      <a href="https://cal.com/david-ndungu/automation-audit" class="btn nav-cta">Book a call</a>
+    </div>
+  </header>
+
+  <article>
+    <div class="article-inner">
+      <a href="/blog/" class="back-link">Back to blog</a>
+      <h1 class="post-title">Making three AIs referee each other</h1>
+      <p class="byline">David Ndungu · 2026-07-11</p>
+
+      <div class="post-body">
+        <p>Before I ship a redesign on Blink, I don't just ask Claude if it's good. Claude wrote the thing, or reviewed the plan for it, so asking it to grade its own homework is close to useless. It's invested in its own reasoning by construction. What I do instead is put the work in front of ChatGPT, Gemini, and Grok, and make them argue about it.</p>
+
+        <p>Mechanically it's dumber than it sounds. I have a Claude session drive an actual browser, not an API, and paste the same design canvases into all three chat interfaces. Same five screens, same prompt, three separate conversations. Then it pulls the responses back out and I read all three side by side.</p>
+
+        <h2>Why not just ask one model harder</h2>
+        <p>Because a single model's review is a single point of view wearing the costume of an objective verdict. Ask GPT whether your onboarding flow is good and you get an answer shaped by whatever it tends to notice, and no way to tell if that's a real gap or just its house style. Ask three, and the review stops being "what does this model think" and starts being data.</p>
+
+        <p>The clearest case: I'd designed the navigation for Blink's redesign as gesture-only, swipe between the main views, no visible tab bar. Clean, I thought. Confident. All three models flagged it independently, unprompted, as a trap for exactly the audience Blink serves: people already fighting focus and working memory, now expected to remember a gesture vocabulary nobody told them existed. When three models that don't talk to each other converge on the same critique without being led there, I stop treating it as an opinion and start treating it as a finding.</p>
+
+        <p>That's the useful signal: unanimous convergence. If Claude, ChatGPT, Gemini, and Grok all land on the same problem from different angles, the odds that it's a shared blind spot in all four are much lower than the odds that one model just made something up.</p>
+
+        <h2>The catch that only one model made</h2>
+        <p>The unanimous ones are the ones I quote in standups. The valuable ones are rarer and weirder. I ran the same panel treatment on a delivery plan, not a design, an execution plan, asking each model to check whether it actually verified what it claimed to verify. Two of the three walked through it and said, essentially, looks solid, the plan covers pushes, UI states, and user journeys.</p>
+
+        <p>One model didn't say that. It said the plan verified pushes, UI, and journeys, but never verified that the analytics events firing underneath all of that were actually correct. Not "did the event fire," which the plan did check, but does it carry the right properties, does it fire once instead of three times, does the funnel math it feeds actually mean what the dashboard says it means. Its own phrasing stuck with me: you do not verify measurement. That's the whole reason to run three models instead of one. Had I only asked the two that missed it, I'd have shipped a plan with a hole in exactly the place you only notice once the numbers are already wrong and nobody can say why.</p>
+
+        <h2>They don't just disagree, they think differently</h2>
+        <p>Past a few rounds of this you start to notice each model has a lens, not just an opinion. One consistently reasons in retention psychology, what makes someone come back tomorrow. One reasons in state machines, what happens when this screen is reached from an unexpected prior state, what's the invalid transition. One ranks everything by severity before saying anything else, like it's triaging a bug tracker. None of these is the correct way to review a product. Together they cover more ground than any one lens would, including the one I'd have picked myself.</p>
+
+        <h2>The unglamorous part is the browser, not the models</h2>
+        <p>The part of this that actually eats time isn't the AI reasoning, it's getting text in and out of three chat UIs reliably. One session had a model's page render its response in a virtualized DOM, the kind that only paints the rows currently scrolled into view, and my extraction read back ninety characters from what was actually a five-thousand-character review. I nearly concluded the model had nothing useful to say and queued up a re-ask. The review was sitting right there the whole time. I'd just scraped a sliver of it. I only caught it because the reply felt too short for the prompt I'd sent. That instinct, not any error message, is what saved the re-ask.</p>
+
+        <p>That's the honest tax on this technique. Driving three separate web UIs through a browser is fussier than any API would be, and the failure modes are dumb ones: a stale selector, a lazy-rendered pane, a model that asks a clarifying question instead of answering. None of that is exotic AI failure. It's just automating a browser, with all the brittleness browser automation always has.</p>
+
+        <h2>Same panel you'd assemble for humans</h2>
+        <p>None of this is a new idea dressed up in AI language. If I were shipping something high-stakes with a human team, I wouldn't want one reviewer either. I'd want a designer, an engineer, and someone from support who's heard every user complaint firsthand, because each would catch something the others wouldn't. Models are the same. Get a few different ones, look for where they agree, and don't discard the one that says something the others didn't. That's usually the finding worth the whole exercise.</p>
+      </div>
+
+      <div class="post-footer">
+        <a href="/blog/" class="back-link">Back to blog</a>
+      </div>
+    </div>
+  </article>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      © <span id="year"></span> David Ndungu · 20+ years building software · ex-Zendesk · Built with plain HTML &amp; CSS.
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

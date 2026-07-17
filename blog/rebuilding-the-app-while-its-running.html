@@ -1,0 +1,204 @@
+<!-- copy to <slug>.html, fill title/date/body -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-28JM2750VX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-28JM2750VX');
+  </script>
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <title>Rebuilding the app while it's running — David Ndungu</title>
+  <meta name="description" content="Shipping a redesign to a live product without a maintenance window, and without users noticing the seams." />
+  <meta name="author" content="David Ndungu" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Rebuilding the app while it's running — David Ndungu" />
+  <meta property="og:description" content="Shipping a redesign to a live product without a maintenance window, and without users noticing the seams." />
+  <meta property="og:url" content="https://ndungu.dev/blog/rebuilding-the-app-while-its-running.html" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230ee510'/%3E%3Ctext x='50%25' y='52%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial,sans-serif' font-size='30' font-weight='700' fill='%230a0a0a'%3EDN%3C/text%3E%3C/svg%3E" />
+
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: hsl(0, 0%, 10%);
+      --bg-alt: hsl(0, 0%, 16%);
+      --ink: hsl(0, 0%, 96%);
+      --ink-soft: hsl(0, 0%, 75%);
+      --ink-faint: hsl(0, 0%, 60%);
+      --border: hsl(0, 0%, 20%);
+      --accent: hsl(119, 99%, 46%);
+      --accent-soft: hsl(119 99% 46% / 12%);
+      --accent-foreground: hsl(0, 0%, 4%);
+      --nav-button: hsl(0, 0%, 18%);
+      --hero-bg: hsl(0, 0%, 8%);
+      --radius: 14px;
+      --maxw: 920px;
+      --measure: 65ch;
+    }
+
+    @keyframes fade-up {
+      0% { opacity: 0; transform: translateY(20px); filter: blur(4px); }
+      100% { opacity: 1; transform: translateY(0); filter: blur(0); }
+    }
+    .animate-fade-up { opacity: 0; animation: fade-up .7s cubic-bezier(.16,1,.3,1) forwards; }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: "Sora", -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Helvetica, Arial, sans-serif;
+      font-size: 17px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+
+    header.nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+      background: color-mix(in srgb, var(--hero-bg) 55%, transparent);
+      backdrop-filter: saturate(160%) blur(14px);
+      -webkit-backdrop-filter: saturate(160%) blur(14px);
+      border-bottom: 1px solid color-mix(in srgb, var(--border) 60%, transparent);
+    }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 62px; gap: 24px; }
+    .brand { font-weight: 600; letter-spacing: -.02em; color: var(--ink); font-size: 17px; }
+    .brand:hover { text-decoration: none; }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a {
+      font-size: 13px; color: var(--ink-faint); text-transform: uppercase; letter-spacing: .12em;
+      font-weight: 500; transition: color .15s ease;
+    }
+    .nav-links a:hover { color: var(--ink); text-decoration: none; }
+    .nav-links a.active { color: var(--accent); }
+    @media (max-width: 768px) { .nav-links { display: none; } }
+
+    .btn.nav-cta {
+      background: var(--nav-button); color: var(--ink); padding: 10px 22px;
+      border-radius: 8px; font-size: 12px; text-transform: uppercase; letter-spacing: .1em;
+      display: inline-block; border: 1px solid transparent;
+    }
+    .btn.nav-cta:hover { background: color-mix(in srgb, var(--nav-button) 80%, white 10%); text-decoration: none; }
+    @media (max-width: 768px) { .btn.nav-cta { display: none; } }
+
+    /* Article */
+    article { padding: 148px 0 80px; }
+    @media (max-width: 640px) { article { padding: 100px 0 60px; } }
+    .article-inner { max-width: var(--measure); margin: 0 auto; padding: 0 24px; }
+
+    .back-link { display: inline-block; margin-bottom: 28px; font-size: 13.5px; color: var(--ink-faint); }
+    .back-link:hover { color: var(--accent); text-decoration: none; }
+    .back-link::before { content: "← "; }
+
+    h1.post-title {
+      font-size: clamp(1.9rem, 5vw, 2.6rem); line-height: 1.15; letter-spacing: -.03em;
+      margin: 0 0 14px; font-weight: 700; color: var(--ink);
+    }
+    .byline { color: var(--ink-faint); font-size: 14px; margin: 0 0 44px; }
+
+    .post-body { font-size: 17.5px; line-height: 1.75; color: var(--ink-soft); }
+    .post-body p { margin: 0 0 22px; }
+    .post-body h2 { color: var(--ink); font-size: 24px; letter-spacing: -.01em; margin: 40px 0 16px; font-weight: 650; }
+    .post-body h3 { color: var(--ink); font-size: 19px; margin: 32px 0 12px; font-weight: 650; }
+    .post-body a { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
+    .post-body strong { color: var(--ink); }
+    .post-body code {
+      background: var(--bg-alt); border: 1px solid var(--border); border-radius: 4px;
+      padding: 2px 6px; font-size: .9em; font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    }
+    .post-body pre {
+      background: var(--bg-alt); border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 18px 20px; overflow-x: auto; font-size: 14.5px; line-height: 1.6;
+    }
+    .post-body pre code { background: none; border: none; padding: 0; }
+    .post-body blockquote {
+      margin: 24px 0; padding: 4px 0 4px 18px; border-left: 3px solid var(--accent);
+      color: var(--ink-faint); font-style: italic;
+    }
+    .post-body ul, .post-body ol { margin: 0 0 22px; padding-left: 24px; }
+    .post-body li { margin-bottom: 8px; }
+
+    .post-footer { margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--border); }
+
+    footer.site-footer { padding: 40px 0; border-top: 1px solid var(--border); color: var(--ink-faint); font-size: 14px; text-align: center; }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a href="/" class="brand">David Ndungu</a>
+      <nav class="nav-links">
+        <a href="/#pain">Problem</a>
+        <a href="/#how">How it works</a>
+        <a href="/#pricing">Pricing</a>
+        <a href="/#work">The work</a>
+        <a href="/blog/" class="active">Blog</a>
+      </nav>
+      <a href="https://cal.com/david-ndungu/automation-audit" class="btn nav-cta">Book a call</a>
+    </div>
+  </header>
+
+  <article>
+    <div class="article-inner">
+      <a href="/blog/" class="back-link">Back to blog</a>
+      <h1 class="post-title">Rebuilding the app while it's running</h1>
+      <p class="byline">David Ndungu · 2026-07-14</p>
+
+      <div class="post-body">
+        <p>Blink's tab bar is going away. In its place: a zoom-stack, three levels deep, that you push into and pull back out of instead of hopping between tabs. It's a better shape for what the app actually does. It's also the kind of change that, done wrong, reads to a tester as "the app broke overnight."</p>
+
+        <p>Real people use Blink every day right now. Not a lot of people, but enough that I can't just take the app down for two weeks, gut the navigation layer, and put it back together. Whatever I do has to happen underneath users who didn't ask for a redesign and shouldn't have to notice one.</p>
+
+        <h2>Neither classic option survives contact</h2>
+        <p>The obvious move is to refactor in place: nudge the current tab bar toward the zoom-stack a little at a time, PR by PR, until one day it's fully transformed. I tried sketching this out and it falls apart on a simple fact: a tab bar and a zoom-stack aren't points on the same line. There's no halfway state where three tabs are "kind of" a stack of three zoom levels. You can't gradually morph one into the other any more than you can gradually morph a bicycle into a boat. Every intermediate commit is either the old thing or a broken thing, and testers hit the broken thing.</p>
+
+        <p>The other obvious move is greenfield: branch off, build the new shell properly, cut over when it's done. This throws away something I'm not willing to throw away: a year of plumbing that's been hardened against real usage. Sync edge cases, offline states, calendar quirks, all the stuff that only shows up once actual people touch it for months. A clean rebuild means re-discovering every one of those the hard way, and it means giving up the thing I actually want most going into a rebuild this size: the ability to flip one switch and be back on the version that works, immediately, no rollback deploy required.</p>
+
+        <h2>So: strangler fig</h2>
+        <p>The new shell grows inside the same binary as the old one, behind a feature flag. The old UI stays the default for every tester. Nothing about their day-to-day changes. Meanwhile, in the same codebase, the zoom-stack gets built out screen by screen, level by level, entirely inert unless the flag is on.</p>
+
+        <p>The rule that makes this survivable is on the backend, not the UI: it only ever adds. No endpoint change is allowed to break what the old client expects, full stop. I enforce that with a compatibility test that does something almost embarrassingly literal. It runs the actual old app against the actual new backend, on every PR. If a backend change would strand the shipping app, the test fails before the change merges. It's not a policy anyone has to remember to follow. It's a build that won't go green if you break it.</p>
+
+        <p>CI builds and boots both UIs on every PR, old and new, so a change that quietly wrecks the zoom-stack gets caught the same day it's written, not three weeks into the rebuild when nobody remembers which commit did it. New work lands on an integration branch that pulls from trunk daily, so the new shell never drifts far enough from reality to become its own science project.</p>
+
+        <p>The bill for all this is carrying two UIs at once for however many weeks the rebuild takes. More code paths, more surface area, a slightly heavier CI run. I'm fine paying it, because the alternative bill (a redesign that visibly breaks for testers mid-refactor, or a big-bang cutover with no way back if it's wrong) is worse and it's due immediately, not amortized.</p>
+
+        <h2>One demolition instead of a slow bleed</h2>
+        <p>The plan ends with a single deliberate step: flip the flag, watch it hold, then delete the old shell in one clean pass. Not a slow bleed of half-migrated screens and dead code nobody's sure is safe to remove. One demolition, on purpose, when the replacement has already proven itself under real load with a kill switch sitting right there the whole time.</p>
+
+        <p>Here's the part that actually changed how I think about this: I'm not the one writing most of this code. Blink's rebuild, like most of what I ship now, gets built by a fleet of autonomous agents working in parallel. Eight sessions at a time isn't unusual. And eight parallel agents cannot be trusted, individually or collectively, to not break trunk. That's not a knock on the agents; it's just true of eight independent actors touching a shared system fast. The old assumption behind "just be careful" was that a human was doing the careful part. That assumption is gone.</p>
+
+        <p>Which means the actual engineering problem isn't "write the zoom-stack correctly." It's "make it structurally impossible for any of the eight to break the trunk, so their mistakes get caught by CI instead of by testers." The compatibility test, the dual-boot CI, the flag, the daily sync from trunk, none of that is about this rebuild specifically. It's the scaffolding that lets me point a fleet of agents at a live product at all. The code is replaceable. The safety structure around it is the actual product of this phase of work.</p>
+      </div>
+
+      <div class="post-footer">
+        <a href="/blog/" class="back-link">Back to blog</a>
+      </div>
+    </div>
+  </article>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      © <span id="year"></span> David Ndungu · 20+ years building software · ex-Zendesk · Built with plain HTML &amp; CSS.
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
