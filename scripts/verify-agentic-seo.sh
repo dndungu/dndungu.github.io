@@ -81,6 +81,17 @@ if [ "$LIVE" -eq 1 ]; then
     code=$(curl -s -o /dev/null -w "%{http_code}" "$BASE_URL$p")
     [ "$code" = "200" ] && pass "$p returns 200" || bad "$p returned HTTP $code, expected 200"
   done
+
+  echo
+  echo "== Accept: text/markdown negotiation (Cloudflare Worker) =="
+  for p in / /about/ /contact/ /privacy/; do
+    ct=$(curl -s -H "Accept: text/markdown" -D - -o /dev/null "$BASE_URL$p" | grep -i '^content-type:' | tr -d '\r')
+    vary=$(curl -s -H "Accept: text/markdown" -D - -o /dev/null "$BASE_URL$p" | grep -i '^vary:' | tr -d '\r')
+    echo "$ct" | grep -qi 'text/markdown' && pass "$p negotiates text/markdown" || bad "$p did not negotiate text/markdown ($ct)"
+    echo "$vary" | grep -qi 'accept' && pass "$p Vary header includes Accept" || bad "$p Vary header missing Accept ($vary)"
+  done
+  plain_ct=$(curl -s -D - -o /dev/null "$BASE_URL/" | grep -i '^content-type:' | tr -d '\r')
+  echo "$plain_ct" | grep -qi 'text/html' && pass "/ still serves text/html without Accept override" || bad "/ unexpectedly changed default content type ($plain_ct)"
 fi
 
 echo

@@ -1,0 +1,7 @@
+name = "ndungu-dev-md-negotiation"
+main = "src/worker.js"
+compatibility_date = "2026-08-01"
+
+routes = [
+  { pattern = "ndungu.dev/*", zone_name = "ndungu.dev" }
+]
