@@ -1,14 +1,12 @@
 # About David Ndungu
 
-I'm a software engineer with 20+ years building production systems, the last 8 of them as a Staff/Senior engineer at Zendesk. I ran my own development consultancy for the better part of a decade before that. Today I build AI agent infrastructure and sell done-for-you AI automations to small businesses through [Sire](https://sire.run).
+I'm a software engineer with 20+ years building production systems, including 8 years as a Staff/Senior engineer at Zendesk. I ran my own development consultancy for the better part of a decade before that. Today I build open-source agent infrastructure and help engineering teams use coding agents effectively.
 
-## What I actually build
+## What I build and how I help
 
-I don't just prompt models — I build the infrastructure underneath them. That includes [Zerfoo](https://github.com/zerfoo/zerfoo), a from-scratch ML inference engine in pure Go that runs 40+ transformer architectures and decodes faster than Ollama on comparable hardware, and the durable-workflow engine behind Sire, which lets AI agents run as crash-recoverable workflows with a human approval gate on every customer-facing step.
+My work spans verification with [Kazi](https://kazi.sire.run), decision history with [Dira](https://github.com/kazi-org/dira), agent memory with [Serenity](https://github.com/sirerun/serenity) (in active development), and ML infrastructure with [Zerfoo](https://github.com/zerfoo/zerfoo).
 
-## What I do for clients
-
-Through the Sire Founding Pilot (see https://ndungu.dev/#pricing), I audit one repeated manual workflow in your business, then build 1-2 real automations for it in 5 business days — connected to your actual tools, with a human sign-off gate so nothing fires without your approval.
+I help teams improve acceptance checks, context, integrations, and handoffs around Claude Code and other coding agents. We agree on a bounded engagement, fee, and timeline before implementation. See [the engagement](https://ndungu.dev/#pricing).
 
 ## At Zendesk
 

@@ -1,13 +1,10 @@
 # Contact David Ndungu
 
-Tell me the manual workflow eating your team's week. On a free audit call I'll tell you exactly how I'd automate it, what it would cost, and what it would save.
+Discuss your Claude Code or agentic development workflow with me. Bring one task that stalled or needed too much supervision, and what a better outcome would look like. If an open-source project brought you here, mention which one. No preparation is required.
 
-## Channels
+- [Book a discovery call](https://cal.com/david-ndungu/automation-audit)
+- Call / text: +1 (559) 414-8242
+- Email: david@sire.run
+- GitHub: https://github.com/dndungu
 
-- **Book a call**: https://cal.com/david-ndungu/automation-audit
-- **Call / text**: +1 (559) 414-8242
-- **Email**: david@sire.run
-- **GitHub**: https://github.com/dndungu
-- **Product**: https://sire.run
-
-I read and respond to email and call inquiries personally — there's no support queue or intake team between you and me.
+I respond personally. The initial conversation is free; paid work starts after we agree on scope, fee, and timeline.

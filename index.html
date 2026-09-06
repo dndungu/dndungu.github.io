@@ -18,8 +18,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <title>David Ndungu — Done-for-you AI automations for small business</title>
-  <meta name="description" content="I build custom AI agent automations for your business: one repeated manual workflow, taken off your team's plate and running in days, connected to your real tools, with a human approval gate so nothing fires without your sign-off." />
+  <title>David Ndungu — Agentic development consulting</title>
+  <meta name="description" content="Hands-on consulting for developers and engineering teams using Claude Code and other coding agents. Improve verification, context, integrations, and handoffs." />
   <meta name="author" content="David Ndungu" />
   <link rel="canonical" href="https://ndungu.dev/" />
   <link rel="alternate" type="text/markdown" href="/index.md" />
@@ -27,8 +27,8 @@
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="David Ndungu — Done-for-you AI automations" />
-  <meta property="og:description" content="Sire Founding Pilot: a senior engineer audits your workflow, builds 1-2 real AI automations, and gets you running on Sire — every automation behind a human approval gate. $3,500 fixed, 5 business days, 3-5 slots." />
+  <meta property="og:title" content="David Ndungu — Agentic development consulting" />
+  <meta property="og:description" content="Hands-on consulting for developers and engineering teams using Claude Code and other coding agents. Improve verification, context, integrations, and handoffs." />
   <meta property="og:url" content="https://ndungu.dev" />
   <meta property="og:image" content="https://ndungu.dev/og-image.png" />
   <meta property="og:image:width" content="1200" />
@@ -47,8 +47,8 @@
         "name": "David Ndungu",
         "url": "https://ndungu.dev/",
         "image": "https://ndungu.dev/og-image.png",
-        "jobTitle": "AI Agent & Automation Engineer",
-        "description": "20+ years building software, 8 years at Zendesk, now building AI agent infrastructure and done-for-you automations under Sire.",
+        "jobTitle": "Agentic Development Consultant",
+        "description": "20+ years building software, 8 years at Zendesk, now building open-source agent infrastructure and helping engineering teams use coding agents effectively.",
         "sameAs": [
           "https://github.com/dndungu",
           "https://sire.run"
@@ -196,7 +196,7 @@
       background: var(--accent-soft); padding: 6px 12px; border-radius: 999px; margin-bottom: 22px;
     }
     .hero-h1 {
-      font-size: clamp(2.75rem, 8vw, 5.5rem); line-height: 1.05; letter-spacing: -.05em;
+      font-size: clamp(2.5rem, 6vw, 4.5rem); line-height: 1.05; letter-spacing: -.05em;
       margin: 0 0 16px; font-weight: 700; text-transform: uppercase; color: var(--ink);
     }
     .hero-h1 .accent { color: var(--accent); }
@@ -287,17 +287,34 @@
     .links a { color: var(--ink-soft); font-weight: 500; }
 
     footer { padding: 40px 0; border-top: 1px solid var(--border); color: var(--ink-faint); font-size: 14px; text-align: center; }
+
+    :root { --focus-width: 3px; --focus-offset: 4px; --anchor-gap: 6rem; }
+    :focus-visible { outline: var(--focus-width) solid var(--accent); outline-offset: var(--focus-offset); }
+    [id] { scroll-margin-top: var(--anchor-gap); }
+    .hero-h1 { text-transform: none; text-wrap: balance; }
+    .lede, .cta-note { color: var(--ink-soft); }
+    .card { min-width: 0; }
+    .skip-link { position: fixed; top: 0; left: 0; z-index: 100; padding: 1rem; background: var(--bg); transform: translateY(-110%); }
+    .skip-link:focus { transform: translateY(0); }
+    @media (max-width: 768px) { .btn.nav-cta { display: inline-block; padding: .6rem .8rem; letter-spacing: 0; } }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .animate-fade-up, .animate-fade-in { animation: none; opacity: 1; }
+      .btn, .card { transition: none; }
+      .btn:hover { transform: none; }
+    }
   </style>
 </head>
 <body>
+  <a class="skip-link" href="#top">Skip to content</a>
   <header class="nav">
     <div class="wrap nav-inner">
       <a href="#top" class="brand">David Ndungu</a>
       <nav class="nav-links">
-        <a href="#pain">Problem</a>
+        <a href="#pain">Where I help</a>
         <a href="#how">How it works</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#work">The work</a>
+        <a href="#pricing">Engagement</a>
+        <a href="#work">Open source</a>
         <a href="#faq">FAQ</a>
         <a href="/blog/">Blog</a>
         <a href="/about/">About</a>
@@ -314,229 +331,49 @@
       </div>
       <div class="hero-overlay"></div>
       <div class="hero-content">
-        <span class="eyebrow animate-fade-up" style="animation-delay:.1s">Done-for-you AI automation</span>
-        <h1 class="hero-h1 animate-fade-up" style="animation-delay:.25s">DAVID<br><span class="accent">NDUNGU</span></h1>
-        <p class="hero-sub animate-fade-up" style="animation-delay:.4s">I build custom AI automations for your business.</p>
-        <p class="lede animate-fade-up" style="animation-delay:.55s">I take one repeated, expensive manual workflow off your team's plate and build it into a durable AI automation: connected to your real tools, running in days not months, with a human approval gate so nothing fires without your sign-off.</p>
+        <span class="eyebrow animate-fade-up" style="animation-delay:.1s">Consulting for teams using coding agents</span>
+        <h1 class="hero-h1 animate-fade-up" style="animation-delay:.25s">Make agentic coding<br><span class="accent">work for your team.</span></h1>
+        <p class="hero-sub animate-fade-up" style="animation-delay:.4s">Hands-on help with Claude Code and the workflow around it.</p>
+        <p class="lede animate-fade-up" style="animation-delay:.55s">Your agents can write code. I help you turn that output into reviewed, tested changes your team can ship—with clear context, useful integrations, and fewer handoffs to babysit.</p>
         <div class="cta-row animate-fade-up" style="animation-delay:.7s">
-          <a href="https://cal.com/david-ndungu/automation-audit" class="btn big">Book a free automation audit</a>
+          <a href="https://cal.com/david-ndungu/automation-audit" class="btn big">Book a discovery call</a>
           <a href="tel:+15594148242" class="btn secondary big">Call (559) 414-8242</a>
-          <a href="mailto:david@sire.run?subject=Automation%20audit" class="btn secondary big">Email me</a>
+          <a href="mailto:david@sire.run?subject=Agentic%20development%20consulting" class="btn secondary big">Email me</a>
         </div>
-        <p class="cta-note animate-fade-up" style="animation-delay:.85s">$3,500 fixed &middot; Scope-backed guarantee &middot; 20+ years building software &middot; Ex-Zendesk</p>
+        <p class="cta-note animate-fade-up" style="animation-delay:.85s">Work directly with David &middot; 20+ years building software &middot; 8 years at Zendesk</p>
       </div>
     </section>
 
-    <section id="pain" style="border-top:0;">
-      <div class="wrap">
-        <div class="proof-bar" style="margin-bottom:40px;">
-          <div class="proof-item">
-            <strong>20+ years building software</strong>
-            <span>Ran my own dev consultancy for the better part of a decade, then 8 years at Zendesk</span>
-          </div>
-          <div class="proof-item">
-            <strong>I build the AI, not just use it</strong>
-            <span>My own ML inference engine + agent tooling, open source on GitHub</span>
-          </div>
-          <div class="proof-item">
-            <strong>Founder rate, honest start</strong>
-            <span>Senior work below market while I build my first AI-automation case studies</span>
-          </div>
-        </div>
-        <div class="section-head">
-          <h2>Your team is doing the same manual work every week</h2>
-          <p>Client reporting pulled by hand from three tools. The same support tickets answered over and over. Paid leads going cold because nobody followed up in time. Data re-keyed between systems. It is repetitive, it scales up exactly when you are winning, and it never ends.</p>
-        </div>
-        <div class="grid">
-          <div class="card">
-            <h3>Cut weekly reporting from hours to minutes</h3>
-            <p>Pull the numbers from your tools, draft the report, and wait for one click to send. What took a half-day takes minutes.</p>
-          </div>
-          <div class="card">
-            <h3>Stop paid leads from going cold</h3>
-            <p>A new lead gets a personalized reply and a booking link within about a minute, and you get alerted, so the leads you paid for stop slipping away.</p>
-          </div>
-          <div class="card">
-            <h3>A human approves before anything goes out</h3>
-            <p>Every customer-facing step pauses for your one-click sign-off. The automation does the work; you keep control of what actually fires.</p>
-          </div>
-          <div class="card">
-            <h3>Built to survive the real world</h3>
-            <p>If a step fails mid-run, the workflow resumes exactly where it stopped, and the approval gate means nothing reaches a customer without your sign-off. This is not a fragile no-code zap.</p>
-          </div>
-        </div>
+    <section id="pain">
+      <div class="wrap"><div class="proof-bar" style="margin-bottom:40px;">
+<div class="proof-item"><strong>20+ years building software</strong><span>Consultancy experience and eight years at Zendesk</span></div>
+<div class="proof-item"><strong>Public engineering work</strong><span>Coding-agent tools, decision history, and ML infrastructure</span></div>
+<div class="proof-item"><strong>Work with the builder</strong><span>I review the workflow and implement the agreed changes myself</span></div></div><div class="section-head"><h2>More generated code. Still too much supervision.</h2><p>For developers, technical founders, and engineering leads already using coding agents—and spending too much time getting their work over the finish line.</p></div><div class="grid"><div class="card"><h3>“Done” still needs checking</h3><p>Turn the intended behavior into checks that run against the real product. Make it clear what passed, what failed, and what still needs human review.</p></div><div class="card"><h3>Every session needs the story again</h3><p>Make repository instructions, decisions, and handoffs useful to the next agent, so you spend less time repeating the same context.</p></div><div class="card"><h3>Agents cannot reach the right tools</h3><p>Connect the APIs, internal tools, and development systems your workflow depends on. Define access and approval boundaries as part of the integration.</p></div><div class="card"><h3>More agents create more coordination</h3><p>Find where work stalls between assignment, implementation, review, and merge. Improve ownership and recovery before adding more parallel work.</p></div></div>
       </div>
     </section>
 
     <section id="how">
-      <div class="wrap">
-        <div class="section-head">
-          <h2>How it works</h2>
-          <p>Simple, fixed-scope, and fast. No discovery-call runaround, no open-ended hourly bills.</p>
-        </div>
-        <div class="steps">
-          <div class="step">
-            <span class="num">1</span>
-            <h3>Free audit call</h3>
-            <p>We find the one workflow worth automating first and put a real number on the hours and dollars it is costing you.</p>
-          </div>
-          <div class="step">
-            <span class="num">2</span>
-            <h3>Fixed-price scope, 50% to start</h3>
-            <p>You get a one-page scope with an exact price and timeline. No surprises. The deposit kicks off the build.</p>
-          </div>
-          <div class="step">
-            <span class="num">3</span>
-            <h3>Live in days</h3>
-            <p>Your automation runs on your real tools, with the approval gate, plus a walkthrough video and a one-page runbook.</p>
-          </div>
-        </div>
+      <div class="wrap"><div class="section-head"><h2>Start with one real development task</h2><p>Bring a recent task that stalled, produced misleading results, or needed repeated intervention.</p></div><div class="steps"><div class="step"><span class="num">1</span><h3>Find the bottleneck</h3><p>We discuss your tools, team, and a concrete example. The first call is free and helps us decide whether I can help.</p></div><div class="step"><span class="num">2</span><h3>Agree on the result</h3><p>I propose a bounded engagement with deliverables, acceptance checks, a fee, and a timeline. You approve the scope before paid work starts.</p></div><div class="step"><span class="num">3</span><h3>Implement and hand over</h3><p>I work in your existing workflow, demonstrate the agreed result, and leave documentation your team can use. We compare the outcome with the starting point.</p></div></div>
       </div>
     </section>
 
     <section id="pricing">
-      <div class="wrap">
-        <div class="section-head">
-          <h2>The Sire Founding Pilot</h2>
-          <p>One fixed-fee engagement, not a menu. I personally audit your business, build 1-2 automations that save real time or money, and get you running on Sire so they stay governed after I leave.</p>
-        </div>
-        <div class="pricing" style="grid-template-columns: minmax(0, 560px); justify-content: center;">
-          <div class="tier featured">
-            <span class="badge">3 to 5 slots</span>
-            <h3>Sire Founding Pilot</h3>
-            <div class="price">$3,500</div>
-            <p class="sub">5 business days, start to finish. 50% to start, balance when it is live and you have signed off.</p>
-            <ul>
-              <li>Before day 1: a short intake so I show up already knowing your business, not guessing</li>
-              <li>Days 1-2: diagnosis of what your team actually does, not what the org chart says</li>
-              <li>Days 3-5: 1-2 working automations, built and tested against your real workflow, not a demo</li>
-              <li>Onboarding onto Sire: approval gates, receipts, and a dashboard so you see and control what fires</li>
-              <li>Ends with you running on a Sire subscription; your pilot fee credits toward your first month(s)</li>
-            </ul>
-          </div>
-        </div>
-        <p class="pricing-note">I'm only running 3 to 5 of these at once, an actual constraint on my calendar, not a scarcity trick. Founding customers lock their subscription rate at the founding price for as long as they stay a customer, even as list price rises later.</p>
+      <div class="wrap"><div class="section-head"><h2>A focused engagement, with a written scope</h2><p>Start with the part of agentic development that is costing your team the most attention.</p></div><div class="pricing" style="grid-template-columns:minmax(0,560px);justify-content:center;"><div class="tier featured"><h3>Agentic workflow review &amp; implementation</h3><div class="price">Scoped to your team</div><p class="sub">Fee and timeline agreed before work begins.</p><ul><li>Review of one workflow, repository, or recurring failure</li><li>A concrete diagnosis and prioritized changes</li><li>Implementation of the improvements we agree to</li><li>Acceptance checks, a walkthrough, and a handoff your team can maintain</li></ul><div class="cta-row" style="margin-top:24px;"><a class="btn" href="https://cal.com/david-ndungu/automation-audit">Discuss your workflow</a></div></div></div><p class="pricing-note">Examples include a Claude Code workflow review, MCP integration, or verification and handoff improvements. The tool choice follows your needs; a Sire subscription is not required.</p>
       </div>
     </section>
 
     <section id="work">
-      <div class="wrap">
-        <div class="section-head">
-          <h2>The engineering behind your automation</h2>
-          <p>You would be one of my first automation clients, so here is the proof the code is real. I build the AI agent infrastructure most people only talk about — some of it open source, some of it shipping to real users.</p>
-        </div>
-        <div class="grid">
-          <div class="card">
-            <span class="tag">My workflow engine</span>
-            <h3><a href="https://sire.run" target="_blank" rel="noopener">Sire ↗</a></h3>
-            <p>The engine I build your automation on: AI agents that run as durable workflows, survive crashes, pause for human approval, and connect to your tools.</p>
-            <div class="meta">Go · Next.js · PostgreSQL · durable execution</div>
-          </div>
-          <div class="card">
-            <span class="tag">Open source · ML systems</span>
-            <h3><a href="https://github.com/zerfoo/zerfoo" target="_blank" rel="noopener">Zerfoo ↗</a></h3>
-            <p>A from-scratch ML inference engine in pure Go that runs 40+ model architectures and decodes ~28% faster than Ollama on Gemma 3 1B. Proof I understand AI at the metal.</p>
-            <div class="meta">Go · CUDA · Metal · GGUF · quantization</div>
-          </div>
-          <div class="card">
-            <span class="tag">Open source · Integrations</span>
-            <h3><a href="https://github.com/sirerun/mint" target="_blank" rel="noopener">Mint ↗</a></h3>
-            <p>How I connect automations to your existing tools: turns an API spec into a working integration in seconds. The bridge between AI agents and your real systems.</p>
-            <div class="meta">Go · MCP · OpenAPI 3.x · code generation</div>
-          </div>
-          <div class="card">
-            <span class="tag">Open source · Infrastructure</span>
-            <h3><a href="https://github.com/sirerun/gist" target="_blank" rel="noopener">Gist ↗</a></h3>
-            <p>The retrieval engine that keeps automations accurate and cheap: 98.9% context reduction on a 754 KB spec, gated by a real CI test that asserts at least 80%.</p>
-            <div class="meta">Go · retrieval · LLM context</div>
-          </div>
-          <div class="card">
-            <span class="tag">Open source · Agent reliability</span>
-            <h3><a href="https://kazi.sire.run" target="_blank" rel="noopener">Kazi ↗</a></h3>
-            <p>The same discipline behind the approval gate, packaged for coding agents: declare a goal as machine-checkable predicates, and kazi loops Claude Code until every check passes — or stops to tell you why it's stuck, instead of quietly calling it done.</p>
-            <div class="meta">Elixir · OTP · Apache-2.0 · Homebrew</div>
-          </div>
-          <div class="card">
-            <span class="tag">Open source · LLM infrastructure</span>
-            <h3><a href="https://github.com/valyrium/valyrium" target="_blank" rel="noopener">Valyrium ↗</a></h3>
-            <p>A zero-dependency OpenAI-compatible HTTP gateway that routes Chat Completions requests straight to the Claude Code CLI, so any tool built for OpenAI's API can run on Claude models without a rewrite.</p>
-            <div class="meta">Go · OpenAI-compatible API · Homebrew</div>
-          </div>
-          <div class="card">
-            <span class="tag">Own product · launching 2026</span>
-            <h3><a href="https://coachblink.com" target="_blank" rel="noopener">Blink ↗</a></h3>
-            <p>An AI planning coach for iOS: talk to it like a person and it turns what you say into a real task with a real time on your calendar, then follows up with adaptive reminders until it's actually done.</p>
-            <div class="meta">Swift · SwiftUI · Go · AWS</div>
-          </div>
-          <div class="card">
-            <span class="tag">Open source · Search infrastructure</span>
-            <h3><a href="https://github.com/sirerun/saka" target="_blank" rel="noopener">Saka ↗</a></h3>
-            <p>Free web search for Go and AI, no API keys required: a single binary that embeds as a library, ships as a CLI, and exposes REST and MCP servers speaking OpenAI/Anthropic tool-calling natively.</p>
-            <div class="meta">Go · MCP · REST · CLI</div>
-          </div>
-          <div class="card">
-            <span class="tag">Open source · Agent governance</span>
-            <h3><a href="https://github.com/agentgavel/agentgavel" target="_blank" rel="noopener">AgentGavel ↗</a></h3>
-            <p>An adversarial benchmark for AI agent frameworks: it stress-tests hard vs. soft governance, human-in-the-loop gates, and tamper-evident provenance under active attack, not just happy-path compliance.</p>
-            <div class="meta">Go · agent governance · benchmark</div>
-          </div>
-          <div class="card">
-            <span class="tag">Open source · In active development</span>
-            <h3><a href="https://github.com/sirerun/serenity" target="_blank" rel="noopener">Serenity ↗</a></h3>
-            <p>A claim-based personal memory and direction system: it ingests everything one person produces, reconciles it in a git-canonical brain repository, and serves that truth to AI agents with every consequential change gated by human disposition.</p>
-            <div class="meta">Go · git-canonical · agent memory</div>
-          </div>
-          <div class="card">
-            <span class="tag">Personal project · Voice control</span>
-            <h3><a href="https://github.com/sirerun/prosody" target="_blank" rel="noopener">Prosody ↗</a></h3>
-            <p>A voice-driven, hands-free remote control for coding agents: an iOS app with a watchOS companion and Home/Lock Screen widgets, talking to a Go gateway over a WebSocket control plane and voice plane.</p>
-            <div class="meta">Swift · SwiftUI · Go · WebSocket</div>
-          </div>
-        </div>
+      <div class="wrap"><div class="section-head"><h2>The tools behind my practice</h2><p>I build and use tools across the agent workflow. Explore the code to assess my engineering approach; these projects are evidence of the work, not claims of client results.</p></div><div class="grid"><article class="card" id="kazi"><span class="tag">Coding-agent verification</span><h3><a href="https://kazi.sire.run" target="_blank" rel="noopener">Kazi ↗</a></h3><p>Express a goal as machine-checkable conditions and give a coding agent a concrete finish line. Relevant when a successful agent run still leaves you unsure whether the task works.</p><div class="meta">Acceptance checks · agent execution</div></article><article class="card" id="dira"><span class="tag">Decision history</span><h3><a href="https://github.com/kazi-org/dira" target="_blank" rel="noopener">Dira ↗</a></h3><p>A git-native ledger of decisions and the alternatives they rejected. Keep the reasoning behind a change available when another agent or developer picks up the work.</p><div class="meta">Decisions · context · git</div></article><article class="card" id="serenity"><span class="tag">Agent memory · in active development</span><h3><a href="https://github.com/sirerun/serenity" target="_blank" rel="noopener">Serenity ↗</a></h3><p>A personal memory and direction system being built around a git-backed record. It explores how agents can share durable context while keeping consequential changes under human review.</p><div class="meta">Memory · direction · human review</div></article><article class="card" id="zerfoo"><span class="tag">ML infrastructure</span><h3><a href="https://github.com/zerfoo/zerfoo" target="_blank" rel="noopener">Zerfoo ↗</a></h3><p>A machine-learning inference and training framework in Go. This is the infrastructure side of my work: model execution, performance, and the systems beneath agent applications.</p><div class="meta">Go · inference · GPU systems</div></article><article class="card" id="mint"><span class="tag">Tool integration</span><h3><a href="https://github.com/sirerun/mint" target="_blank" rel="noopener">Mint ↗</a></h3><p>Generate MCP servers from OpenAPI specifications. Relevant when an agent needs a usable connection to your APIs and internal systems.</p><div class="meta">MCP · OpenAPI · Go</div></article><article class="card" id="sire"><span class="tag">Workflow orchestration</span><h3><a href="https://sire.run" target="_blank" rel="noopener">Sire ↗</a></h3><p>My platform for durable agent workflows and human approval gates. It is also where I am applying these ideas to my own operations.</p><div class="meta">Durable workflows · approvals</div></article></div><p class="pricing-note">Found me through one of these projects? <a href="/contact/">Tell me which one and what you are trying to do.</a> I can help evaluate fit or implement it in your workflow.</p>
       </div>
     </section>
 
     <section id="faq">
-      <div class="wrap">
-        <div class="section-head">
-          <h2>Honest answers</h2>
-        </div>
-        <div class="faq-item">
-          <h3>Do you have clients yet?</h3>
-          <p>I have built software for clients for over 20 years, including running my own dev consultancy for the better part of a decade and 8 years at Zendesk. You would be among my first clients for AI automation specifically, which is why founding-pilot pricing is below market and the work is backed by the scope guarantee. You get a seasoned engineer at a founder rate; I get my first automation case studies. The engineering behind it is real and public too.</p>
-        </div>
-        <div class="faq-item">
-          <h3>Is the deposit refundable?</h3>
-          <p>The deposit is non-refundable once the build starts, with one commitment: if the delivered automation does not do what the written scope says, I keep working at no extra charge until it does. If I still cannot make it match the scope within 7 days of your sign-off date, I refund the deposit in full. The balance is due once it is running and you have approved it; if I have not heard objections within 5 business days of handoff, the work is deemed approved.</p>
-        </div>
-        <div class="faq-item">
-          <h3>Why not just use ChatGPT or Zapier?</h3>
-          <p>ChatGPT is great for one-off answers; it will not watch your inbox at 2am or look up an order in your store. Zapier is fine until a run fails halfway and leaves things half-done, or you need an integration it does not have. I build crash-recoverable workflows that resume where they stopped, with a human approval gate, wired to the tools you actually use.</p>
-        </div>
-        <div class="faq-item">
-          <h3>How fast can it be live?</h3>
-          <p>5 business days, start to finish. Intake happens before day 1, days 1-2 are diagnosis, and days 3-5 are build, test, and handoff onto Sire. Fixed scope keeps it fast.</p>
-        </div>
+      <div class="wrap"><div class="section-head"><h2>Before we talk</h2></div><div class="faq-item"><h3>Is this only for Claude Code?</h3><p>Claude Code is a particular focus. The engagement starts with your actual tools and constraints; verification, integrations, and handoffs often extend beyond one coding agent.</p></div><div class="faq-item"><h3>Do we have to adopt your projects?</h3><p>No. I can improve your existing setup. I recommend one of my tools only when it fits the problem, and we agree on the choice before implementation.</p></div><div class="faq-item"><h3>What experience can we inspect?</h3><p>My open-source work is linked above. Before this, I spent eight years at Zendesk and ran a development consultancy. I am building the consulting practice around agentic development; I do not present my own dogfooding as a client case study.</p></div><div class="faq-item"><h3>Can you guarantee agents will ship autonomously?</h3><p>No. We agree on a specific result we can test, including where a person still needs to review or approve work. That makes the engagement assessable without promising unattended software delivery.</p></div><div class="faq-item"><h3>What should I bring to the first call?</h3><p>Your current agent setup, one task that went wrong or took too much supervision, and what a better outcome would look like. A public example or a description is enough to start.</p></div>
       </div>
     </section>
 
-    <section id="contact" class="contact">
-      <div class="wrap">
-        <h2>Let's take one thing off your plate</h2>
-        <p>Tell me the workflow that eats your team's week. On a free audit call I will tell you exactly how I would automate it, what it would cost, and what it would save.</p>
-        <div class="cta-row" style="justify-content:center;">
-          <a href="https://cal.com/david-ndungu/automation-audit" class="btn big">Book a free automation audit</a>
-          <a href="tel:+15594148242" class="btn secondary big">Call (559) 414-8242</a>
-          <a href="mailto:david@sire.run?subject=Automation%20audit" class="btn secondary big">Email me</a>
-        </div>
-        <div class="links">
-          <a href="https://github.com/dndungu" target="_blank" rel="noopener">GitHub</a>
-          <a href="https://sire.run" target="_blank" rel="noopener">Sire</a>
-          <a href="/about/">About</a>
-          <a href="/contact/">Contact</a>
-          <a href="/privacy/">Privacy</a>
-          <!-- Add your LinkedIn profile URL here once ready -->
-        </div>
+    <section id="contact">
+      <div class="wrap"><div class="section-head"><h2>Where does your agent workflow get stuck?</h2><p>Tell me what you use, where you keep stepping in, and what you want to finish. We will use the first conversation to decide on a useful next step.</p></div><div class="cta-row"><a href="https://cal.com/david-ndungu/automation-audit" class="btn big">Book a discovery call</a><a href="tel:+15594148242" class="btn secondary big">Call (559) 414-8242</a><a href="mailto:david@sire.run?subject=Agentic%20development%20consulting" class="btn secondary big">Email David</a></div><div class="links"><a href="/about/">About David</a><a href="/contact/">Contact details</a><a href="https://github.com/dndungu">GitHub</a><a href="/privacy/">Privacy</a></div>
       </div>
     </section>
   </main>
