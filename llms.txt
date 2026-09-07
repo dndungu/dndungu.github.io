@@ -13,6 +13,7 @@ Initial discovery call is free. Paid scope, fee, and timeline are agreed before 
 ## Pages
 
 - [Home](https://ndungu.dev/): offer, process, and public work — [markdown](https://ndungu.dev/index.md)
+- [Claude Code production guardrails audit](https://ndungu.dev/audit/): fixed-scope, one-week audit; $6,000 fixed — [markdown](https://ndungu.dev/audit/index.md)
 - [About](https://ndungu.dev/about/): engineering background — [markdown](https://ndungu.dev/about/index.md)
 - [Contact](https://ndungu.dev/contact/): booking, phone, email — [markdown](https://ndungu.dev/contact/index.md)
 - [Privacy](https://ndungu.dev/privacy/)

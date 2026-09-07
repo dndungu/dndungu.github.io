@@ -15,6 +15,8 @@ I help developers, technical founders, and engineering teams make Claude Code an
 
 Start with a free discovery call and one task that stalled or needed repeated intervention. I propose a bounded review and implementation engagement with deliverables, acceptance checks, a fee, and a timeline. Paid work starts after you approve the scope. A Sire subscription is not required.
 
+Fixed-scope option: the [Claude Code production guardrails audit](https://ndungu.dev/audit/).
+
 You receive a diagnosis, the agreed implementation, acceptance checks, a walkthrough, and documentation your team can maintain. No promise of unattended software delivery or guaranteed productivity gains.
 
 ## Public engineering work
