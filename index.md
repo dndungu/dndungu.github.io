@@ -31,6 +31,10 @@ You do not need to share private code on the first call. Describe one task, the 
 
 If there is a fit, I propose a written scope with deliverables, a fee, a timeline, and acceptance checks. You decide whether to proceed. The free discovery call creates no obligation to buy.
 
+## AI assistant
+
+[Discuss your workflow with my AI assistant](https://ndungu.dev/#chat). It helps identify a useful starting point for working together and can guide you to a free discovery call. Messages are processed by OpenRouter and its model provider; leave out secrets and private client details. See [privacy](https://ndungu.dev/privacy/).
+
 ## Engagement
 
 Start with a free discovery call and one task that stalled or needed repeated intervention. I propose a bounded review and implementation engagement with deliverables, acceptance checks, a fee, and a timeline. Paid work starts after you approve the scope. A Sire subscription is not required.

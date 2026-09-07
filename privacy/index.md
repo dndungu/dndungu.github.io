@@ -1,8 +1,16 @@
 # Privacy Policy
 
-Last updated September 1, 2026.
+Last updated September 7, 2026.
 
-ndungu.dev is a static personal and consulting site published by David Ndungu. It does not run its own servers, does not have user accounts, and does not host a form that stores your data on this domain.
+ndungu.dev is a personal and consulting site published by David Ndungu. The website is served as static pages and includes an optional AI chat backed by a server on AWS. There are no user accounts.
+
+## AI chat
+
+When you send a chat message, your message and recent conversation history are sent to the chat server on AWS, then to OpenRouter and its selected model provider to generate a response. The assistant helps you explore whether David’s consulting services fit your needs. It is AI and may make mistakes. Do not submit secrets, private client details, or sensitive personal information.
+
+The application keeps the conversation in browser memory while the page is open and does not write messages or transcripts to its application logs or a database. Recent messages are sent again to support follow-up questions. Reloading the page clears the conversation. The server uses IP addresses temporarily for request limits. AWS, OpenRouter, and model providers process request data under their own policies; their retention may differ from the application’s. See [OpenRouter’s privacy policy](https://openrouter.ai/privacy).
+
+The chat does not send a transcript or lead notification to David. To discuss work with him, use the booking or contact links. If your browser offers voice input and you activate it, speech may be processed by your browser’s speech recognition provider; the resulting text is only sent to the chat when you submit it.
 
 ## Analytics
 

@@ -304,6 +304,8 @@
       .btn:hover { transform: none; }
     }
   </style>
+  <link rel="stylesheet" href="/assets/chat.css">
+  <script defer src="/assets/chat.js"></script>
   <link rel="stylesheet" href="/assets/layout.css">
 </head>
 <body>
@@ -312,6 +314,7 @@
     <div class="wrap nav-inner">
       <a href="#top" class="brand">David Ndungu</a>
       <nav class="nav-links">
+        <a href="#chat">Ask about your workflow</a>
         <a href="#pain">Where I help</a>
         <a href="#how">How it works</a>
         <a href="#pricing">Engagement</a>
@@ -338,14 +341,36 @@
         <p class="lede animate-fade-up" style="animation-delay:.55s">Your agents can write code. I help you turn that output into reviewed, tested changes your team can ship—with clear context, useful integrations, and fewer handoffs to babysit.</p>
         <div class="cta-row animate-fade-up" style="animation-delay:.7s">
           <a href="https://cal.com/david-ndungu/automation-audit" class="btn big">Book a discovery call</a>
-          <a href="tel:+15594148242" class="btn secondary big">Call (559) 414-8242</a>
+          <a href="#chat" class="btn secondary big">Find the right starting point</a>
           <a href="mailto:david@sire.run?subject=Agentic%20development%20consulting" class="btn secondary big">Email me</a>
         </div>
         <p class="cta-note animate-fade-up" style="animation-delay:.85s">Work directly with David &middot; 20+ years building software &middot; 8 years at Zendesk</p>
       </div>
     </section>
 
-<section id="pain">
+    <section id="chat" class="nd-chat" aria-labelledby="chat-title">
+      <div class="wrap">
+        <div class="section-head"><h2 id="chat-title">Where does your agent workflow get stuck?</h2>
+        <p>Tell my AI assistant what you’re building and where you keep stepping in. Find a useful starting point for working together.</p></div>
+        <div class="composer-shell">
+          <form class="composer" id="askForm">
+            <div class="thread" id="thread" role="log" aria-live="polite" aria-label="Conversation with David’s AI assistant" tabindex="0">
+              <div class="msg ai"><div class="bubble">I’m David’s AI assistant. What are you using coding agents for, and what still takes too much of your time?</div></div>
+            </div>
+            <div class="askbar">
+              <input id="q" name="question" type="text" maxlength="1000" placeholder="Tell me where you’re getting stuck…" autocomplete="off" aria-label="Your message" required>
+              <button class="voice-btn" id="voiceBtn" type="button" aria-pressed="false" aria-label="Dictate your message" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15a3.5 3.5 0 0 0 3.5-3.5V6a3.5 3.5 0 1 0-7 0v5.5A3.5 3.5 0 0 0 12 15zm5.5-3.5a5.5 5.5 0 0 1-11 0H5a7 7 0 0 0 6 6.93V21h2v-2.57A7 7 0 0 0 19 11.5z"/></svg></button>
+              <button class="send" type="submit" aria-label="Send message"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+            </div>
+          </form>
+          <p class="hint" id="chat-status">AI can make mistakes. Messages go to OpenRouter and its model provider. Please leave out secrets and private client details. <a href="/privacy/">Privacy</a></p>
+          <p class="hint">Ready to talk? <a href="https://cal.com/david-ndungu/automation-audit">Book a free discovery call with David</a>.</p>
+          <noscript><p>Chat needs JavaScript. <a href="/contact/">Contact David directly</a>.</p></noscript>
+        </div>
+      </div>
+    </section>
+
+    <section id="pain">
       <div class="wrap"><div class="proof-bar" style="margin-bottom:40px;">
 <div class="proof-item"><strong>20+ years building software</strong><span>Former Zendesk Staff engineer and development consultancy founder</span></div>
 <div class="proof-item"><strong>Production reliability</strong><span>Zero-downtime etcd migration across Zendesk’s production Kubernetes clusters</span></div>

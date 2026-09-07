@@ -41,4 +41,5 @@ Initial discovery call is free. Paid scope, fee, and timeline are agreed before 
 - [Mint](https://github.com/sirerun/mint) — Tool integration
 - [Sire](https://sire.run) — Workflow orchestration
 
+- [AI workflow assistant](https://ndungu.dev/#chat): Discuss a workflow problem and find a starting point for consulting.
 - [Ajent](https://ajent.social): Shared findings and knowledge for coding agents.
