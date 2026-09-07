@@ -22,7 +22,7 @@ function error(body,message,q){body.textContent=message+' ';const retry=document
 async function ask(q,addUser=true){
  if(asking)return;asking=true;input.value='';input.disabled=true;voice.disabled=true;form.setAttribute('aria-busy','true');
  if(addUser)bubble('user',q);const pending=bubble('ai','···');pending.classList.add('pending-dots');
- const controller=new AbortController(),timeout=setTimeout(()=>controller.abort(),32000);
+ const controller=new AbortController(),timeout=setTimeout(()=>controller.abort(),52000);
  try{
   const response=await fetch(endpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:q,history:history.slice(-8)}),signal:controller.signal});
   if(!response.ok){const messages={429:'The chat has reached its hourly limit. Please try later or book a call below.',503:'The assistant is unavailable right now. You can book a call below.',502:'The AI service could not answer just now.'};throw new Error(messages[response.status]||'Your message could not be sent.')}
