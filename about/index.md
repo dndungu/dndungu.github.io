@@ -1,6 +1,6 @@
 # About David Ndungu
 
-I'm a software engineer with 20+ years building production systems, including 8 years as a Staff/Senior engineer at Zendesk. I ran my own development consultancy for the better part of a decade before that. Today I build open-source agent infrastructure and help engineering teams use coding agents effectively.
+I'm a software engineer with 20+ years building software, including eight years at Zendesk across test, senior, and staff engineering roles. I have also run a development consultancy and founded Zatiti, an e-commerce SaaS that reached 50 paying retailers. Today I build open-source agent infrastructure and help engineering teams use coding agents effectively.
 
 ## What I build and how I help
 
@@ -10,7 +10,15 @@ I help teams improve acceptance checks, context, integrations, and handoffs arou
 
 ## At Zendesk
 
-Eight years across Staff and Senior engineering roles, with org-wide influence: I drove gRPC adoption, shipped inbound email authentication via ARC, led a zero-downtime etcd v2→v3 migration across every production Kubernetes cluster, and worked diagnostics touching the majority of production services.
+At Zendesk, I designed and delivered a zero-downtime etcd v2-to-v3 migration across production Kubernetes clusters and led diagnostic endpoint integration across 95% of production services. I worked on cloud-cost optimization through Kubernetes Cluster Autoscaler, production incident response, and service stress testing. As a Staff engineer, I delivered inbound email authentication with ARC and advocated gRPC adoption for SMTP Relay.
+
+## Building for customers
+
+Before Zendesk, I founded and ran DavidDesigns, delivering custom websites and web applications. I later founded Gereji and launched Zatiti, growing it from zero to 50 paying retailers and joining the Savannah Fund accelerator. That experience shapes how I scope consulting: a useful result, clear acceptance, and a handover the customer can maintain.
+
+## How that experience applies now
+
+Production diagnostics and testing inform how I verify agent output. Cross-team infrastructure work informs how I capture decisions and coordinate handoffs. Cloud-cost work informs how I measure the cost of an accepted change, including retries and review. My current Fanisi work explores cheaper code generation; it is early experimental work, without a general savings claim.
 
 ## Contact
 

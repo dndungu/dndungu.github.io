@@ -2,7 +2,7 @@
 
 I help developers, technical founders, and engineering teams make Claude Code and other coding agents work in their development workflow. Turn generated output into reviewed, tested changes with clear context, useful integrations, and fewer handoffs to supervise.
 
-20+ years building software. Eight years at Zendesk. Work directly with me.
+20+ years building software. Eight years at Zendesk across test, senior, and staff engineering roles. I led a zero-downtime etcd migration across production Kubernetes clusters and diagnostic endpoint integration across 95% of production services. I also ran a development consultancy and founded Zatiti, which reached 50 paying retailers. Work directly with me.
 
 ## Where I help
 
@@ -10,6 +10,14 @@ I help developers, technical founders, and engineering teams make Claude Code an
 - Context: repository instructions, decision history, and useful session handoffs.
 - Integration: connect agents to APIs and internal tools with appropriate access and approvals.
 - Coordination: ownership and recovery between assignment, implementation, review, and merge.
+
+## Three useful results we can work toward
+
+- **Know when the change works.** Take one stalled agent task through meaningful acceptance checks, implementation, and review. Deliverables: repaired workflow, executable checks, and a walkthrough.
+- **Keep decisions between sessions.** Capture architectural choices, rejected approaches, and review standards. Deliverables: a decision ledger, tailored skills, and a fresh-session handoff exercise.
+- **Find what an accepted change costs.** Compare approaches on representative tasks, counting failures, repairs, and review effort. Deliverables: a baseline, measured comparison, and recommendations. Cost studies are scoped experiments; savings are established by measurement.
+
+Read [the experience behind the work](https://ndungu.dev/about/).
 
 ## Engagement
 
