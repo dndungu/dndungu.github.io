@@ -4,6 +4,8 @@
 const form=document.getElementById('askForm');if(!form)return;
 const input=document.getElementById('q'),thread=document.getElementById('thread'),voice=document.getElementById('voiceBtn');
 const history=[];let asking=false;
+const encoder=new TextEncoder();
+function historyContent(text){let out='',bytes=0;for(const char of text){const size=encoder.encode(char).length;if(bytes+size>3000)break;out+=char;bytes+=size}return out}
 // Deployment writes the public API URL here; no credential belongs in this file.
 const endpoint='https://nd-4f385fbf915449f88e3805712d0e98b4.ecs.us-west-2.on.aws/api/ask';
 function render(text){
@@ -27,7 +29,7 @@ async function ask(q,addUser=true){
   const response=await fetch(endpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:q,history:history.slice(-8)}),signal:controller.signal});
   if(!response.ok){const messages={429:'The chat has reached its hourly limit. Please try later or book a call below.',503:'The assistant is unavailable right now. You can book a call below.',502:'The AI service could not answer just now.'};throw new Error(messages[response.status]||'Your message could not be sent.')}
   const data=await response.json();if(typeof data.answer!=='string'||!data.answer.trim())throw new Error('The assistant returned an empty answer.');
-  pending.replaceChildren(render(data.answer));history.push({role:'user',content:q},{role:'assistant',content:data.answer.slice(0,3000)});if(history.length>8)history.splice(0,history.length-8);
+  pending.replaceChildren(render(data.answer));history.push({role:'user',content:q},{role:'assistant',content:historyContent(data.answer)});if(history.length>8)history.splice(0,history.length-8);
  }catch(err){error(pending,err.name==='AbortError'?'The assistant took too long to respond.':err instanceof TypeError?'The chat could not be reached.':err.message,q)}
  finally{clearTimeout(timeout);pending.classList.remove('pending-dots');input.disabled=false;voice.disabled=false;asking=false;form.removeAttribute('aria-busy');thread.scrollTop=thread.scrollHeight;input.focus({preventScroll:true})}
 }
