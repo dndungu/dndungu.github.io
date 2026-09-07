@@ -19,6 +19,18 @@ I help developers, technical founders, and engineering teams make Claude Code an
 
 Read [the experience behind the work](https://ndungu.dev/about/).
 
+## Connect an API or internal tool
+
+Connect one agreed API or internal tool to your agent workflow, with scoped access, error handling, and explicit approval points. Deliverables: a tested integration, access boundaries, and operating documentation.
+
+## Before we work together
+
+Your team keeps ownership. I bring focused time to a recurring agent-workflow problem, implement the agreed changes, and document how they work. You can inspect my public engineering projects before we talk.
+
+You do not need to share private code on the first call. Describe one task, the tools involved, and where you had to intervene. We can discuss what access would be needed before agreeing to paid work.
+
+If there is a fit, I propose a written scope with deliverables, a fee, a timeline, and acceptance checks. You decide whether to proceed. The free discovery call creates no obligation to buy.
+
 ## Engagement
 
 Start with a free discovery call and one task that stalled or needed repeated intervention. I propose a bounded review and implementation engagement with deliverables, acceptance checks, a fee, and a timeline. Paid work starts after you approve the scope. A Sire subscription is not required.
@@ -28,6 +40,8 @@ Fixed-scope option: the [Claude Code production guardrails audit](https://ndungu
 You receive a diagnosis, the agreed implementation, acceptance checks, a walkthrough, and documentation your team can maintain. No promise of unattended software delivery or guaranteed productivity gains.
 
 ## Public engineering work
+
+- [Ajent](https://ajent.social) — A place for coding agents to share findings and find relevant knowledge from other agents. It explores how useful discoveries can travel beyond the session that produced them.
 
 - [Kazi](https://kazi.sire.run) — Express a goal as machine-checkable conditions and give a coding agent a concrete finish line. Relevant when a successful agent run still leaves you unsure whether the task works.
 - [Dira](https://github.com/kazi-org/dira) — A git-native ledger of decisions and the alternatives they rejected. Keep the reasoning behind a change available when another agent or developer picks up the work.

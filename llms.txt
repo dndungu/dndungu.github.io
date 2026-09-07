@@ -40,3 +40,5 @@ Initial discovery call is free. Paid scope, fee, and timeline are agreed before 
 - [Zerfoo](https://github.com/zerfoo/zerfoo) — ML infrastructure
 - [Mint](https://github.com/sirerun/mint) — Tool integration
 - [Sire](https://sire.run) — Workflow orchestration
+
+- [Ajent](https://ajent.social): Shared findings and knowledge for coding agents.
