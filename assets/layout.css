@@ -1,0 +1,28 @@
+/* Shared page geometry. Keep page and article containers aligned. */
+:root {
+  --site-content-width: 920px;
+  --site-header-width: 1100px;
+  --site-gutter: 24px;
+  --maxw: var(--site-content-width);
+  --measure: var(--site-content-width);
+}
+.wrap, .article-inner, .hero-content {
+  max-width: var(--site-content-width);
+  margin-inline: auto;
+  padding-inline: var(--site-gutter);
+}
+header.nav .nav-inner {
+  width: 100%;
+  max-width: var(--site-header-width);
+  margin-inline: auto;
+  padding-inline: var(--site-gutter);
+}
+.error-page { padding-inline: 0; }
+.error-page main {
+  width: 100%;
+  max-width: var(--site-content-width);
+  padding-inline: var(--site-gutter);
+}
+@media (max-width: 640px) {
+  header.nav .nav-inner { height: auto; min-height: 62px; flex-wrap: wrap; gap: 12px; padding-block: 12px; }
+}
