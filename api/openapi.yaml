@@ -1,0 +1,116 @@
+openapi: 3.0.3
+info:
+  title: ndungu.dev Developer Resources API
+  version: 1.0.0
+  description: Publicly discoverable API and MCP references for agents integrating with ndungu.dev.
+  contact:
+    name: David Ndungu
+    email: david@sire.run
+    url: https://ndungu.dev/contact/
+servers:
+  - url: https://ndungu.dev
+    description: Production domain
+
+paths:
+  /:
+    get:
+      summary: Homepage
+      description: Retrieve homepage details and human-facing links.
+      responses:
+        '200':
+          description: HTML page and metadata for the homepage.
+  /about/:
+    get:
+      summary: About page
+      description: Personal and professional background.
+      responses:
+        '200':
+          description: HTML page and markdown alternate.
+  /contact/:
+    get:
+      summary: Contact page
+      description: Booking and contact details.
+      responses:
+        '200':
+          description: HTML page and markdown alternate.
+  /privacy/:
+    get:
+      summary: Privacy page
+      description: Privacy policy and data handling details.
+      responses:
+        '200':
+          description: HTML page and markdown alternate.
+  /agent-instructions.md:
+    get:
+      summary: Agent instructions
+      description: Recovery and integration guidance for machine callers.
+      responses:
+        '200':
+          description: Markdown guidance file.
+  /llms.txt:
+    get:
+      summary: Machine-readable summary
+      description: Agent and crawler-friendly summary for services, contacts, and trust pages.
+      responses:
+        '200':
+          description: Public summary file.
+  /api/openapi.yaml:
+    get:
+      summary: OpenAPI document
+      description: This API document.
+      responses:
+        '200':
+          description: OpenAPI YAML payload.
+  /api/:
+    get:
+      summary: Developer resources index
+      description: Human and machine-friendly index for public resources.
+      responses:
+        '200':
+          description: Developer resources page.
+
+  /mcp:
+    post:
+      summary: MCP streamable-HTTP transport
+      description: JSON-RPC endpoint for MCP initialize, tools/list, and tools/call.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - jsonrpc
+                - method
+                - id
+              properties:
+                jsonrpc:
+                  type: string
+                  example: "2.0"
+                id:
+                  type: string
+                method:
+                  type: string
+                  description: "initialize | tools/list | tools/call"
+                params:
+                  type: object
+      responses:
+        '200':
+          description: MCP JSON-RPC result.
+    get:
+      summary: MCP stream readiness check
+      description: Verifies endpoint is reachable.
+      responses:
+        '200':
+          description: Streamable endpoint metadata.
+
+  /mcp/server-card:
+    get:
+      summary: MCP server card
+      description: Server identity and transport metadata for discovery.
+      responses:
+        '200':
+          description: MCP server card JSON.
+
+components:
+  securitySchemes: {}

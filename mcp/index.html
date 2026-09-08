@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MCP endpoint — ndungu.dev</title>
+  <meta name="description" content="ndungu.dev Model Context Protocol (MCP) streamable-HTTP endpoint and tool references." />
+  <link rel="canonical" href="https://ndungu.dev/mcp/" />
+  <meta property="og:site_name" content="David Ndungu" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="ndungu.dev MCP endpoint" />
+  <meta property="og:description" content="ndungu.dev Model Context Protocol (MCP) streamable-HTTP endpoint and tool references." />
+  <meta property="og:url" content="https://ndungu.dev/mcp/" />
+  <meta property="og:image" content="https://ndungu.dev/og-image.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2315bcdf'/%3E%3Ctext x='50%25' y='52%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial,sans-serif' font-size='30' font-weight='700' fill='%230a0a0a'%3EDN%3C/text%3E%3C/svg%3E" />
+  <style>
+    :root { color-scheme: dark; --bg:hsl(0,0%,10%); --bg-alt:hsl(0,0%,16%); --ink:hsl(0,0%,96%); --ink-soft:hsl(0,0%,75%); --border:hsl(0,0%,20%); --accent:#15bcdf; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--ink); font-family: "Sora", -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Helvetica, Arial, sans-serif; font-size: 17px; line-height: 1.65; }
+    .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    header { padding: 36px 0 12px; border-bottom: 1px solid var(--border); }
+    h1 { font-size: clamp(28px, 4vw, 44px); margin: 16px 0; }
+    .panel { background: var(--bg-alt); border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin: 18px 0; }
+    h2 { margin: 0 0 10px; }
+    p { color: var(--ink-soft); margin: 0 0 10px; }
+    ul { color: var(--ink-soft); padding-left: 20px; }
+    code { background: hsl(0,0%,16%); border: 1px solid var(--border); border-radius: 4px; padding: 1px 6px; }
+    .btn { display: inline-block; background: var(--accent); color: #fff; padding: 10px 14px; border-radius: 8px; font-weight: 700; }
+    .btn:hover { filter: brightness(1.1); }
+  </style>
+  <link rel="stylesheet" href="/assets/layout.css">
+</head>
+<body>
+  <main class="wrap" style="padding: 0 24px 52px">
+    <header>
+      <p><a href="/">← Home</a> · <a href="/api/">Developer resources</a> · <a href="/llms.txt">llms.txt</a></p>
+      <h1>MCP endpoint</h1>
+      <p>ndungu.dev exposes a lightweight MCP server for public, non-sensitive references with streamable HTTP transport.</p>
+    </header>
+
+    <section class="panel">
+      <h2>Endpoint and protocol</h2>
+      <p><strong>URL:</strong> <code>https://ndungu.dev/mcp</code></p>
+      <p><strong>Transport:</strong> Streamable HTTP</p>
+      <p><strong>Protocol:</strong> <code>2025-03-26</code></p>
+      <p>Use JSON-RPC methods (<code>initialize</code>, <code>tools/list</code>, <code>tools/call</code>) via <code>POST</code>.</p>
+      <a class="btn" href="/mcp/server-card">View server card</a>
+    </section>
+
+    <section class="panel">
+      <h2>Tool list</h2>
+      <ul>
+        <li><code>get_site_navigation</code> — returns homepage, about, contact, privacy, audit, and API links.</li>
+        <li><code>get_developer_resources</code> — returns OpenAPI, MCP card, and machine-readable index links.</li>
+        <li><code>get_contact_brief</code> — returns practical contact fields for scheduling.</li>
+      </ul>
+    </section>
+
+    <section class="panel">
+      <h2>Discovery docs</h2>
+      <ul>
+        <li><a href="/.well-known/ai-catalog.json">AI catalog (domain discovery)</a></li>
+        <li><a href="/mcp/server-card">MCP server card</a></li>
+        <li><a href="/api/openapi.yaml">OpenAPI</a></li>
+      </ul>
+    </section>
+
+    <section class="panel">
+      <h2>Fallback paths</h2>
+      <p>If an endpoint is wrong or missing, request headers <code>Accept: text/markdown</code> to get a markdown recovery page at the 404 response.</p>
+      <a class="btn" href="/404.md">404 recovery document</a>
+    </section>
+  </main>
+</body>
+</html>

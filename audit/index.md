@@ -14,7 +14,7 @@ Engineering teams of 3 to 60 developers who have rolled Claude Code out and hit 
 
 ## Why now
 
-88% of agent pilots never reach production, stopped by governance and safety gaps, not the model itself. Every week your team runs Claude Code without a hook-blocked destructive-command policy and a settings audit for silent changes is a week you're exposed to the incident that gets a rollout banned instead of shipped.
+Fast code generation helps only if reviews, integration, and releases keep moving. I inspect your actual agent workflow, identify where it stalls or bypasses a control, and test the fixes we agree to make. Every week your team runs Claude Code without a hook-blocked destructive-command policy and a settings audit for silent changes is a week you're exposed to the incident that gets a rollout banned instead of shipped.
 
 ## What you get in one week
 
