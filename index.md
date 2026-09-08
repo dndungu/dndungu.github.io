@@ -58,7 +58,7 @@ These projects demonstrate my work; they are not client case studies.
 
 ## Contact
 
-- [Book a discovery call](https://cal.com/david-ndungu/automation-audit)
+- [Book a discovery call](https://cal.com/david-ndungu/discovery)
 - Phone: +1 (559) 414-8242
 - Email: david@sire.run
 - [Contact details](https://ndungu.dev/contact/)

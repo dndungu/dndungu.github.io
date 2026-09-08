@@ -22,7 +22,7 @@ Production diagnostics and testing inform how I verify agent output. Cross-team 
 
 ## Contact
 
-- Book a call: https://cal.com/david-ndungu/automation-audit
+- Book a call: https://cal.com/david-ndungu/discovery
 - Phone: +1 (559) 414-8242
 - Email: david@sire.run
 - GitHub: https://github.com/dndungu
