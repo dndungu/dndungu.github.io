@@ -37,6 +37,7 @@ Initial discovery call is free. Paid scope, fee, and timeline are agreed before 
 - [Kazi](https://kazi.sire.run) — Coding-agent verification
 - [Dira](https://github.com/kazi-org/dira) — Decision history
 - [Serenity](https://github.com/sirerun/serenity) — Agent memory · in active development
+- [Serenity installation](https://serenity.sire.run/get-started/) — Canonical early-access source/release setup guide
 - [Zerfoo](https://github.com/zerfoo/zerfoo) — ML infrastructure
 - [Mint](https://github.com/sirerun/mint) — Tool integration
 - [Sire](https://sire.run) — Workflow orchestration
