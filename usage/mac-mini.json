@@ -1,12 +1,12 @@
 {
   "machine": "mac-mini",
-  "generated_at": "2026-09-09T04:36:25Z",
+  "generated_at": "2026-09-09T05:01:58Z",
   "totals": {
-    "input_tokens": 3928771,
-    "output_tokens": 183542203,
-    "cache_creation_input_tokens": 1838428227,
-    "cache_read_input_tokens": 58171076639,
-    "messages": 314070
+    "input_tokens": 3929463,
+    "output_tokens": 183917193,
+    "cache_creation_input_tokens": 1840738783,
+    "cache_read_input_tokens": 58233465002,
+    "messages": 314416
   },
   "daily": [
     {
@@ -163,20 +163,20 @@
     },
     {
       "date": "2026-09-09",
-      "messages": 1064,
-      "input_tokens": 2128,
-      "output_tokens": 813501,
-      "cache_creation_input_tokens": 4308174,
-      "cache_read_input_tokens": 259288629
+      "messages": 1410,
+      "input_tokens": 2820,
+      "output_tokens": 1188491,
+      "cache_creation_input_tokens": 6618730,
+      "cache_read_input_tokens": 321676992
     }
   ],
   "models": {
     "claude-sonnet-5": {
-      "messages": 233072,
-      "input_tokens": 466298,
-      "output_tokens": 125428424,
-      "cache_creation_input_tokens": 1253551827,
-      "cache_read_input_tokens": 41335983004
+      "messages": 233418,
+      "input_tokens": 466990,
+      "output_tokens": 125803414,
+      "cache_creation_input_tokens": 1255862383,
+      "cache_read_input_tokens": 41398371367
     },
     "claude-fable-5-1": {
       "messages": 20456,
