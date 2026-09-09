@@ -288,6 +288,26 @@
 
     footer { padding: 40px 0; border-top: 1px solid var(--border); color: var(--ink-faint); font-size: 14px; text-align: center; }
 
+    /* Usage */
+    .usage-grid { grid-template-columns: repeat(4, 1fr); margin-bottom: 18px; }
+    @media (max-width: 780px) { .usage-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 460px) { .usage-grid { grid-template-columns: 1fr; } }
+    .usage-stat { text-align: center; }
+    .usage-value { font-size: clamp(26px, 4vw, 34px); font-weight: 700; letter-spacing: -.02em; color: var(--ink); font-variant-numeric: tabular-nums; }
+    .usage-label { margin-top: 6px; color: var(--ink-faint); font-size: 13.5px; }
+    .usage-chart-card { position: relative; padding: 22px 24px 14px; }
+    .usage-chart-card svg { display: block; width: 100%; height: auto; overflow: visible; }
+    .usage-bar { fill: var(--accent); }
+    .usage-baseline { stroke: var(--border); stroke-width: 1; }
+    .usage-chart-foot { display: flex; justify-content: space-between; margin-top: 6px; font-size: 12.5px; color: var(--ink-faint); }
+    .usage-tooltip {
+      position: absolute; pointer-events: none; opacity: 0; transition: opacity .1s ease;
+      background: var(--ink); color: var(--bg); font-size: 12.5px; font-weight: 600;
+      padding: 6px 10px; border-radius: 8px; white-space: nowrap; transform: translate(-50%, -100%);
+      top: 0; left: 0;
+    }
+    .usage-updated { margin: 14px 0 0; color: var(--ink-faint); font-size: 13px; text-align: center; }
+
     :root { --focus-width: 3px; --focus-offset: 4px; --anchor-gap: 6rem; }
     :focus-visible { outline: var(--focus-width) solid var(--accent); outline-offset: var(--focus-offset); }
     [id] { scroll-margin-top: var(--anchor-gap); }
@@ -319,6 +339,7 @@
         <a href="#how">How it works</a>
         <a href="#pricing">Engagement</a>
         <a href="#work">Open source</a>
+        <a href="#usage">Usage</a>
         <a href="#faq">FAQ</a>
         <a href="/blog/">Blog</a>
         <a href="/about/">About</a>
@@ -406,6 +427,39 @@
       </div>
     </section>
 
+    <section id="usage">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>How much agent work I actually run</h2>
+          <p>Token throughput from the Claude Code sessions I run daily, pulled automatically from local session logs across my machines. Evidence of the practice, not a claim about it.</p>
+        </div>
+        <div class="grid usage-grid">
+          <div class="card usage-stat">
+            <div class="usage-value" id="usage-total">—</div>
+            <div class="usage-label">tokens processed · last 30 days</div>
+          </div>
+          <div class="card usage-stat">
+            <div class="usage-value" id="usage-all-time">—</div>
+            <div class="usage-label">tokens processed · all time</div>
+          </div>
+          <div class="card usage-stat">
+            <div class="usage-value" id="usage-messages">—</div>
+            <div class="usage-label">agent turns · last 30 days</div>
+          </div>
+          <div class="card usage-stat">
+            <div class="usage-value" id="usage-machines">—</div>
+            <div class="usage-label">machines reporting</div>
+          </div>
+        </div>
+        <div class="card usage-chart-card">
+          <svg id="usage-chart" viewBox="0 0 640 160" preserveAspectRatio="none" role="img" aria-label="Daily tokens processed, last 14 days"></svg>
+          <div class="usage-chart-foot"><span id="usage-chart-start"></span><span id="usage-chart-end"></span></div>
+          <div class="usage-tooltip" id="usage-tooltip"></div>
+        </div>
+        <p class="usage-updated" id="usage-updated"></p>
+      </div>
+    </section>
+
     <section id="faq">
       <div class="wrap"><div class="section-head"><h2>Before we talk</h2></div><div class="faq-item"><h3>We already have strong engineers. Why bring you in?</h3><p>Your team keeps ownership. I bring focused time to a recurring agent-workflow problem, implement the agreed changes, and document how they work. You can inspect my public engineering projects before we talk.</p></div><div class="faq-item"><h3>Do we need to share our code on the first call?</h3><p>No. Describe one task, the tools involved, and where you had to intervene. We can discuss what access would be needed before agreeing to any paid work.</p></div><div class="faq-item"><h3>What happens after the discovery call?</h3><p>If there’s a fit, I propose a written scope with deliverables, a fee, a timeline, and acceptance checks. You decide whether to proceed. The call creates no obligation to buy.</p></div><div class="faq-item"><h3>Is this only for Claude Code?</h3><p>Claude Code is a particular focus. The engagement starts with your actual tools and constraints; verification, integrations, and handoffs often extend beyond one coding agent.</p></div><div class="faq-item"><h3>Do we have to adopt your projects?</h3><p>No. I can improve your existing setup. I recommend one of my tools only when it fits the problem, and we agree on the choice before implementation.</p></div><div class="faq-item"><h3>What experience can we inspect?</h3><p>At Zendesk, I led a zero-downtime etcd migration across production Kubernetes clusters and integrated diagnostics across 95% of production services. I also ran a development consultancy and founded Zatiti, which reached 50 paying retailers. My current agent tools are linked above; they demonstrate engineering work, not client consulting results.</p></div><div class="faq-item"><h3>Can you guarantee agents will ship autonomously?</h3><p>No. We agree on a specific result we can test, including where a person still needs to review or approve work. That makes the engagement assessable without promising unattended software delivery.</p></div><div class="faq-item"><h3>What should I bring to the first call?</h3><p>Your current agent setup, one task that went wrong or took too much supervision, and what a better outcome would look like. A public example or a description is enough to start.</p></div>
       </div>
@@ -423,5 +477,105 @@
     </div>
   </footer>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+  (function () {
+    var MACHINES = ['mac-laptop', 'mac-mini', 'dgx-spark'];
+    var USAGE_FIELDS = ['input_tokens', 'output_tokens', 'cache_creation_input_tokens', 'cache_read_input_tokens'];
+
+    function fmtCompact(n) {
+      if (n >= 1e9) return (n / 1e9).toFixed(1).replace(/\.0$/, '') + 'B';
+      if (n >= 1e6) return (n / 1e6).toFixed(1).replace(/\.0$/, '') + 'M';
+      if (n >= 1e3) return (n / 1e3).toFixed(1).replace(/\.0$/, '') + 'K';
+      return String(n);
+    }
+
+    function tokensOf(day) {
+      return USAGE_FIELDS.reduce(function (sum, f) { return sum + (day[f] || 0); }, 0);
+    }
+
+    function fetchReport(machine) {
+      return fetch('usage/' + machine + '.json', { cache: 'no-store' })
+        .then(function (res) { return res.ok ? res.json() : null; })
+        .catch(function () { return null; });
+    }
+
+    Promise.all(MACHINES.map(fetchReport)).then(function (reports) {
+      reports = reports.filter(Boolean);
+      if (!reports.length) return;
+
+      var byDate = {};
+      var latestUpdate = null;
+      reports.forEach(function (r) {
+        (r.daily || []).forEach(function (day) {
+          var bucket = byDate[day.date] || (byDate[day.date] = { date: day.date, messages: 0 });
+          USAGE_FIELDS.concat('messages').forEach(function (f) { bucket[f] = (bucket[f] || 0) + (day[f] || 0); });
+        });
+        if (r.generated_at && (!latestUpdate || r.generated_at > latestUpdate)) latestUpdate = r.generated_at;
+      });
+
+      var dates = Object.keys(byDate).sort();
+      var last30 = dates.slice(-30).map(function (d) { return byDate[d]; });
+      var totalTokens = last30.reduce(function (sum, d) { return sum + tokensOf(d); }, 0);
+      var totalMessages = last30.reduce(function (sum, d) { return sum + d.messages; }, 0);
+      var allTimeTokens = dates.reduce(function (sum, d) { return sum + tokensOf(byDate[d]); }, 0);
+
+      document.getElementById('usage-total').textContent = fmtCompact(totalTokens);
+      document.getElementById('usage-all-time').textContent = fmtCompact(allTimeTokens);
+      document.getElementById('usage-messages').textContent = totalMessages.toLocaleString();
+      document.getElementById('usage-machines').textContent = String(reports.length);
+      if (latestUpdate) {
+        document.getElementById('usage-updated').textContent =
+          'Last synced ' + new Date(latestUpdate).toLocaleString(undefined, { dateStyle: 'medium', timeStyle: 'short' });
+      }
+
+      var last14 = dates.slice(-14).map(function (d) { return byDate[d]; });
+      if (!last14.length) return;
+
+      var svg = document.getElementById('usage-chart');
+      var W = 640, H = 160, baseline = 148, gap = 6;
+      var barW = (W - gap * (last14.length - 1)) / last14.length;
+      var max = Math.max.apply(null, last14.map(tokensOf)) || 1;
+      var ns = 'http://www.w3.org/2000/svg';
+
+      var base = document.createElementNS(ns, 'line');
+      base.setAttribute('x1', 0); base.setAttribute('x2', W);
+      base.setAttribute('y1', baseline); base.setAttribute('y2', baseline);
+      base.setAttribute('class', 'usage-baseline');
+      svg.appendChild(base);
+
+      var bars = last14.map(function (day, i) {
+        var val = tokensOf(day);
+        var h = Math.max(2, (val / max) * (baseline - 8));
+        var x = i * (barW + gap);
+        var y = baseline - h;
+        var rect = document.createElementNS(ns, 'rect');
+        rect.setAttribute('x', x); rect.setAttribute('y', y);
+        rect.setAttribute('width', barW); rect.setAttribute('height', h);
+        rect.setAttribute('rx', Math.min(4, barW / 2));
+        rect.setAttribute('class', 'usage-bar');
+        svg.appendChild(rect);
+        return { x: x, w: barW, date: day.date, val: val };
+      });
+
+      document.getElementById('usage-chart-start').textContent = last14[0].date;
+      document.getElementById('usage-chart-end').textContent = last14[last14.length - 1].date;
+
+      var tooltip = document.getElementById('usage-tooltip');
+      var card = svg.closest('.usage-chart-card');
+      svg.addEventListener('pointermove', function (evt) {
+        var rect = svg.getBoundingClientRect();
+        var relX = ((evt.clientX - rect.left) / rect.width) * W;
+        var idx = Math.min(bars.length - 1, Math.max(0, Math.floor(relX / (barW + gap))));
+        var bar = bars[idx];
+        var cardRect = card.getBoundingClientRect();
+        tooltip.style.left = (evt.clientX - cardRect.left) + 'px';
+        tooltip.style.top = ((rect.top - cardRect.top) + (baseline / H) * rect.height - 10) + 'px';
+        tooltip.textContent = bar.date + ' · ' + bar.val.toLocaleString() + ' tokens';
+        tooltip.style.opacity = 1;
+      });
+      svg.addEventListener('pointerleave', function () { tooltip.style.opacity = 0; });
+    });
+  })();
+  </script>
 </body>
 </html>
