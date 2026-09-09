@@ -2,8 +2,9 @@
 """Aggregate local Claude Code session logs into a small usage report.
 
 Reads every ~/.claude/projects/**/*.jsonl transcript on this machine, sums
-token usage per day and per model, and merges the result into
-usage/<machine>.json in this repo.
+token usage per day, per hour, and per model, and merges the daily/model
+totals into usage/<machine>.json in this repo. The hourly series is not
+merged (see below) — it only backs a rolling "last 24 hours" figure.
 
 Merged, not overwritten: local session logs are not a permanent record — they
 can be pruned, and a project directory can be deleted along with its logs.
@@ -57,16 +58,20 @@ def iter_usage_records(claude_dir):
 def scan(claude_dir):
     """Fresh aggregate from whatever local logs exist right now."""
     daily = defaultdict(lambda: defaultdict(int))
+    hourly = defaultdict(lambda: defaultdict(int))
     models = defaultdict(lambda: defaultdict(int))
     for ts, model, usage in iter_usage_records(claude_dir):
         date = ts[:10]  # YYYY-MM-DD, UTC
+        hour = ts[:13]  # YYYY-MM-DDTHH, UTC
         daily[date]["messages"] += 1
+        hourly[hour]["messages"] += 1
         models[model]["messages"] += 1
         for field in USAGE_FIELDS:
             val = usage.get(field) or 0
             daily[date][field] += val
+            hourly[hour][field] += val
             models[model][field] += val
-    return daily, models
+    return daily, hourly, models
 
 
 def main():
@@ -84,7 +89,7 @@ def main():
         with open(out_path, "r", encoding="utf-8") as f:
             existing = json.load(f)
 
-    fresh_daily, fresh_models = scan(args.claude_dir)
+    fresh_daily, fresh_hourly, fresh_models = scan(args.claude_dir)
 
     # A date in the fresh scan is authoritative (a full re-read of whatever
     # logs currently exist for it); a date missing from the fresh scan but
@@ -106,11 +111,18 @@ def main():
         for field in USAGE_FIELDS + ("messages",):
             totals[field] += row.get(field, 0)
 
+    # Not merged with history: this only backs a rolling "last 24 hours" figure,
+    # which needs true hourly resolution (daily buckets can't tell "today so
+    # far" from "the last 24 hours"). Local logs for the last couple of days
+    # are always still on disk, so a fresh recompute is enough here.
+    hourly_out = [{"hour": h, **fresh_hourly[h]} for h in sorted(fresh_hourly)][-72:]
+
     report = {
         "machine": args.machine,
         "generated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "totals": dict(totals),
         "daily": daily_out,
+        "hourly": hourly_out,
         "models": merged_models,
     }
 

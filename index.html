@@ -435,16 +435,16 @@
         </div>
         <div class="grid usage-grid">
           <div class="card usage-stat">
-            <div class="usage-value" id="usage-total">—</div>
-            <div class="usage-label">tokens processed · last 30 days</div>
+            <div class="usage-value" id="usage-24h">—</div>
+            <div class="usage-label">tokens processed · last 24 hours</div>
           </div>
           <div class="card usage-stat">
-            <div class="usage-value" id="usage-all-time">—</div>
-            <div class="usage-label">tokens processed · all time</div>
+            <div class="usage-value" id="usage-7d">—</div>
+            <div class="usage-label">tokens processed · last 7 days</div>
           </div>
           <div class="card usage-stat">
-            <div class="usage-value" id="usage-messages">—</div>
-            <div class="usage-label">agent turns · last 30 days</div>
+            <div class="usage-value" id="usage-14d">—</div>
+            <div class="usage-label">tokens processed · last 14 days</div>
           </div>
           <div class="card usage-stat">
             <div class="usage-value" id="usage-machines">—</div>
@@ -504,24 +504,39 @@
       if (!reports.length) return;
 
       var byDate = {};
+      var byHour = {};
       var latestUpdate = null;
       reports.forEach(function (r) {
         (r.daily || []).forEach(function (day) {
           var bucket = byDate[day.date] || (byDate[day.date] = { date: day.date, messages: 0 });
           USAGE_FIELDS.concat('messages').forEach(function (f) { bucket[f] = (bucket[f] || 0) + (day[f] || 0); });
         });
+        (r.hourly || []).forEach(function (hr) {
+          var bucket = byHour[hr.hour] || (byHour[hr.hour] = { hour: hr.hour, messages: 0 });
+          USAGE_FIELDS.concat('messages').forEach(function (f) { bucket[f] = (bucket[f] || 0) + (hr[f] || 0); });
+        });
         if (r.generated_at && (!latestUpdate || r.generated_at > latestUpdate)) latestUpdate = r.generated_at;
       });
 
-      var dates = Object.keys(byDate).sort();
-      var last30 = dates.slice(-30).map(function (d) { return byDate[d]; });
-      var totalTokens = last30.reduce(function (sum, d) { return sum + tokensOf(d); }, 0);
-      var totalMessages = last30.reduce(function (sum, d) { return sum + d.messages; }, 0);
-      var allTimeTokens = dates.reduce(function (sum, d) { return sum + tokensOf(byDate[d]); }, 0);
+      var now = Date.now();
+      var DAY = 24 * 60 * 60 * 1000;
 
-      document.getElementById('usage-total').textContent = fmtCompact(totalTokens);
-      document.getElementById('usage-all-time').textContent = fmtCompact(allTimeTokens);
-      document.getElementById('usage-messages').textContent = totalMessages.toLocaleString();
+      var tokensSince = function (cutoffMs) {
+        return Object.keys(byHour).reduce(function (sum, h) {
+          var hourMs = Date.parse(h + ':00:00Z');
+          return hourMs >= cutoffMs ? sum + tokensOf(byHour[h]) : sum;
+        }, 0);
+      };
+      var dates = Object.keys(byDate).sort();
+      var tokensSinceDate = function (cutoffMs) {
+        return dates.reduce(function (sum, d) {
+          return Date.parse(d + 'T00:00:00Z') >= cutoffMs ? sum + tokensOf(byDate[d]) : sum;
+        }, 0);
+      };
+
+      document.getElementById('usage-24h').textContent = fmtCompact(tokensSince(now - DAY));
+      document.getElementById('usage-7d').textContent = fmtCompact(tokensSinceDate(now - 7 * DAY));
+      document.getElementById('usage-14d').textContent = fmtCompact(tokensSinceDate(now - 14 * DAY));
       document.getElementById('usage-machines').textContent = String(reports.length);
       if (latestUpdate) {
         document.getElementById('usage-updated').textContent =
