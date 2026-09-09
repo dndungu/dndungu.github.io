@@ -10,7 +10,7 @@ don't need to share credentials — the site sums whatever files exist.
 ```bash
 cd <path to this repo clone>
 git checkout main   # GitHub Pages only builds main — the sync script refuses to run elsewhere
-MACHINE=mac-laptop   # or mac-mini / dgx-spark — pick one label, used consistently
+MACHINE=mac-laptop   # or mac-mini / dgx — pick one label, used consistently
 ./scripts/claude_usage_sync.sh "$MACHINE"   # generates usage/$MACHINE.json and pushes it once
 
 sed "s#__REPO_DIR__#$(pwd)#" scripts/com.dndungu.claude-usage-sync.mac-laptop.plist.template \
@@ -21,7 +21,12 @@ launchctl load ~/Library/LaunchAgents/com.dndungu.claude-usage-sync.$MACHINE.pli
 ```
 
 This runs the sync every 6 hours (`StartInterval`) and once immediately
-(`RunAtLoad`). Logs land in `/tmp/claude-usage-sync.$MACHINE.log`.
+(`RunAtLoad`). Logs land in `/tmp/claude-usage-sync.$MACHINE.log`. The plist
+template is macOS/launchd; on Linux (e.g. the DGX) use cron or a systemd timer
+calling `scripts/claude_usage_sync.sh "$MACHINE"` on the same schedule instead.
+
+Whatever label you pick here must also be added to the `MACHINES` array in
+`index.html`'s usage script, or the site will never fetch that machine's file.
 
 ## What it does NOT do
 
