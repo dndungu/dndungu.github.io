@@ -17,7 +17,7 @@ fi
 
 python3 scripts/claude_usage_report.py --machine "$MACHINE"
 
-if git diff --quiet -- "usage/${MACHINE}.json" && git diff --cached --quiet -- "usage/${MACHINE}.json"; then
+if [ -z "$(git status --porcelain -- "usage/${MACHINE}.json")" ]; then
   exit 0
 fi
 
