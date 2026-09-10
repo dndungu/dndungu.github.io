@@ -49,7 +49,7 @@ You receive a diagnosis, the agreed implementation, acceptance checks, a walkthr
 
 - [Kazi](https://kazi.sire.run) — Express a goal as machine-checkable conditions and give a coding agent a concrete finish line. Relevant when a successful agent run still leaves you unsure whether the task works.
 - [Dira](https://github.com/kazi-org/dira) — A git-native ledger of decisions and the alternatives they rejected. Keep the reasoning behind a change available when another agent or developer picks up the work.
-- [Serenity](https://github.com/sirerun/serenity) — A personal memory and direction system being built around a git-backed record. It explores how agents can share durable context while keeping consequential changes under human review.
+- [Serenity](https://github.com/sirerun/serenity) — A personal memory and direction system being built around a git-backed record. It explores how agents can share durable context while keeping consequential changes under human review. [Installation guide](https://serenity.sire.run/get-started/) (early access).
 - [Zerfoo](https://github.com/zerfoo/zerfoo) — A machine-learning inference and training framework in Go. This is the infrastructure side of my work: model execution, performance, and the systems beneath agent applications.
 - [Mint](https://github.com/sirerun/mint) — Generate MCP servers from OpenAPI specifications. Relevant when an agent needs a usable connection to your APIs and internal systems.
 - [Sire](https://sire.run) — My platform for durable agent workflows and human approval gates. It is also where I am applying these ideas to my own operations.
