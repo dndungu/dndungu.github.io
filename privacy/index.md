@@ -2,11 +2,9 @@
 
 Last updated September 7, 2026.
 
-ndungu.dev is a personal and consulting site published by David Ndungu. The website is served as static pages. The homepage now links directly to email and booking instead of loading the former AI chat. There are no user accounts.
+ndungu.dev is a personal and consulting site published by David Ndungu. The website is served as static pages and includes an optional AI chat backed by a server on AWS. There are no user accounts.
 
-## Former AI chat
-
-The following describes the earlier chat and any browser tab still running that version. The current homepage does not load it.
+## AI chat
 
 When you send a chat message, your message and recent conversation history are sent to the chat server on AWS, then to OpenRouter and its selected model provider to generate a response. The assistant helps you explore whether David’s consulting services fit your needs. It is AI and may make mistakes. Do not submit secrets, private client details, or sensitive personal information.
 

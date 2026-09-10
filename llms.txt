@@ -1,37 +1,33 @@
-# David Ndungu — Get your AI-built software unstuck
+# Make your coding agents work better together
 
-Hands-on engineering for founders and small teams. Bring one stubborn bug, broken API/MCP integration or agent-generated change you need to ship. Work directly with David, a former Zendesk Staff engineer with 20+ years building software.
+Hands-on consulting for engineering teams using Claude Code, Codex, Cursor and other coding agents. Work directly with David Ndungu to improve shared context, verification, tool integrations and handoffs.
 
-## When to use this service
+## Turn discoveries into a head start
 
-An existing application has a reproducible issue, misleading passing tests, or a clearly defined integration that needs to work in the real workflow. Start with the failing behavior, your stack and your deadline.
+Agents should not have to rediscover the same fix, lose the reasoning behind a decision, or leave your team guessing whether a change works. David helps you identify where the workflow breaks and implement improvements in your existing tools.
 
-## Find the blocker — $500 USD
+Ajent connects agents with shared engineering findings. Consulting brings that same idea into your team's workflow: useful knowledge at the point of work, with sources and checks your engineers can inspect. An Ajent subscription or tool migration is not required. A Global Serenity brain is planned work, not a capability promised by this engagement.
 
-One issue in one repository, up to four engineering hours, written findings, a walkthrough and a repair recommendation. Paid before the diagnostic. Target delivery is two business days after the agreed start and required access. This buys investigation, not a guaranteed fix.
+## Agent workflow assessment
 
-## Get the change ready — $2,500 USD total
+Review a representative task from context gathering through implementation and review. Identify repeated discovery, missing context, weak acceptance checks and integration gaps. Receive prioritized findings, a proposed implementation scope and a baseline for evaluating improvement.
 
-For a separately agreed fix or integration: implementation, regression checks and handoff, up to five business days from the agreed start. The $500 diagnostic is included. After diagnosis, $1,000 starts implementation and $1,000 is due when the written acceptance checks pass. Seven days of support for defects in delivered scope. Larger work and third-party costs require a separate agreement. No automatic upgrade.
+## Implementation and team handoff
 
-Whole-app rewrites, open-ended feature development, security certification and emergency on-call support are excluded. Your team owns the repository, review and release decisions. Use your existing tools; no product subscription is required.
+Put the agreed improvements into your repositories and tools: reusable project knowledge, retrieval and MCP integrations, meaningful acceptance checks, and durable decision records. Deliver working changes, verification evidence and a team walkthrough. Your team owns review and release.
 
-## Evidence and expectations
+## Scope and fees
 
-This is a new consulting offer without client case studies. Public projects and technical writing demonstrate David's own work, not customer outcomes. No guaranteed savings, autonomous delivery or immediate availability. Scope and start date are confirmed before payment.
+Each engagement is scoped to your team's workflow. A fixed fee, timeline, deliverables and acceptance checks are agreed in writing before paid work begins. Assessment and implementation can be commissioned separately. No public day-rate package or introductory discount is offered.
 
-## Contact
+## Discuss your agent workflow
 
-[Send David the problem](mailto:david@sire.run) or [book a free fit call](https://cal.com/david-ndungu/discovery). Include failing behavior, stack, deadline and how you found the site. The first call creates no payment or commitment.
+Tell David which agents you use, where work repeats or needs too much supervision, and what a better result would look like. [Book a free discovery call](https://cal.com/david-ndungu/discovery) or [email David](mailto:david@sire.run). No private code or credentials needed for the first conversation.
 
-[Ask David directly](https://ndungu.dev/#chat) by email or book a free fit call.
+## Explore the work
 
-## Public engineering work
+[Ajent](https://ajent.social), [Kazi](https://kazi.sire.run), [Dira](https://github.com/kazi-org/dira) and [Mint](https://github.com/sirerun/mint) provide public engineering examples. David's projects demonstrate his own practice, not client results or guaranteed savings. [Ask the AI assistant](https://ndungu.dev/#chat) about the work or where to start. It does not book appointments or notify David.
 
-[Ajent](https://ajent.social) · [Kazi](https://kazi.sire.run) · [Dira](https://github.com/kazi-org/dira) · [Serenity](https://github.com/sirerun/serenity) · [Zerfoo](https://github.com/zerfoo/zerfoo) · [Mint](https://github.com/sirerun/mint).
+## When to use
 
-[About David](https://ndungu.dev/about/) · [Contact](https://ndungu.dev/contact/) · [Blog](https://ndungu.dev/blog/) · [Privacy](https://ndungu.dev/privacy/).
-
-## Page formats
-
-[Homepage Markdown](https://ndungu.dev/index.md) · [Diagnostic](https://ndungu.dev/audit/) · [Diagnostic Markdown](https://ndungu.dev/audit/index.md).
+Use this site to understand David’s engineering work or explore paid help improving coding-agent workflows.
