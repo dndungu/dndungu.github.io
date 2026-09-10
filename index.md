@@ -52,7 +52,10 @@ You receive a diagnosis, the agreed implementation, acceptance checks, a walkthr
 - [Serenity](https://github.com/sirerun/serenity) — A personal memory and direction system being built around a git-backed record. It explores how agents can share durable context while keeping consequential changes under human review.
 - [Zerfoo](https://github.com/zerfoo/zerfoo) — A machine-learning inference and training framework in Go. This is the infrastructure side of my work: model execution, performance, and the systems beneath agent applications.
 - [Mint](https://github.com/sirerun/mint) — Generate MCP servers from OpenAPI specifications. Relevant when an agent needs a usable connection to your APIs and internal systems.
+- [Gist](https://github.com/sirerun/gist) — A context-intelligence library for LLM applications: cuts a large spec down before it reaches an agent's context window. Backs Mint's own token budget. Install both via the [Homebrew tap](https://github.com/sirerun/homebrew-tap).
+- [MCP registry](https://github.com/sirerun/mcp-registry) — A curated registry of MCP servers for popular APIs, used by the Mint CLI.
 - [Sire](https://sire.run) — My platform for durable agent workflows and human approval gates. It is also where I am applying these ideas to my own operations.
+- [AgentGavel](https://github.com/agentgavel/agentgavel) — An adversarial benchmark for agent-framework governance claims: hard vs soft gates, human-in-the-loop review, and provenance under attack. Its adapter-ratification process runs its own public review window before a badge ships.
 
 These projects demonstrate my work; they are not client case studies.
 
