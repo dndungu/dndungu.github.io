@@ -13,8 +13,8 @@
     gtag('config', 'G-28JM2750VX');
   </script>
 
-  <title>Claude Code production guardrails audit — David Ndungu</title>
-  <meta name="description" content="A fixed-scope, one-week audit that hardens a Claude Code rollout: hook-blocked destructive commands, permission-mode policy, settings review, one CLAUDE.md standard, MCP ownership, and audit logging." />
+  <title>Coding-agent diagnostic — David Ndungu</title>
+  <meta name="description" content="A $500 diagnostic for one blocked software change or coding-agent workflow. Written findings, then a separately agreed implementation sprint if suitable." />
   <meta name="author" content="David Ndungu" />
   <link rel="canonical" href="https://ndungu.dev/audit/" />
   <link rel="alternate" type="text/markdown" href="/audit/index.md" />
@@ -22,8 +22,8 @@
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Claude Code production guardrails audit" />
-  <meta property="og:description" content="One fixed week: committed, tested guardrails in your repos, a ranked findings report, and a handoff with your team. $6,000 fixed." />
+  <meta property="og:title" content="Coding-agent diagnostic" />
+  <meta property="og:description" content="One issue, one repository, written findings. $500 diagnostic; optional $2,500 scoped implementation sprint." />
   <meta property="og:url" content="https://ndungu.dev/audit/" />
   <meta property="og:image" content="https://ndungu.dev/og-image.png" />
   <meta property="og:image:width" content="1200" />
@@ -40,15 +40,15 @@
     "@context": "https://schema.org",
     "@type": "Service",
     "@id": "https://ndungu.dev/audit/#service",
-    "name": "Claude Code production guardrails audit",
+    "name": "Coding-agent diagnostic",
     "serviceType": "Engineering consulting",
-    "description": "A fixed-scope, one-week audit that hardens a Claude Code rollout with committed, tested guardrails, a ranked findings report, and a team handoff.",
+    "description": "Up to four engineering hours investigating one issue in one repository, with written findings and a walkthrough.",
     "url": "https://ndungu.dev/audit/",
     "provider": { "@id": "https://ndungu.dev/#person" },
     "areaServed": "Remote",
     "offers": {
       "@type": "Offer",
-      "price": "6000",
+      "price": "500",
       "priceCurrency": "USD",
       "url": "https://cal.com/david-ndungu/discovery"
     }
@@ -123,89 +123,7 @@
       </nav>
     </div>
   </header>
-  <main class="wrap">
-    <span class="eyebrow">Fixed-scope engagement</span>
-    <h1>Claude Code production guardrails audit</h1>
-    <p class="lede">One fixed week. Committed, tested guardrails in your repos, a findings report ranked by blast radius, and your team holding the reviewer role at the end.</p>
-    <div class="cta-row">
-      <a href="https://cal.com/david-ndungu/discovery" class="btn big" target="_blank" rel="noopener">Book a discovery call</a>
-      <a href="mailto:david@sire.run?subject=Claude%20Code%20guardrails%20audit" class="btn secondary big">Email David</a>
-    </div>
-    <p class="cta-note">Remote &middot; $6,000 fixed &middot; work directly with David</p>
-
-    <h2>Who it is for</h2>
-    <p>Engineering teams of 3 to 60 developers who have rolled Claude Code out and hit one of these:</p>
-    <ul>
-      <li>An agent ran a destructive command against real data.</li>
-      <li>A setting changed without anyone choosing it.</li>
-      <li>CLAUDE.md files disagree across repos.</li>
-      <li>Nobody owns the MCP servers.</li>
-      <li>The security team blocked the rollout from reaching production.</li>
-    </ul>
-
-    <h2>Why now</h2>
-    <p>88% of agent pilots never reach production, stopped by governance and safety gaps, not the model itself. Every week your team runs Claude Code without a hook-blocked destructive-command policy and a settings audit for silent changes is a week you're exposed to the incident that gets a rollout banned instead of shipped.</p>
-
-    <h2>What you get in one week</h2>
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th>Day</th><th>Work</th><th>Deliverable</th></tr></thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>Inventory: every repo's CLAUDE.md, settings files, hooks, MCP servers, permission modes, and who runs what.</td>
-            <td>Findings report, ranked by blast radius.</td>
-          </tr>
-          <tr>
-            <td>2&ndash;3</td>
-            <td>Guardrails: PreToolUse hooks that block destructive commands (database resets, forced deletes, history rewrites) outside isolated worktrees; permission-mode policy per repo; settings audit for remote access and telemetry. Each guardrail is installed and exercised as a governed lane: the change is proposed by an agent, held for a named reviewer, and applied only after approval, so the audit trail starts on day 2, not after handoff.</td>
-            <td>Committed hooks and settings in your repos, with tests that prove each block fires, and a receipt per applied change.</td>
-          </tr>
-          <tr>
-            <td>4</td>
-            <td>Consistency: one CLAUDE.md template with per-repo overrides; MCP server ownership and allowlist.</td>
-            <td>Template plus a diff for every repo.</td>
-          </tr>
-          <tr>
-            <td>5</td>
-            <td>Observability and handoff: audit logging of tool calls, cost controls, and a 60-minute session with the team. Your fleet's lanes are running under the same governance that installed the guardrails: nothing goes out that you haven't read, and idle costs nothing.</td>
-            <td>Runbook, recording, and your team holding the reviewer role.</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <h2>How the governed lanes work</h2>
-    <p>I run my own fleet on <a href="https://sire.run" target="_blank" rel="noopener">Sire</a>, the runtime I build for exactly this: an agent proposes, a human reads and releases, a receipt records who approved what. Two things it promises your team from day 2: nothing goes out that you haven't read (a human reads each outbound action before it applies, until you release a class of actions), and idle costs nothing (no queued work means no spend).</p>
-    <p>You are not buying Sire. A subscription is not required to keep the guardrails, which live as plain hooks and settings in your repos. Staying on Sire after the week is your choice and a separate conversation.</p>
-
-    <h2>What it does not include</h2>
-    <p>General Claude Code training, prompt writing, or building features. If the team needs those, they are separate engagements. See <a href="/#pricing">the scoped engagement</a>.</p>
-
-    <h2>Price</h2>
-    <div class="price-box">
-      <div class="price">$6,000</div>
-      <p class="sub">Fixed. One week. Remote.</p>
-      <p>First three clients: $3,500, an introductory rate in exchange for a named case study, while this offer has no published track record yet.</p>
-      <div class="cta-row" style="margin-top:8px;"><a href="https://cal.com/david-ndungu/discovery" class="btn" target="_blank" rel="noopener">Book a discovery call</a></div>
-    </div>
-
-    <h2>Guarantee</h2>
-    <div class="callout">
-      <p>If day 1's findings report turns up none of the failure modes this audit exists to catch (unblocked destructive commands, settings enabled without a decision, inconsistent CLAUDE.md files, unowned MCP servers), you pay for day 1 only and the engagement stops there.</p>
-    </div>
-
-    <h2>Why me</h2>
-    <p>I run a fleet of about a dozen parallel Claude Code sessions daily across a dozen repos. Every guardrail in this audit is one I run myself: hook-blocked destructive commands, destructive operations confined to isolated worktrees, permission modes per repo, MCP allowlists, and audit trails through a reconciliation controller I built for converging agent work against machine-checkable predicates. Go and iOS backgrounds; senior engineer. <a href="/about/">More about David.</a></p>
-
-    <h2>Next step</h2>
-    <p>Book a free discovery call. Bring your current Claude Code setup and the incident or blocker that brought you here. If the audit fits, the week starts on a date we agree.</p>
-    <div class="cta-row">
-      <a href="https://cal.com/david-ndungu/discovery" class="btn big" target="_blank" rel="noopener">Book a discovery call</a>
-      <a href="tel:+15594148242" class="btn secondary big">Call (559) 414-8242</a>
-      <a href="mailto:david@sire.run?subject=Claude%20Code%20guardrails%20audit" class="btn secondary big">Email David</a>
-    </div>
-  </main>
+  <main class="wrap"><span class="eyebrow">Focused engineering help</span><h1>Start with one blocked change.</h1><p class="lede">The previous week-long guardrails audit has been replaced by a smaller entry point: a $500 diagnostic, followed by a $2,500 implementation sprint when the issue fits.</p><h2>What the diagnostic covers</h2><p>One issue in one repository, up to four engineering hours, a walkthrough and written findings. Agent permissions, failing verification and broken MCP integrations can be suitable topics. Investigation does not promise a fix or security certification.</p><h2>What happens next</h2><p>We confirm fit, access and a start date before payment. If a fix fits the sprint, we agree on scope and acceptance checks. Your $500 is credited toward the $2,500 total. There is no obligation to continue.</p><div class="cta-row"><a class="btn" href="/#pricing">See the current scope and pricing</a><a class="btn secondary" href="mailto:david@sire.run?subject=Help%20with%20a%20stalled%20software%20change&amp;body=What%20I%20am%20trying%20to%20ship%3A%0A%0AWhat%20is%20failing%3A%0A%0AStack%20and%20coding%20tools%3A%0A%0ADeadline%3A%0A%0AHow%20I%20found%20you%3A%0A">Send me the problem</a></div></main>
   <footer>
     <div class="wrap">© <span id="year"></span> David Ndungu · 20+ years building software · ex-Zendesk</div>
   </footer>

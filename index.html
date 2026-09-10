@@ -18,8 +18,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <title>David Ndungu — Agentic development consulting</title>
-  <meta name="description" content="Hands-on consulting for developers and engineering teams using Claude Code and other coding agents. Improve verification, context, integrations, and handoffs." />
+  <title>David Ndungu — Get your AI-built software unstuck</title>
+  <meta name="description" content="Stuck on a bug, failing integration or agent-generated change? Work directly with David Ndungu. $500 diagnostic; $2,500 scoped implementation sprint." />
   <meta name="author" content="David Ndungu" />
   <link rel="canonical" href="https://ndungu.dev/" />
   <link rel="alternate" type="text/markdown" href="/index.md" />
@@ -27,8 +27,8 @@
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="David Ndungu — Agentic development consulting" />
-  <meta property="og:description" content="Hands-on consulting for developers and engineering teams using Claude Code and other coding agents. Improve verification, context, integrations, and handoffs." />
+  <meta property="og:title" content="David Ndungu — Get your AI-built software unstuck" />
+  <meta property="og:description" content="Stuck on a bug, failing integration or agent-generated change? Work directly with David Ndungu. $500 diagnostic; $2,500 scoped implementation sprint." />
   <meta property="og:url" content="https://ndungu.dev" />
   <meta property="og:image" content="https://ndungu.dev/og-image.png" />
   <meta property="og:image:width" content="1200" />
@@ -323,9 +323,15 @@
       .btn, .card { transition: none; }
       .btn:hover { transform: none; }
     }
+
+    .offer-pricing { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; }
+    .offer-pricing .tier { min-width:0; }
+    .offer-pricing p { font-size:16px; line-height:1.6; }
+    .hero-h1 { font-size:clamp(36px,5.3vw,64px); }
+    .nav-links { flex-wrap:wrap; gap:14px; }
+    .nav-links a { font-size:14px; }
+    @media(max-width:700px) { .offer-pricing { grid-template-columns:1fr; } }
   </style>
-  <link rel="stylesheet" href="/assets/chat.css?v=0de043a22a5c">
-  <script defer src="/assets/chat.js?v=07cba741a136"></script>
   <link rel="stylesheet" href="/assets/layout.css">
 </head>
 <body>
@@ -337,9 +343,9 @@
         <a href="#chat">Ask</a>
         <a href="#pain">Where I help</a>
         <a href="#how">How it works</a>
-        <a href="#pricing">Engagement</a>
+        <a href="#pricing">Pricing</a>
         <a href="#work">Open source</a>
-        <a href="#usage">Usage</a>
+
         <a href="#faq">FAQ</a>
         <a href="/blog/">Blog</a>
         <a href="/about/">About</a>
@@ -356,71 +362,28 @@
       </div>
       <div class="hero-overlay"></div>
       <div class="hero-content">
-        <span class="eyebrow animate-fade-up" style="animation-delay:.1s">Consulting for teams using coding agents</span>
-        <h1 class="hero-h1 animate-fade-up" style="animation-delay:.25s">Make agentic coding<br><span class="accent">work for your team.</span></h1>
-        <p class="hero-sub animate-fade-up" style="animation-delay:.4s">Production engineering experience for your coding-agent workflow.</p>
-        <p class="lede animate-fade-up" style="animation-delay:.55s">Your agents can write code. I help you turn that output into reviewed, tested changes your team can ship—with clear context, useful integrations, and fewer handoffs to babysit.</p>
+        <span class="eyebrow animate-fade-up" style="animation-delay:.1s">Hands-on engineering for founders and small teams</span>
+        <h1 class="hero-h1 animate-fade-up" style="animation-delay:.25s">Your coding agent is stuck.<br><span class="accent">Let’s finish the job.</span></h1>
+        <p class="hero-sub animate-fade-up" style="animation-delay:.4s">One stubborn bug. One broken integration. One change you need to ship.</p>
+        <p class="lede animate-fade-up" style="animation-delay:.55s">I investigate the failure, make the agreed fix, and leave you with tests and a handoff. Start with a $500 diagnostic. If the fix fits a five-day sprint, implementation is $2,500 total, including the diagnostic.</p>
         <div class="cta-row animate-fade-up" style="animation-delay:.7s">
-          <a href="https://cal.com/david-ndungu/discovery" class="btn big">Book a discovery call</a>
-          <a href="#chat" class="btn secondary big">Find the right starting point</a>
-          <a href="mailto:david@sire.run?subject=Agentic%20development%20consulting" class="btn secondary big">Email me</a>
+          <a href="https://cal.com/david-ndungu/discovery" class="btn big">Book a free fit call</a>
+          <a href="#pricing" class="btn secondary big">See scope &amp; pricing</a>
+          <a href="mailto:david@sire.run?subject=Help%20with%20a%20stalled%20software%20change&amp;body=What%20I%20am%20trying%20to%20ship%3A%0A%0AWhat%20is%20failing%3A%0A%0AStack%20and%20coding%20tools%3A%0A%0ADeadline%3A%0A%0AHow%20I%20found%20you%3A%0A" class="btn secondary big">Send me the problem</a>
         </div>
         <p class="cta-note animate-fade-up" style="animation-delay:.85s">Work directly with David &middot; 20+ years building software &middot; 8 years at Zendesk</p>
       </div>
     </section>
 
-    <section id="chat" class="nd-chat" aria-labelledby="chat-title">
-      <div class="wrap">
-        <div class="section-head"><span class="nd-chat-kicker">Interactive workflow guide</span><h2 id="chat-title">Where does your agent workflow get stuck?</h2>
-        <p>Tell my AI assistant what you’re building and where you keep stepping in. Find a useful starting point for working together.</p></div>
-        <div class="composer-shell">
-          <form class="composer" id="askForm">
-            <div class="thread" id="thread" role="log" aria-live="polite" aria-label="Conversation with David’s AI assistant" tabindex="0">
-              <div class="msg ai"><div class="bubble">I’m David’s AI assistant. What are you using coding agents for, and what still takes too much of your time?</div></div>
-            </div>
-            <div class="askbar">
-              <input id="q" name="question" type="text" maxlength="1000" placeholder="Tell me where you’re getting stuck…" autocomplete="off" aria-label="Your message" required>
-              <button class="voice-btn" id="voiceBtn" type="button" aria-pressed="false" aria-label="Dictate your message" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15a3.5 3.5 0 0 0 3.5-3.5V6a3.5 3.5 0 1 0-7 0v5.5A3.5 3.5 0 0 0 12 15zm5.5-3.5a5.5 5.5 0 0 1-11 0H5a7 7 0 0 0 6 6.93V21h2v-2.57A7 7 0 0 0 19 11.5z"/></svg></button>
-              <button class="send" type="submit" aria-label="Send message"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
-            </div>
-          </form>
-          <p class="hint" id="chat-status"></p>
-          <p class="hint">Ready to talk? <a href="https://cal.com/david-ndungu/discovery">Book a free discovery call with David</a>.</p>
-          <noscript><p>Chat needs JavaScript. <a href="/contact/">Contact David directly</a>.</p></noscript>
-        </div>
-      </div>
-    </section>
 
-    <section id="pain">
-      <div class="wrap"><div class="proof-bar" style="margin-bottom:40px;">
-<div class="proof-item"><strong>20+ years building software</strong><span>Former Zendesk Staff engineer and development consultancy founder</span></div>
-<div class="proof-item"><strong>Production reliability</strong><span>Zero-downtime etcd migration across Zendesk’s production Kubernetes clusters</span></div>
-<div class="proof-item"><strong>Built a business, too</strong><span>Founded Zatiti and grew it to 50 paying retailers</span></div></div><div class="section-head"><h2>More generated code. Still too much supervision.</h2><p>For developers, technical founders, and engineering leads already using coding agents—and spending too much time getting their work over the finish line.</p></div><div class="grid"><div class="card"><h3>“Done” still needs checking</h3><p>Turn the intended behavior into checks that run against the real product. Make it clear what passed, what failed, and what still needs human review.</p></div><div class="card"><h3>Every session needs the story again</h3><p>Make repository instructions, decisions, and handoffs useful to the next agent, so you spend less time repeating the same context.</p></div><div class="card"><h3>Agents cannot reach the right tools</h3><p>Connect the APIs, internal tools, and development systems your workflow depends on. Define access and approval boundaries as part of the integration.</p></div><div class="card"><h3>More agents create more coordination</h3><p>Find where work stalls between assignment, implementation, review, and merge. Improve ownership and recovery before adding more parallel work.</p></div></div>
-      </div>
-    </section>
 
-    <section id="outcomes">
-      <div class="wrap">
-        <div class="section-head"><h2>Three useful results we can work toward</h2><p>Choose one bottleneck. We agree on the evidence of improvement before implementation.</p></div>
-        <div class="grid">
-          <article class="card"><h3>Know when the change works</h3><p>Take one stalled agent task through meaningful acceptance checks, implementation, and review. Leave with a repeatable workflow and evidence of what passed.</p><div class="meta">Deliverables: repaired workflow · executable checks · walkthrough</div></article>
-          <article class="card"><h3>Keep decisions between sessions</h3><p>Turn architectural choices, rejected approaches, and review standards into useful repository context. Rehearse a fresh agent session picking up the work.</p><div class="meta">Deliverables: decision ledger · tailored skills · handoff exercise</div></article>
-          <article class="card"><h3>Find what an accepted change costs</h3><p>Compare approaches on representative tasks, counting failed attempts, repairs, and review effort. Identify where a cheaper workflow meets the same acceptance bar.</p><div class="meta">Deliverables: baseline · measured comparison · recommendations</div></article>
-          <article class="card"><h3>Connect the tool your agent keeps asking you to use</h3><p>Connect one agreed API or internal tool with scoped access, error handling, and explicit approval points. Keep the integration in your team’s workflow.</p><div class="meta">Deliverables: tested integration · access boundaries · operating documentation</div></article>
-        </div>
-        <p class="pricing-note">My background includes production diagnostics, infrastructure migrations, and cloud-cost optimization at Zendesk. <a href="/about/">Read the experience behind the work.</a> Cost studies are scoped experiments; savings are established by measurement.</p>
-      </div>
-    </section>
+    <section id="pain"><div class="wrap"><div class="proof-bar"><div class="proof-item"><strong>Work directly with David</strong><span>20+ years building software</span></div><div class="proof-item"><strong>Former Zendesk Staff engineer</strong><span>Production systems, testing and reliability</span></div><div class="proof-item"><strong>Code you can inspect</strong><span>Public tools and engineering write-ups below</span></div></div><div class="section-head"><h2>Bring the problem that keeps coming back.</h2><p>For technical founders and small engineering teams with an existing codebase, a clear blocker and someone who can approve a fix.</p></div><div class="grid"><article class="card"><h3>The fix breaks something else</h3><p>Your agent keeps editing, but the same bug returns. We reproduce the failure and define a regression check before making another change.</p></article><article class="card"><h3>The integration works only in the demo</h3><p>An API, webhook or MCP connection fails in the real workflow. We trace the boundary, handle errors and exercise the agreed path.</p></article><article class="card"><h3>“Tests pass” does not mean it works</h3><p>The application still fails even though the agent says it is done. We check actual behavior and repair the gap.</p></article></div></div></section>
 
-<section id="how">
-      <div class="wrap"><div class="section-head"><h2>Start with one real development task</h2><p>Bring a recent task that stalled, produced misleading results, or needed repeated intervention.</p></div><div class="steps"><div class="step"><span class="num">1</span><h3>Find the bottleneck</h3><p>We discuss your tools, team, and a concrete example. The first call is free and helps us decide whether I can help.</p></div><div class="step"><span class="num">2</span><h3>Agree on the result</h3><p>I propose a bounded engagement with deliverables, acceptance checks, a fee, and a timeline. You approve the scope before paid work starts.</p></div><div class="step"><span class="num">3</span><h3>Implement and hand over</h3><p>I work in your existing workflow, demonstrate the agreed result, and leave documentation your team can use. We compare the outcome with the starting point.</p></div></div>
-      </div>
-    </section>
+    <section id="outcomes"><div class="wrap"><div class="section-head"><h2>A change your team can review and maintain.</h2></div><div class="grid"><article class="card"><h3>A concrete diagnosis</h3><p>The failure, its likely cause, the evidence and a prioritized repair plan. You keep the findings even if we stop after diagnosis.</p></article><article class="card"><h3>The agreed implementation</h3><p>A focused patch in your repository, with checks tied to the behavior we agreed to fix. Your team controls review and release.</p></article><article class="card"><h3>A useful handoff</h3><p>A walkthrough, verification results and instructions for running the checks. Known limitations are written down.</p></article></div></div></section>
 
-    <section id="pricing">
-      <div class="wrap"><div class="section-head"><h2>A focused engagement, with a written scope</h2><p>Start with the part of agentic development that is costing your team the most attention.</p></div><div class="pricing" style="grid-template-columns:minmax(0,560px);justify-content:center;"><div class="tier featured"><h3>Agentic workflow review &amp; implementation</h3><div class="price">Scoped to your team</div><p class="sub">Fee and timeline agreed before work begins.</p><ul><li>Review of one workflow, repository, or recurring failure</li><li>A concrete diagnosis and prioritized changes</li><li>Implementation of the improvements we agree to</li><li>Acceptance checks, a walkthrough, and a handoff your team can maintain</li></ul><div class="cta-row" style="margin-top:24px;"><a class="btn" href="https://cal.com/david-ndungu/discovery">Discuss your workflow</a></div></div></div><p class="pricing-note">Examples include a Claude Code workflow review, MCP integration, or verification and handoff improvements. The tool choice follows your needs; a Sire subscription is not required. Fixed-scope option: the <a href="/audit/">Claude Code production guardrails audit</a>.</p>
-      </div>
-    </section>
+<section id="how"><div class="wrap"><div class="section-head"><h2>Start with the problem, not a long proposal.</h2></div><div class="steps"><div class="step"><span class="num">1</span><h3>Check the fit</h3><p>Email a short description or book a free call. Tell me what fails, your stack and your deadline. No private code needed yet.</p></div><div class="step"><span class="num">2</span><h3>Find the cause</h3><p>We agree on access, scope and a start date. The $500 diagnostic covers one issue in one repository, up to four engineering hours, with written findings.</p></div><div class="step"><span class="num">3</span><h3>Approve the fix</h3><p>If it fits, we agree on a $2,500 total sprint and acceptance checks. The diagnostic is credited. I implement; your team reviews the result.</p></div></div></div></section>
+
+    <section id="pricing"><div class="wrap"><div class="section-head"><h2>Two clear ways to start.</h2><p>USD · remote · work directly with me. Scope and start date confirmed before payment.</p></div><div class="pricing offer-pricing"><article class="tier"><span class="tag">Start here</span><h3>Find the blocker</h3><div class="price">$500</div><p class="sub">Fixed diagnostic · paid before the session</p><ul><li>One issue in one repository</li><li>Up to four hours of investigation and a walkthrough</li><li>Written findings and a repair recommendation</li><li>A sprint scope if the issue is a fit</li></ul><p>This buys investigation and findings, not a guaranteed fix. Target delivery: two business days after the agreed start and required access.</p><a class="btn" href="mailto:david@sire.run?subject=Help%20with%20a%20stalled%20software%20change&amp;body=What%20I%20am%20trying%20to%20ship%3A%0A%0AWhat%20is%20failing%3A%0A%0AStack%20and%20coding%20tools%3A%0A%0ADeadline%3A%0A%0AHow%20I%20found%20you%3A%0A">Ask about the $500 diagnostic</a></article><article class="tier featured"><span class="tag">For an agreed fix</span><h3>Get the change ready</h3><div class="price">$2,500</div><p class="sub">Fixed sprint · diagnostic included</p><ul><li>One agreed fix or integration in one repository</li><li>Up to five business days from the agreed start</li><li>Implementation, regression checks and handoff</li><li>Seven days of support for defects in the delivered scope</li></ul><p>After the diagnostic, $1,000 starts implementation and $1,000 is due when the written acceptance checks pass. Larger work gets a separate quote before it starts.</p><a class="btn" href="https://cal.com/david-ndungu/discovery">Discuss a sprint</a></article></div><p class="pricing-note">Good fit: an existing application with a reproducible issue or a clearly defined integration. Whole-app rewrites, open-ended feature development, security certification and emergency on-call support are outside this offer. Third-party costs are agreed separately.</p><p class="pricing-note">Found me through Ajent? Bring the recurring context, verification or integration problem behind your agent’s question. You can use your existing tools.</p></div></section>
 
     <section id="work">
       <div class="wrap"><div class="section-head"><h2>The tools behind my practice</h2><p>I build and use tools across the agent workflow. Explore the code to assess my engineering approach; these projects are evidence of the work, not claims of client results.</p></div><div class="grid"><article class="card" id="ajent"><span class="tag">Shared knowledge for agents</span><h3><a href="https://ajent.social" target="_blank" rel="noopener">Ajent ↗</a></h3><p>A place for coding agents to share findings and find relevant knowledge from other agents. It explores how useful discoveries can travel beyond the session that produced them.</p><div class="meta">Agent collaboration · shared findings</div></article><article class="card" id="kazi"><span class="tag">Coding-agent verification</span><h3><a href="https://kazi.sire.run" target="_blank" rel="noopener">Kazi ↗</a></h3><p>Express a goal as machine-checkable conditions and give a coding agent a concrete finish line. Relevant when a successful agent run still leaves you unsure whether the task works.</p><div class="meta">Acceptance checks · agent execution</div></article><article class="card" id="dira"><span class="tag">Decision history</span><h3><a href="https://github.com/kazi-org/dira" target="_blank" rel="noopener">Dira ↗</a></h3><p>A git-native ledger of decisions and the alternatives they rejected. Keep the reasoning behind a change available when another agent or developer picks up the work.</p><div class="meta">Decisions · context · git</div></article><article class="card" id="serenity"><span class="tag">Agent memory · in active development</span><h3><a href="https://github.com/sirerun/serenity" target="_blank" rel="noopener">Serenity ↗</a></h3><p>A personal memory and direction system being built around a git-backed record. It explores how agents can share durable context while keeping consequential changes under human review.</p><div class="meta">Memory · direction · human review</div></article><article class="card" id="zerfoo"><span class="tag">ML infrastructure</span><h3><a href="https://github.com/zerfoo/zerfoo" target="_blank" rel="noopener">Zerfoo ↗</a></h3><p>A machine-learning inference and training framework in Go. This is the infrastructure side of my work: model execution, performance, and the systems beneath agent applications.</p><div class="meta">Go · inference · GPU systems</div></article><article class="card" id="mint"><span class="tag">Tool integration</span><h3><a href="https://github.com/sirerun/mint" target="_blank" rel="noopener">Mint ↗</a></h3><p>Generate MCP servers from OpenAPI specifications. Relevant when an agent needs a usable connection to your APIs and internal systems.</p><div class="meta">MCP · OpenAPI · Go</div></article><article class="card" id="sire"><span class="tag">Workflow orchestration</span><h3><a href="https://sire.run" target="_blank" rel="noopener">Sire ↗</a></h3><p>My platform for durable agent workflows and human approval gates. It is also where I am applying these ideas to my own operations.</p><div class="meta">Durable workflows · approvals</div></article></div><p class="pricing-note">Found me through one of these projects? <a href="/contact/">Tell me which one and what you are trying to do.</a> I can help evaluate fit or implement it in your workflow.</p>
@@ -431,7 +394,7 @@
       <div class="wrap">
         <div class="section-head">
           <h2>How much agent work I actually run</h2>
-          <p>Token throughput from the Claude Code sessions I run daily, pulled automatically from local session logs across my machines. Evidence of the practice, not a claim about it.</p>
+          <p>Token throughput from the Claude Code sessions I run daily, pulled automatically from local session logs across my machines. Personal activity only. Token volume is not evidence of quality, savings or client outcomes.</p>
         </div>
         <div class="grid usage-grid">
           <div class="card usage-stat">
@@ -460,15 +423,10 @@
       </div>
     </section>
 
-    <section id="faq">
-      <div class="wrap"><div class="section-head"><h2>Before we talk</h2></div><div class="faq-item"><h3>We already have strong engineers. Why bring you in?</h3><p>Your team keeps ownership. I bring focused time to a recurring agent-workflow problem, implement the agreed changes, and document how they work. You can inspect my public engineering projects before we talk.</p></div><div class="faq-item"><h3>Do we need to share our code on the first call?</h3><p>No. Describe one task, the tools involved, and where you had to intervene. We can discuss what access would be needed before agreeing to any paid work.</p></div><div class="faq-item"><h3>What happens after the discovery call?</h3><p>If there’s a fit, I propose a written scope with deliverables, a fee, a timeline, and acceptance checks. You decide whether to proceed. The call creates no obligation to buy.</p></div><div class="faq-item"><h3>Is this only for Claude Code?</h3><p>Claude Code is a particular focus. The engagement starts with your actual tools and constraints; verification, integrations, and handoffs often extend beyond one coding agent.</p></div><div class="faq-item"><h3>Do we have to adopt your projects?</h3><p>No. I can improve your existing setup. I recommend one of my tools only when it fits the problem, and we agree on the choice before implementation.</p></div><div class="faq-item"><h3>What experience can we inspect?</h3><p>At Zendesk, I led a zero-downtime etcd migration across production Kubernetes clusters and integrated diagnostics across 95% of production services. I also ran a development consultancy and founded Zatiti, which reached 50 paying retailers. My current agent tools are linked above; they demonstrate engineering work, not client consulting results.</p></div><div class="faq-item"><h3>Can you guarantee agents will ship autonomously?</h3><p>No. We agree on a specific result we can test, including where a person still needs to review or approve work. That makes the engagement assessable without promising unattended software delivery.</p></div><div class="faq-item"><h3>What should I bring to the first call?</h3><p>Your current agent setup, one task that went wrong or took too much supervision, and what a better outcome would look like. A public example or a description is enough to start.</p></div>
-      </div>
-    </section>
+    <section id="chat"><div class="wrap"><div class="section-head"><h2>Ask me about your blocker.</h2><p>You do not need to know the cause. A short description of what you expected, what happened and your stack is enough to check the fit.</p></div><div class="cta-row"><a class="btn" href="mailto:david@sire.run?subject=Help%20with%20a%20stalled%20software%20change">Email David directly</a><a class="btn secondary" href="https://cal.com/david-ndungu/discovery">Book a free fit call</a></div></div></section>
+<section id="faq"><div class="wrap"><div class="section-head"><h2>Before you book</h2></div><div class="faq-item"><h3>What if you cannot find or fix the issue?</h3><p>The diagnostic is a bounded investigation. You receive the evidence, remaining unknowns and next steps. I only offer the implementation sprint after we agree on a realistic scope; there is no automatic upgrade.</p></div><div class="faq-item"><h3>What if the sprint needs more work?</h3><p>We agree on acceptance checks and exclusions before starting. If the investigation reveals a scope change, I explain it and get your approval before extra work or charges. The final payment is tied to the agreed checks.</p></div><div class="faq-item"><h3>Do I need to use Claude Code or your products?</h3><p>No. Bring your current stack and coding tools. I assess fit before taking the work, and your team retains ownership of the repository and release decisions.</p></div><div class="faq-item"><h3>Do you have client case studies for this offer?</h3><p>This is a new consulting offer. The public projects and technical writing below demonstrate my own engineering work, not customer outcomes. My background includes eight years at Zendesk and earlier software businesses.</p></div><div class="faq-item"><h3>Can we start immediately?</h3><p>Send the problem and your deadline. I confirm availability and a start date before payment; the site does not reserve a slot or charge you.</p></div></div></section>
 
-    <section id="contact">
-      <div class="wrap"><div class="section-head"><h2>Where does your agent workflow get stuck?</h2><p>Tell me what you use, where you keep stepping in, and what you want to finish. We will use the first conversation to decide on a useful next step.</p></div><div class="cta-row"><a href="https://cal.com/david-ndungu/discovery" class="btn big">Book a discovery call</a><a href="tel:+15594148242" class="btn secondary big">Call (559) 414-8242</a><a href="mailto:david@sire.run?subject=Agentic%20development%20consulting" class="btn secondary big">Email David</a></div><div class="links"><a href="/about/">About David</a><a href="/contact/">Contact details</a><a href="https://github.com/dndungu">GitHub</a><a href="/privacy/">Privacy</a></div>
-      </div>
-    </section>
+    <section id="contact"><div class="wrap"><div class="section-head"><h2>What are you trying to ship?</h2><p>Send me the failing behavior, your stack and your deadline. I’ll tell you whether the diagnostic is a fit.</p></div><div class="cta-row"><a href="mailto:david@sire.run?subject=Help%20with%20a%20stalled%20software%20change&amp;body=What%20I%20am%20trying%20to%20ship%3A%0A%0AWhat%20is%20failing%3A%0A%0AStack%20and%20coding%20tools%3A%0A%0ADeadline%3A%0A%0AHow%20I%20found%20you%3A%0A" class="btn big">Send me the problem</a><a href="https://cal.com/david-ndungu/discovery" class="btn secondary big">Book a free fit call</a></div><p class="pricing-note">No payment or commitment on the first call. Prefer email? <a href="mailto:david@sire.run">david@sire.run</a></p><div class="links"><a href="/about/">About David</a><a href="/contact/">Contact details</a><a href="https://github.com/dndungu">GitHub</a><a href="/privacy/">Privacy</a></div></div></section>
   </main>
 
   <footer>

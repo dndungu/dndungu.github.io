@@ -31,3 +31,9 @@ This is a new consulting offer without client case studies. Public projects and 
 [Ajent](https://ajent.social) · [Kazi](https://kazi.sire.run) · [Dira](https://github.com/kazi-org/dira) · [Serenity](https://github.com/sirerun/serenity) · [Zerfoo](https://github.com/zerfoo/zerfoo) · [Mint](https://github.com/sirerun/mint).
 
 [About David](https://ndungu.dev/about/) · [Contact](https://ndungu.dev/contact/) · [Blog](https://ndungu.dev/blog/) · [Privacy](https://ndungu.dev/privacy/).
+
+## Internal rationale — 2026-09-10
+
+David explicitly authorized repositioning all site content for near-term revenue and confirmed that no clients have come through the site. Codex selected a $500 diagnostic and a $2,500 total implementation sprint as an unvalidated starting offer. This supersedes the older $6,000/$3,500 guardrails audit, including its external wisdom draft. `/audit/` keeps old links usable and points to the current offer. No invented client results, scarcity, guaranteed fix or percentage savings. The AI chat was replaced with direct contact because its separate backend has stale commercial context and does not deliver leads. Assets and backend remain available but are not loaded by the homepage.
+
+Track human inquiries, fit calls, paid diagnostics and accepted sprint proposals separately. The first sales milestone is a paid diagnostic. Website copy is not evidence of demand; active distribution is needed. Outreach drafts may be prepared but sends require authorization.
