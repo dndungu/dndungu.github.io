@@ -1,12 +1,12 @@
 {
   "machine": "dgx",
-  "generated_at": "2026-09-11T01:00:40Z",
+  "generated_at": "2026-09-11T07:00:37Z",
   "totals": {
-    "input_tokens": 100936511,
-    "output_tokens": 37890743,
+    "input_tokens": 105358561,
+    "output_tokens": 38174636,
     "cache_creation_input_tokens": 305459660,
-    "cache_read_input_tokens": 15189128933,
-    "messages": 63171
+    "cache_read_input_tokens": 15202535141,
+    "messages": 63342
   },
   "daily": [
     {
@@ -208,25 +208,17 @@
       "output_tokens": 6204493,
       "cache_creation_input_tokens": 26557351,
       "cache_read_input_tokens": 2826181347
+    },
+    {
+      "date": "2026-09-11",
+      "messages": 171,
+      "input_tokens": 4422050,
+      "output_tokens": 283893,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 13406208
     }
   ],
   "hourly": [
-    {
-      "hour": "2026-08-31T23",
-      "messages": 14,
-      "input_tokens": 177041,
-      "output_tokens": 11739,
-      "cache_creation_input_tokens": 0,
-      "cache_read_input_tokens": 423104
-    },
-    {
-      "hour": "2026-09-01T04",
-      "messages": 22,
-      "input_tokens": 0,
-      "output_tokens": 0,
-      "cache_creation_input_tokens": 0,
-      "cache_read_input_tokens": 0
-    },
     {
       "hour": "2026-09-01T05",
       "messages": 22,
@@ -786,6 +778,22 @@
       "output_tokens": 45543,
       "cache_creation_input_tokens": 72873,
       "cache_read_input_tokens": 77981533
+    },
+    {
+      "hour": "2026-09-11T05",
+      "messages": 160,
+      "input_tokens": 3804486,
+      "output_tokens": 272516,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 12570624
+    },
+    {
+      "hour": "2026-09-11T06",
+      "messages": 11,
+      "input_tokens": 617564,
+      "output_tokens": 11377,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 835584
     }
   ],
   "models": {
@@ -858,6 +866,13 @@
       "output_tokens": 11780,
       "cache_creation_input_tokens": 272422,
       "cache_read_input_tokens": 1109130
+    },
+    "glm-5.3-flash": {
+      "messages": 171,
+      "input_tokens": 4422050,
+      "output_tokens": 283893,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 13406208
     }
   }
 }
