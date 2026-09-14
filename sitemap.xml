@@ -32,9 +32,15 @@
   </url>
   <url>
     <loc>https://ndungu.dev/blog/</loc>
-    <lastmod>2026-07-17</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ndungu.dev/blog/the-post-i-should-have-written-first.html</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://ndungu.dev/blog/i-run-a-dozen-claude-sessions-at-once.html</loc>
