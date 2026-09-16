@@ -24,6 +24,18 @@
 .nd-chat [hidden]{display:none!important}
 .nd-chat .hint{margin:.9rem 0 0;text-align:center;color:var(--dim);font-size:.78rem}
 .nd-chat .retry{font:inherit;color:var(--sire);background:none;border:0;padding:0;text-decoration:underline;cursor:pointer}
+.nd-chat .booking-bubble{max-width:92%!important}
+.nd-chat .booking-status{margin:0 0 .5rem;color:var(--heading);font-size:.88rem}
+.nd-chat .booking-status a{color:var(--sire)}
+.nd-chat .booking-days{display:flex;flex-direction:column;gap:.6rem;max-height:260px;overflow-y:auto}
+.nd-chat .booking-day-label{font-size:.78rem;font-weight:700;color:var(--dim);text-transform:uppercase;letter-spacing:.06em;margin-bottom:.3rem}
+.nd-chat .booking-slots{display:flex;flex-wrap:wrap;gap:.4rem}
+.nd-chat .booking-slot{font:inherit;font-size:.82rem;padding:.35rem .65rem;border-radius:8px;border:1px solid var(--line);background:var(--bg2);color:var(--heading);cursor:pointer;transition:border-color .15s,transform .15s var(--ease)}
+.nd-chat .booking-slot:hover{border-color:var(--sire);transform:translateY(-1px)}
+.nd-chat .booking-form{display:flex;flex-direction:column;gap:.5rem;max-width:280px}
+.nd-chat .booking-form input{font:inherit;font-size:.9rem;padding:.5rem .65rem;border-radius:8px;border:1px solid var(--line);background:color-mix(in srgb,var(--bg-alt) 72%,transparent);color:var(--heading)}
+.nd-chat .booking-form button[type="submit"]{font:inherit;font-size:.88rem;font-weight:600;padding:.5rem .8rem;border-radius:8px;border:1px solid var(--heading);background:var(--heading);color:var(--bg);cursor:pointer}
+.nd-chat .booking-form button[type="submit"]:disabled{opacity:.6;cursor:default}
 .nd-chat :focus-visible{outline:3px solid var(--sire);outline-offset:4px}
 @keyframes chat-pulse{50%{opacity:.3}}
 @keyframes chat-lift{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
