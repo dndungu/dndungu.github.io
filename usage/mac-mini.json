@@ -1,12 +1,12 @@
 {
   "machine": "mac-mini",
-  "generated_at": "2026-09-15T18:54:49Z",
+  "generated_at": "2026-09-16T00:55:06Z",
   "totals": {
-    "input_tokens": 4250799,
-    "output_tokens": 228922607,
-    "cache_creation_input_tokens": 2323273044,
-    "cache_read_input_tokens": 74450059054,
-    "messages": 372159
+    "input_tokens": 4250873,
+    "output_tokens": 229012886,
+    "cache_creation_input_tokens": 2323991780,
+    "cache_read_input_tokens": 74452889441,
+    "messages": 372196
   },
   "daily": [
     {
@@ -387,30 +387,22 @@
     },
     {
       "date": "2026-09-15",
-      "messages": 59,
-      "input_tokens": 118,
-      "output_tokens": 171143,
-      "cache_creation_input_tokens": 1190652,
-      "cache_read_input_tokens": 4424061
+      "messages": 61,
+      "input_tokens": 122,
+      "output_tokens": 171475,
+      "cache_creation_input_tokens": 1294936,
+      "cache_read_input_tokens": 4502531
+    },
+    {
+      "date": "2026-09-16",
+      "messages": 35,
+      "input_tokens": 70,
+      "output_tokens": 89947,
+      "cache_creation_input_tokens": 614452,
+      "cache_read_input_tokens": 2751917
     }
   ],
   "hourly": [
-    {
-      "hour": "2026-09-08T19",
-      "messages": 120,
-      "input_tokens": 240,
-      "output_tokens": 110886,
-      "cache_creation_input_tokens": 1118517,
-      "cache_read_input_tokens": 24616621
-    },
-    {
-      "hour": "2026-09-08T20",
-      "messages": 184,
-      "input_tokens": 368,
-      "output_tokens": 223183,
-      "cache_creation_input_tokens": 1789762,
-      "cache_read_input_tokens": 35445100
-    },
     {
       "hour": "2026-09-08T21",
       "messages": 1346,
@@ -970,6 +962,22 @@
       "output_tokens": 87031,
       "cache_creation_input_tokens": 566792,
       "cache_read_input_tokens": 2389346
+    },
+    {
+      "hour": "2026-09-15T20",
+      "messages": 2,
+      "input_tokens": 4,
+      "output_tokens": 332,
+      "cache_creation_input_tokens": 104284,
+      "cache_read_input_tokens": 78470
+    },
+    {
+      "hour": "2026-09-16T00",
+      "messages": 35,
+      "input_tokens": 70,
+      "output_tokens": 89947,
+      "cache_creation_input_tokens": 614452,
+      "cache_read_input_tokens": 2751917
     }
   ],
   "models": {
