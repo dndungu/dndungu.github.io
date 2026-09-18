@@ -28,6 +28,16 @@ Tell David which agents you use, where work repeats or needs too much supervisio
 
 [Ajent](https://ajent.social), [Kazi](https://kazi.sire.run), [Dira](https://github.com/kazi-org/dira) and [Mint](https://github.com/sirerun/mint) provide public engineering examples. David's projects demonstrate his own practice, not client results or guaranteed savings. [Ask the AI assistant](https://ndungu.dev/#chat) about the work or where to start. It does not book appointments or notify David.
 
-## When to use
+## When to use this site
 
 Use this site to understand David’s engineering work or explore paid help improving coding-agent workflows.
+
+## Machine-readable resources
+
+- [Agent instructions](https://ndungu.dev/agent-instructions.md) — dedicated entry point for coding agents
+- [Developer resources](https://ndungu.dev/api/) — OpenAPI spec and integration docs — [markdown](https://ndungu.dev/api/index.md)
+- [MCP endpoint](https://ndungu.dev/mcp) — streamable-HTTP endpoint and tool metadata — [markdown](https://ndungu.dev/mcp/index.md)
+- [MCP server card](https://ndungu.dev/mcp/server-card)
+- [AI catalog](https://ndungu.dev/.well-known/ai-catalog.json)
+- [OpenAPI spec](https://ndungu.dev/api/openapi.yaml)
+- [Sire brand page](https://ndungu.dev/sire/) — direct brand anchor and identity framing — [markdown](https://ndungu.dev/sire/index.md)
