@@ -278,7 +278,7 @@ async function handleMcpEndpoint(request) {
                   person: "David Ndungu",
                   email: "david@sire.run",
                   phone: "+1 (559) 414-8242",
-                  booking: "https://cal.com/david-ndungu/automation-audit",
+                  booking: "https://cal.com/david-ndungu/discovery",
                 },
                 null,
                 2,
