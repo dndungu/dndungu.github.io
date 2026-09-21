@@ -1,6 +1,6 @@
 # About David Ndungu
 
-I'm a software engineer with 20+ years building software, including eight years at Zendesk across test, senior, and staff engineering roles. I have also run a development consultancy and founded Zatiti, an e-commerce SaaS that reached 50 paying retailers. Today I build open-source agent infrastructure and help engineering teams use coding agents effectively.
+I'm a software engineer with 20+ years building software, including eight years at Zendesk across test, senior, and staff engineering roles. I have also run a development consultancy and founded an e-commerce SaaS that reached 50 paying retailers. Today I build open-source agent infrastructure and help engineering teams use coding agents effectively.
 
 ## What I build and how I help
 
@@ -14,7 +14,7 @@ At Zendesk, I designed and delivered a zero-downtime etcd v2-to-v3 migration acr
 
 ## Building for customers
 
-Before Zendesk, I founded and ran DavidDesigns, delivering custom websites and web applications. I later founded Gereji and launched Zatiti, growing it from zero to 50 paying retailers and joining the Savannah Fund accelerator. That experience shapes how I scope consulting: a useful result, clear acceptance, and a handover the customer can maintain.
+Before Zendesk, I founded and ran DavidDesigns, delivering custom websites and web applications. I later founded Gereji and launched an e-commerce SaaS for retailers, growing it from zero to 50 paying retailers and joining the Savannah Fund accelerator. That experience shapes how I scope consulting: a useful result, clear acceptance, and a handover the customer can maintain.
 
 ## How that experience applies now
 
