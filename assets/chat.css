@@ -28,3 +28,8 @@
 @keyframes chat-pulse{50%{opacity:.3}}
 @keyframes chat-lift{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
 @media(prefers-reduced-motion:reduce){.nd-chat *{animation:none!important;transition:none!important}.nd-chat .thread{mask-image:none}}
+
+.nd-chat .chat-controls{display:flex;align-items:center;gap:.55rem;flex-wrap:wrap;font-size:.78rem;color:var(--dim)}
+.nd-chat .chat-controls select{flex:1;min-width:100px;max-width:100%;overflow:hidden}
+.nd-chat .chat-controls select,.nd-chat .chat-controls button{font:inherit;color:var(--ink);background:var(--bg-alt);border:1px solid var(--border);border-radius:6px;padding:.4rem .5rem}
+.nd-chat .chat-controls button{cursor:pointer}.nd-chat button:disabled{opacity:.5;cursor:wait}
