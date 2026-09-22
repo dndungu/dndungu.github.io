@@ -1,12 +1,12 @@
 {
   "machine": "mac-mini",
-  "generated_at": "2026-09-22T00:59:25Z",
+  "generated_at": "2026-09-22T06:59:38Z",
   "totals": {
-    "input_tokens": 4142572,
-    "output_tokens": 236324691,
-    "cache_creation_input_tokens": 2311464629,
-    "cache_read_input_tokens": 73883797635,
-    "messages": 367641
+    "input_tokens": 4150163,
+    "output_tokens": 237691633,
+    "cache_creation_input_tokens": 2325368546,
+    "cache_read_input_tokens": 74487275506,
+    "messages": 370629
   },
   "daily": [
     {
@@ -443,62 +443,14 @@
     },
     {
       "date": "2026-09-22",
-      "messages": 692,
-      "input_tokens": 1894,
-      "output_tokens": 313374,
-      "cache_creation_input_tokens": 4197756,
-      "cache_read_input_tokens": 122192322
+      "messages": 3680,
+      "input_tokens": 9485,
+      "output_tokens": 1680316,
+      "cache_creation_input_tokens": 18101673,
+      "cache_read_input_tokens": 725670193
     }
   ],
   "hourly": [
-    {
-      "hour": "2026-09-10T19",
-      "messages": 640,
-      "input_tokens": 1280,
-      "output_tokens": 512753,
-      "cache_creation_input_tokens": 1251181,
-      "cache_read_input_tokens": 146293048
-    },
-    {
-      "hour": "2026-09-10T20",
-      "messages": 73,
-      "input_tokens": 144,
-      "output_tokens": 53362,
-      "cache_creation_input_tokens": 105341,
-      "cache_read_input_tokens": 14778080
-    },
-    {
-      "hour": "2026-09-10T21",
-      "messages": 66,
-      "input_tokens": 130,
-      "output_tokens": 58406,
-      "cache_creation_input_tokens": 416428,
-      "cache_read_input_tokens": 14026011
-    },
-    {
-      "hour": "2026-09-10T23",
-      "messages": 43,
-      "input_tokens": 86,
-      "output_tokens": 26927,
-      "cache_creation_input_tokens": 487822,
-      "cache_read_input_tokens": 10828102
-    },
-    {
-      "hour": "2026-09-11T00",
-      "messages": 372,
-      "input_tokens": 744,
-      "output_tokens": 517993,
-      "cache_creation_input_tokens": 2599164,
-      "cache_read_input_tokens": 79895268
-    },
-    {
-      "hour": "2026-09-11T01",
-      "messages": 62,
-      "input_tokens": 124,
-      "output_tokens": 56710,
-      "cache_creation_input_tokens": 83812,
-      "cache_read_input_tokens": 13265961
-    },
     {
       "hour": "2026-09-11T02",
       "messages": 299,
@@ -1021,11 +973,59 @@
     },
     {
       "hour": "2026-09-22T00",
+      "messages": 695,
+      "input_tokens": 1920,
+      "output_tokens": 317029,
+      "cache_creation_input_tokens": 4282232,
+      "cache_read_input_tokens": 122346974
+    },
+    {
+      "hour": "2026-09-22T01",
+      "messages": 249,
+      "input_tokens": 565,
+      "output_tokens": 93295,
+      "cache_creation_input_tokens": 1010118,
+      "cache_read_input_tokens": 29676483
+    },
+    {
+      "hour": "2026-09-22T02",
+      "messages": 128,
+      "input_tokens": 1122,
+      "output_tokens": 139475,
+      "cache_creation_input_tokens": 805084,
+      "cache_read_input_tokens": 27197057
+    },
+    {
+      "hour": "2026-09-22T03",
       "messages": 692,
-      "input_tokens": 1894,
-      "output_tokens": 313374,
-      "cache_creation_input_tokens": 4197756,
-      "cache_read_input_tokens": 122192322
+      "input_tokens": 1440,
+      "output_tokens": 318229,
+      "cache_creation_input_tokens": 2658025,
+      "cache_read_input_tokens": 134231186
+    },
+    {
+      "hour": "2026-09-22T04",
+      "messages": 175,
+      "input_tokens": 840,
+      "output_tokens": 83904,
+      "cache_creation_input_tokens": 1904075,
+      "cache_read_input_tokens": 37837085
+    },
+    {
+      "hour": "2026-09-22T05",
+      "messages": 986,
+      "input_tokens": 2024,
+      "output_tokens": 434604,
+      "cache_creation_input_tokens": 4550003,
+      "cache_read_input_tokens": 190579391
+    },
+    {
+      "hour": "2026-09-22T06",
+      "messages": 755,
+      "input_tokens": 1574,
+      "output_tokens": 293780,
+      "cache_creation_input_tokens": 2892136,
+      "cache_read_input_tokens": 183802017
     }
   ],
   "models": {
@@ -1037,11 +1037,11 @@
       "cache_read_input_tokens": 50602895194
     },
     "claude-fable-5-1": {
-      "messages": 21171,
+      "messages": 21511,
       "input_tokens": 1439467,
-      "output_tokens": 20587246,
-      "cache_creation_input_tokens": 102581491,
-      "cache_read_input_tokens": 4235594766
+      "output_tokens": 20784307,
+      "cache_creation_input_tokens": 103421809,
+      "cache_read_input_tokens": 4307919722
     },
     "claude-opus-5": {
       "messages": 56985,
@@ -1074,9 +1074,9 @@
     "claude-haiku-4-5-20251001": {
       "messages": 1797,
       "input_tokens": 16279,
-      "output_tokens": 510684,
+      "output_tokens": 515322,
       "cache_creation_input_tokens": 12903864,
-      "cache_read_input_tokens": 80667994
+      "cache_read_input_tokens": 81323224
     },
     "claude-opus-4-8": {
       "messages": 6028,
