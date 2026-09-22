@@ -10,7 +10,11 @@ When you send a chat message, your message and recent conversation history are s
 
 The application saves messages and AI replies in an encrypted database on AWS so David can review conversations and you can resume them. Saved chats remain until deleted; there is no automatic expiry. Your browser stores private recovery keys and short chat titles in local storage. Anyone using the same browser profile can reopen those chats. Clearing browser data removes your access keys but does not delete the server transcripts. Chats do not automatically follow you to another browser or device. Use Delete chat to remove the saved conversation, or contact David for a deletion request. Disaster-recovery backups may retain deleted data for up to 35 days. Messages are not written to application logs. The server uses IP addresses temporarily for request limits. AWS, OpenRouter, and model providers process request data under their own policies; their retention may differ from the application’s. See [OpenRouter’s privacy policy](https://openrouter.ai/privacy).
 
-David can read saved transcripts through a protected review page. The chat does not send lead notifications or book appointments. To discuss work with him, use the booking or contact links. If your browser offers voice input and you activate it, speech may be processed by your browser’s speech recognition provider; the resulting text is only sent to the chat when you submit it.
+David can read saved transcripts through a protected review page. You can book a discovery call inside chat after reviewing and explicitly confirming the appointment. The chat does not send separate lead notifications. If your browser offers voice input and you activate it, speech may be processed by your browser’s speech recognition provider; the resulting text is only sent to the chat when you submit it.
+
+## Booking inside chat
+
+When you book inside chat, your name, email, selected time, time zone and booking status are saved with the conversation. These structured booking fields are not sent to the AI model. After you review and confirm, the server sends them to Cal.com to create the appointment and send invitations. Cal.com and the connected calendar and meeting providers process booking data under their own policies. Deleting a chat does not cancel the appointment or delete Cal.com’s records; use your invitation email to cancel or reschedule. See [Cal.com’s privacy policy](https://cal.com/privacy).
 
 ## Analytics
 

@@ -333,8 +333,8 @@
     @media(max-width:700px) { .offer-pricing { grid-template-columns:1fr; } }
   </style>
   <link rel="stylesheet" href="/assets/layout.css">
-  <link rel="stylesheet" href="/assets/chat.css?v=transcripts-20260921">
-  <script defer src="/assets/chat.js?v=transcripts-20260921"></script>
+  <link rel="stylesheet" href="/assets/chat.css?v=booking-20260922">
+  <script defer src="/assets/chat.js?v=booking-20260922"></script>
 </head>
 <body>
   <a class="skip-link" href="#top">Skip to content</a>
@@ -431,19 +431,19 @@
         <p>Tell my AI assistant what you’re building and where you keep stepping in. Find a useful starting point for working together.</p></div>
         <div class="composer-shell">
           <div class="chat-controls"><label for="chat-history">Saved chats</label><select id="chat-history" aria-label="Saved conversations"></select><button id="chat-new" type="button">New chat</button><button id="chat-delete" type="button">Delete chat</button></div>
-          <form class="composer" id="askForm">
+          <div class="composer">
             <div class="thread" id="thread" role="log" aria-live="polite" aria-label="Conversation with David’s AI assistant" tabindex="0">
               <div class="msg ai"><div class="bubble">I’m David’s AI assistant. What are you using coding agents for, and what still takes too much of your time?</div></div>
             </div>
-            <div class="askbar">
+            <form class="askbar" id="askForm">
               <input id="q" name="question" type="text" maxlength="1000" placeholder="Tell me where you’re getting stuck…" autocomplete="off" aria-label="Your message" required>
               <button class="voice-btn" id="voiceBtn" type="button" aria-pressed="false" aria-label="Dictate your message" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15a3.5 3.5 0 0 0 3.5-3.5V6a3.5 3.5 0 1 0-7 0v5.5A3.5 3.5 0 0 0 12 15zm5.5-3.5a5.5 5.5 0 0 1-11 0H5a7 7 0 0 0 6 6.93V21h2v-2.57A7 7 0 0 0 19 11.5z"/></svg></button>
               <button class="send" type="submit" aria-label="Send message"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
-            </div>
-          </form>
+            </form>
+          </div>
           <p class="hint" id="chat-status" role="status"></p>
           <p class="hint">Chats are saved and available for David to review. Messages are processed by OpenRouter and its model provider. Avoid sensitive information. <a href="/privacy/">Privacy details</a>.</p>
-          <p class="hint">Ready to talk? <a href="https://cal.com/david-ndungu/discovery">Book a free discovery call with David</a>.</p>
+          <p class="hint">Ready to talk? <button class="retry" type="button" data-book-call>Book a free discovery call here</button>.</p>
           <noscript><p>Chat needs JavaScript. <a href="/contact/">Contact David directly</a>.</p></noscript>
         </div>
       </div>
