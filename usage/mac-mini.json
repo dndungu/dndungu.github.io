@@ -1,12 +1,12 @@
 {
   "machine": "mac-mini",
-  "generated_at": "2026-09-22T19:00:03Z",
+  "generated_at": "2026-09-22T20:40:55Z",
   "totals": {
-    "input_tokens": 4154103,
-    "output_tokens": 238796250,
-    "cache_creation_input_tokens": 2333260211,
-    "cache_read_input_tokens": 74821797176,
-    "messages": 372460
+    "input_tokens": 4156491,
+    "output_tokens": 239431324,
+    "cache_creation_input_tokens": 2341282579,
+    "cache_read_input_tokens": 75089700974,
+    "messages": 373654
   },
   "daily": [
     {
@@ -443,30 +443,14 @@
     },
     {
       "date": "2026-09-22",
-      "messages": 5511,
-      "input_tokens": 13425,
-      "output_tokens": 2784933,
-      "cache_creation_input_tokens": 25993338,
-      "cache_read_input_tokens": 1060191863
+      "messages": 6705,
+      "input_tokens": 15813,
+      "output_tokens": 3420007,
+      "cache_creation_input_tokens": 34015706,
+      "cache_read_input_tokens": 1328095661
     }
   ],
   "hourly": [
-    {
-      "hour": "2026-09-11T08",
-      "messages": 4,
-      "input_tokens": 8,
-      "output_tokens": 8570,
-      "cache_creation_input_tokens": 2106,
-      "cache_read_input_tokens": 1170856
-    },
-    {
-      "hour": "2026-09-11T14",
-      "messages": 24,
-      "input_tokens": 48,
-      "output_tokens": 30270,
-      "cache_creation_input_tokens": 247121,
-      "cache_read_input_tokens": 1895593
-    },
     {
       "hour": "2026-09-11T21",
       "messages": 82,
@@ -1026,6 +1010,22 @@
       "output_tokens": 100121,
       "cache_creation_input_tokens": 722970,
       "cache_read_input_tokens": 19951333
+    },
+    {
+      "hour": "2026-09-22T19",
+      "messages": 988,
+      "input_tokens": 1976,
+      "output_tokens": 550778,
+      "cache_creation_input_tokens": 5795453,
+      "cache_read_input_tokens": 217570363
+    },
+    {
+      "hour": "2026-09-22T20",
+      "messages": 206,
+      "input_tokens": 412,
+      "output_tokens": 84296,
+      "cache_creation_input_tokens": 2226915,
+      "cache_read_input_tokens": 50333435
     }
   ],
   "models": {
