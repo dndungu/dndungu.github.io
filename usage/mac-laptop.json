@@ -1,12 +1,12 @@
 {
   "machine": "mac-laptop",
-  "generated_at": "2026-09-27T16:33:51Z",
+  "generated_at": "2026-09-27T22:34:10Z",
   "totals": {
-    "input_tokens": 207273666,
-    "output_tokens": 97139616,
-    "cache_creation_input_tokens": 1255594250,
-    "cache_read_input_tokens": 38146067387,
-    "messages": 166429
+    "input_tokens": 207276114,
+    "output_tokens": 97553159,
+    "cache_creation_input_tokens": 1260907429,
+    "cache_read_input_tokens": 38438245681,
+    "messages": 167597
   },
   "daily": [
     {
@@ -411,30 +411,14 @@
     },
     {
       "date": "2026-09-27",
-      "messages": 1329,
-      "input_tokens": 2702,
-      "output_tokens": 548580,
-      "cache_creation_input_tokens": 7384975,
-      "cache_read_input_tokens": 191593342
+      "messages": 2497,
+      "input_tokens": 5150,
+      "output_tokens": 962123,
+      "cache_creation_input_tokens": 12698154,
+      "cache_read_input_tokens": 483771636
     }
   ],
   "hourly": [
-    {
-      "hour": "2026-09-19T14",
-      "messages": 155,
-      "input_tokens": 2832,
-      "output_tokens": 107582,
-      "cache_creation_input_tokens": 6977715,
-      "cache_read_input_tokens": 93827839
-    },
-    {
-      "hour": "2026-09-19T15",
-      "messages": 78,
-      "input_tokens": 788,
-      "output_tokens": 38794,
-      "cache_creation_input_tokens": 4997574,
-      "cache_read_input_tokens": 45590898
-    },
     {
       "hour": "2026-09-19T16",
       "messages": 5,
@@ -994,6 +978,22 @@
       "output_tokens": 2122,
       "cache_creation_input_tokens": 287068,
       "cache_read_input_tokens": 49782
+    },
+    {
+      "hour": "2026-09-27T17",
+      "messages": 599,
+      "input_tokens": 1266,
+      "output_tokens": 237691,
+      "cache_creation_input_tokens": 3606203,
+      "cache_read_input_tokens": 146225899
+    },
+    {
+      "hour": "2026-09-27T18",
+      "messages": 569,
+      "input_tokens": 1182,
+      "output_tokens": 175852,
+      "cache_creation_input_tokens": 1706976,
+      "cache_read_input_tokens": 145952395
     }
   ],
   "models": {
@@ -1068,11 +1068,11 @@
       "cache_read_input_tokens": 13744768
     },
     "claude-opus-5-5": {
-      "messages": 1329,
-      "input_tokens": 2702,
-      "output_tokens": 548580,
-      "cache_creation_input_tokens": 7384975,
-      "cache_read_input_tokens": 191593342
+      "messages": 2497,
+      "input_tokens": 5150,
+      "output_tokens": 962123,
+      "cache_creation_input_tokens": 12698154,
+      "cache_read_input_tokens": 483771636
     }
   }
 }
