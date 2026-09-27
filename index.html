@@ -333,8 +333,8 @@
     @media(max-width:700px) { .offer-pricing { grid-template-columns:1fr; } }
   </style>
   <link rel="stylesheet" href="/assets/layout.css">
-  <link rel="stylesheet" href="/assets/chat.css?v=booking-20260922">
-  <script defer src="/assets/chat.js?v=booking-20260922"></script>
+  <link rel="stylesheet" href="/assets/chat.css?v=glass-20260927">
+  <script defer src="/assets/chat.js?v=glass-20260927"></script>
 </head>
 <body>
   <a class="skip-link" href="#top">Skip to content</a>
@@ -342,7 +342,7 @@
     <div class="wrap nav-inner">
       <a href="#top" class="brand">David Ndungu</a>
       <nav class="nav-links">
-        <a href="#chat">Ask</a>
+        <a href="#chat" data-chat-open>Ask</a>
         <a href="#pain">Where I help</a>
         <a href="#how">How it works</a>
         <a href="#pricing">Engagements</a>
@@ -425,29 +425,28 @@
       </div>
     </section>
 
-    <section id="chat" class="nd-chat" aria-labelledby="chat-title">
-      <div class="wrap">
-        <div class="section-head"><span class="nd-chat-kicker">Interactive workflow guide</span><h2 id="chat-title">Where does your agent workflow get stuck?</h2>
-        <p>Tell my AI assistant what you’re building and where you keep stepping in. Find a useful starting point for working together.</p></div>
-        <div class="composer-shell">
-          <div class="chat-controls"><label for="chat-history">Saved chats</label><select id="chat-history" aria-label="Saved conversations"></select><button id="chat-new" type="button">New chat</button><button id="chat-delete" type="button">Delete chat</button></div>
-          <div class="composer">
-            <div class="thread" id="thread" role="log" aria-live="polite" aria-label="Conversation with David’s AI assistant" tabindex="0">
-              <div class="msg ai"><div class="bubble">I’m David’s AI assistant. What are you using coding agents for, and what still takes too much of your time?</div></div>
-            </div>
-            <form class="askbar" id="askForm">
-              <input id="q" name="question" type="text" maxlength="1000" placeholder="Tell me where you’re getting stuck…" autocomplete="off" aria-label="Your message" required>
-              <button class="voice-btn" id="voiceBtn" type="button" aria-pressed="false" aria-label="Dictate your message" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15a3.5 3.5 0 0 0 3.5-3.5V6a3.5 3.5 0 1 0-7 0v5.5A3.5 3.5 0 0 0 12 15zm5.5-3.5a5.5 5.5 0 0 1-11 0H5a7 7 0 0 0 6 6.93V21h2v-2.57A7 7 0 0 0 19 11.5z"/></svg></button>
-              <button class="send" type="submit" aria-label="Send message"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
-            </form>
-          </div>
-          <p class="hint" id="chat-status" role="status"></p>
-          <p class="hint">Chats are saved and available for David to review. Messages are processed by OpenRouter and its model provider. Avoid sensitive information. <a href="/privacy/">Privacy details</a>.</p>
-          <p class="hint">Ready to talk? <button class="retry" type="button" data-book-call>Book a free discovery call here</button>.</p>
-          <noscript><p>Chat needs JavaScript. <a href="/contact/">Contact David directly</a>.</p></noscript>
+    <div id="chat" class="nd-chat glass-chat" data-open="false">
+      <button class="gc-launcher" id="chat-launcher" type="button" aria-expanded="false" aria-controls="chat-panel" aria-label="Ask David’s AI assistant">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 6.5A2.5 2.5 0 0 1 6.5 4h11A2.5 2.5 0 0 1 20 6.5v7a2.5 2.5 0 0 1-2.5 2.5H10l-4.5 3.5V16H6.5A2.5 2.5 0 0 1 4 13.5z"/></svg>
+        <span>Ask</span>
+      </button>
+      <section class="gc-panel" id="chat-panel" aria-label="Chat with David’s AI assistant" hidden>
+        <div class="gc-top">
+          <div class="chat-controls"><label for="chat-history" class="sr-only">Saved chats</label><select id="chat-history" aria-label="Saved conversations"></select><button id="chat-new" type="button">New</button><button id="chat-delete" type="button">Delete</button></div>
+          <button class="gc-close" id="chat-close" type="button" aria-label="Close chat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
         </div>
-      </div>
-    </section>
+        <div class="gc-stream thread" id="thread" role="log" aria-live="polite" aria-label="Conversation with David’s AI assistant" tabindex="0">
+          <div class="msg ai"><div class="bubble">I’m David’s AI assistant. What are you using coding agents for, and what still takes too much of your time?</div></div>
+        </div>
+        <form class="gc-composer askbar" id="askForm">
+          <input id="q" name="question" type="text" maxlength="1000" placeholder="Ask anything…" autocomplete="off" aria-label="Your message" required>
+          <button class="voice-btn" id="voiceBtn" type="button" aria-pressed="false" aria-label="Dictate your message" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15a3.5 3.5 0 0 0 3.5-3.5V6a3.5 3.5 0 1 0-7 0v5.5A3.5 3.5 0 0 0 12 15zm5.5-3.5a5.5 5.5 0 0 1-11 0H5a7 7 0 0 0 6 6.93V21h2v-2.57A7 7 0 0 0 19 11.5z"/></svg></button>
+          <button class="send" type="submit" aria-label="Send message"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+        </form>
+        <p class="hint" id="chat-status" role="status"></p>
+        <p class="hint gc-meta">Saved for David to review · processed by OpenRouter · <a href="/privacy/">Privacy</a> · <button class="retry" type="button" data-book-call>Book a call</button></p>
+      </section>
+    </div>
 <section id="faq"><div class="wrap"><div class="section-head"><h2>Before we work together</h2></div><div class="grid"><article class="card"><h3>Do we need to adopt Ajent?</h3><p>No. Ajent is part of my work on shared engineering knowledge. The engagement starts with your workflow and existing tools; a product subscription is not required.</p></article><article class="card"><h3>What does an engagement cost?</h3><p>We agree on a fixed fee after defining the scope, deliverables and acceptance checks. The discovery call is free and creates no commitment.</p></article><article class="card"><h3>How do we evaluate success?</h3><p>Choose a representative task and record the current friction. Agree on observable checks for the delivered improvements; no generic savings guarantee replaces that evidence.</p></article></div></div></section>
 
     <section id="contact"><div class="wrap"><div class="section-head"><h2>Where could your agents work better?</h2></div><p>Tell me which agents you use, where work repeats or needs too much supervision, and what you want to improve.</p><div class="cta-row"><a class="btn" href="https://cal.com/david-ndungu/discovery">Discuss your agent workflow</a><a class="btn secondary" href="mailto:david@sire.run">Email David</a></div></div></section>

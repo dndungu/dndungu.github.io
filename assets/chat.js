@@ -99,7 +99,7 @@ async function confirmBooking(b){
 }
 function localDate(zone,date=new Date()){return new Intl.DateTimeFormat('en-CA',{timeZone:zone,year:'numeric',month:'2-digit',day:'2-digit'}).format(date)}
 function field(parent,label,type,value=''){const wrap=element('label',label,parent),input=element('input','',wrap);input.type=type;input.value=value;input.required=true;return input}
-async function openBooking(){if(asking||unanswered)return;if(booking)showBooking(booking);else chooseTime()}
+async function openBooking(){if(asking||unanswered)return;setOpen(true);if(booking)showBooking(booking);else chooseTime()}
 function chooseTime(previous=null){
  const c=card('Book a discovery call');element('p','Choose a time to talk with David. Times are shown in your selected time zone.',c);
  const zoneLabel=element('label','Time zone',c),zone=element('select','',zoneLabel);
@@ -146,5 +146,11 @@ function details(start,zone,duration,previous){
 document.querySelectorAll('[data-book-call]').forEach(b=>b.onclick=openBooking);
 const Recognition=window.SpeechRecognition||window.webkitSpeechRecognition;
 if(Recognition){const recognition=new Recognition();recognition.lang='en-US';recognition.interimResults=false;voice.hidden=false;voice.onclick=()=>{if(voice.getAttribute('aria-pressed')==='true'){recognition.stop();return}try{recognition.start()}catch{}};recognition.onstart=()=>{voice.classList.add('listening');voice.setAttribute('aria-pressed','true')};recognition.onend=()=>{voice.classList.remove('listening');voice.setAttribute('aria-pressed','false')};recognition.onresult=e=>{input.value=e.results[0][0].transcript.slice(0,1000);input.focus()};recognition.onerror=()=>{status.textContent='Voice input is unavailable. Please type your message.'}}
+const widget=document.getElementById('chat'),panel=document.getElementById('chat-panel'),launcher=document.getElementById('chat-launcher'),closeButton=document.getElementById('chat-close');
+function setOpen(open){if(!widget||!panel)return;panel.hidden=!open;widget.dataset.open=String(open);launcher.setAttribute('aria-expanded',String(open));if(open){thread.scrollTop=thread.scrollHeight;if(!input.disabled)input.focus({preventScroll:true})}else launcher.focus({preventScroll:true})}
+if(launcher)launcher.onclick=()=>setOpen(true);if(closeButton)closeButton.onclick=()=>setOpen(false);
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&panel&&!panel.hidden)setOpen(false)});
+document.querySelectorAll('[data-chat-open]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();history.replaceState(null,'','#chat');setOpen(true)}));
+if(location.hash==='#chat')setOpen(true);window.addEventListener('hashchange',()=>{if(location.hash==='#chat')setOpen(true)});
 if(token){options();restore()}else fresh();
 })();
