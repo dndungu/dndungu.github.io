@@ -31,7 +31,7 @@
 .nd-chat .gc-launcher svg{width:22px;height:22px}
 .nd-chat .gc-launcher:hover{transform:translateY(-1px);background:rgb(var(--gc-tint)/calc(var(--gc-opacity)*1.6))}
 .nd-chat[data-open="true"] .gc-launcher{display:none}
-.nd-chat .gc-panel{width:min(var(--gc-width),calc(100vw - 36px));max-height:min(78dvh,720px);display:flex;flex-direction:column;animation:gc-open .35s var(--ease) both}
+.nd-chat .gc-launcher{order:2}.nd-chat .gc-panel{order:1;width:min(var(--gc-width),calc(100vw - 36px));max-height:min(78dvh,720px);display:flex;flex-direction:column;animation:gc-open .35s var(--ease) both}
 .nd-chat .gc-panel[hidden]{display:none}
 .nd-chat .gc-top{display:flex;align-items:center;gap:8px;padding:8px 8px 8px 12px;border-radius:99px;font-size:12px}
 .nd-chat .chat-controls{display:flex;align-items:center;gap:6px;flex:1;min-width:0;font-size:12px}
@@ -41,7 +41,7 @@
 .nd-chat .chat-controls button:hover{background:rgb(var(--gc-text)/.18)}
 .nd-chat .gc-close{flex:none;width:32px;height:32px;border:0;background:none;color:inherit;border-radius:50%;display:grid;place-items:center;cursor:pointer;opacity:.75}
 .nd-chat .gc-close svg{width:16px;height:16px}.nd-chat .gc-close:hover{opacity:1;background:rgb(var(--gc-text)/.12)}
-.nd-chat .gc-stream{flex:1;min-height:200px;height:420px;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:none;padding:var(--gc-fade) 2px 12px;display:flex;flex-direction:column;justify-content:flex-end;gap:var(--gc-gap);mask-image:linear-gradient(to bottom,transparent,black var(--gc-fade));-webkit-mask-image:linear-gradient(to bottom,transparent,black var(--gc-fade));overflow-wrap:anywhere;text-align:left}
+.nd-chat .gc-stream{flex:0 1 420px;min-height:200px;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:none;padding:var(--gc-fade) 2px 12px;display:flex;flex-direction:column;justify-content:flex-end;gap:var(--gc-gap);mask-image:linear-gradient(to bottom,transparent,black var(--gc-fade));-webkit-mask-image:linear-gradient(to bottom,transparent,black var(--gc-fade));overflow-wrap:anywhere;text-align:left}
 .nd-chat .gc-stream::-webkit-scrollbar{display:none}
 .nd-chat .msg{display:flex;flex:none;animation:gc-arrive .45s var(--ease) both;font-size:15px}
 .nd-chat .msg.ai{justify-content:flex-end}.nd-chat .msg.user{justify-content:flex-start}
@@ -68,5 +68,5 @@
 .nd-chat .booking-times h4{color:inherit}
 @keyframes gc-arrive{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
 @keyframes gc-open{from{opacity:0;transform:translateY(16px) scale(.98)}to{opacity:1;transform:none}}
-@media(max-width:600px){.nd-chat{right:12px;bottom:12px;left:12px;align-items:stretch}.nd-chat .gc-launcher{align-self:flex-end}.nd-chat .gc-panel{width:auto;max-height:calc(100dvh - 24px)}.nd-chat .gc-stream{height:auto;--gc-fade:70px}.nd-chat .msg .bubble{width:92%}}
+@media(max-width:600px){.nd-chat{right:12px;bottom:12px;left:12px;align-items:stretch}.nd-chat .gc-launcher{align-self:flex-end}.nd-chat .gc-panel{width:auto;max-height:calc(100dvh - 24px)}.nd-chat .gc-stream{--gc-fade:70px}.nd-chat .msg .bubble{width:92%}}
 @supports not (backdrop-filter:blur(1px)){.nd-chat{--gc-opacity:.85;--gc-tint:45 45 45}}
