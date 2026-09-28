@@ -1,12 +1,12 @@
 {
   "machine": "mac-laptop",
-  "generated_at": "2026-09-27T22:34:10Z",
+  "generated_at": "2026-09-28T14:12:05Z",
   "totals": {
-    "input_tokens": 207276114,
-    "output_tokens": 97553159,
+    "input_tokens": 213016820,
+    "output_tokens": 97599989,
     "cache_creation_input_tokens": 1260907429,
-    "cache_read_input_tokens": 38438245681,
-    "messages": 167597
+    "cache_read_input_tokens": 38466630385,
+    "messages": 167744
   },
   "daily": [
     {
@@ -411,30 +411,14 @@
     },
     {
       "date": "2026-09-27",
-      "messages": 2497,
-      "input_tokens": 5150,
-      "output_tokens": 962123,
+      "messages": 2644,
+      "input_tokens": 5745856,
+      "output_tokens": 1008953,
       "cache_creation_input_tokens": 12698154,
-      "cache_read_input_tokens": 483771636
+      "cache_read_input_tokens": 512156340
     }
   ],
   "hourly": [
-    {
-      "hour": "2026-09-19T16",
-      "messages": 5,
-      "input_tokens": 10,
-      "output_tokens": 937,
-      "cache_creation_input_tokens": 2190,
-      "cache_read_input_tokens": 3184652
-    },
-    {
-      "hour": "2026-09-19T17",
-      "messages": 20,
-      "input_tokens": 100,
-      "output_tokens": 13147,
-      "cache_creation_input_tokens": 1194759,
-      "cache_read_input_tokens": 11257175
-    },
     {
       "hour": "2026-09-19T18",
       "messages": 25,
@@ -994,6 +978,22 @@
       "output_tokens": 175852,
       "cache_creation_input_tokens": 1706976,
       "cache_read_input_tokens": 145952395
+    },
+    {
+      "hour": "2026-09-27T22",
+      "messages": 90,
+      "input_tokens": 4660721,
+      "output_tokens": 31336,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 15214144
+    },
+    {
+      "hour": "2026-09-27T23",
+      "messages": 57,
+      "input_tokens": 1079985,
+      "output_tokens": 15494,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 13170560
     }
   ],
   "models": {
@@ -1026,11 +1026,11 @@
       "cache_read_input_tokens": 1536377182
     },
     "z-ai/glm-5.3-flash": {
-      "messages": 21503,
-      "input_tokens": 196767235,
+      "messages": 21520,
+      "input_tokens": 201645557,
       "output_tokens": 13161263,
       "cache_creation_input_tokens": 0,
-      "cache_read_input_tokens": 1571863424
+      "cache_read_input_tokens": 1589720576
     },
     "claude-opus-5": {
       "messages": 27132,
