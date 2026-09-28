@@ -1,12 +1,12 @@
 {
   "machine": "mac-mini",
-  "generated_at": "2026-09-28T02:58:35Z",
+  "generated_at": "2026-09-28T08:59:03Z",
   "totals": {
-    "input_tokens": 35239101,
-    "output_tokens": 279221636,
+    "input_tokens": 65287642,
+    "output_tokens": 280712804,
     "cache_creation_input_tokens": 2641826730,
-    "cache_read_input_tokens": 84431214923,
-    "messages": 433068
+    "cache_read_input_tokens": 85040977873,
+    "messages": 438170
   },
   "daily": [
     {
@@ -491,62 +491,14 @@
     },
     {
       "date": "2026-09-28",
-      "messages": 381,
-      "input_tokens": 5661256,
-      "output_tokens": 534030,
+      "messages": 5483,
+      "input_tokens": 35709797,
+      "output_tokens": 2025198,
       "cache_creation_input_tokens": 0,
-      "cache_read_input_tokens": 34630528
+      "cache_read_input_tokens": 644393478
     }
   ],
   "hourly": [
-    {
-      "hour": "2026-09-22T14",
-      "messages": 585,
-      "input_tokens": 1200,
-      "output_tokens": 308219,
-      "cache_creation_input_tokens": 2647503,
-      "cache_read_input_tokens": 107371036
-    },
-    {
-      "hour": "2026-09-22T15",
-      "messages": 44,
-      "input_tokens": 88,
-      "output_tokens": 26927,
-      "cache_creation_input_tokens": 64618,
-      "cache_read_input_tokens": 12701704
-    },
-    {
-      "hour": "2026-09-22T16",
-      "messages": 579,
-      "input_tokens": 1180,
-      "output_tokens": 239601,
-      "cache_creation_input_tokens": 2603480,
-      "cache_read_input_tokens": 97318540
-    },
-    {
-      "hour": "2026-09-22T17",
-      "messages": 534,
-      "input_tokens": 1294,
-      "output_tokens": 427259,
-      "cache_creation_input_tokens": 1541621,
-      "cache_read_input_tokens": 96482374
-    },
-    {
-      "hour": "2026-09-22T18",
-      "messages": 86,
-      "input_tokens": 172,
-      "output_tokens": 100121,
-      "cache_creation_input_tokens": 722970,
-      "cache_read_input_tokens": 19951333
-    },
-    {
-      "hour": "2026-09-22T19",
-      "messages": 988,
-      "input_tokens": 1976,
-      "output_tokens": 550778,
-      "cache_creation_input_tokens": 5795453,
-      "cache_read_input_tokens": 217570363
-    },
     {
       "hour": "2026-09-22T20",
       "messages": 206,
@@ -1074,6 +1026,54 @@
       "output_tokens": 126782,
       "cache_creation_input_tokens": 0,
       "cache_read_input_tokens": 9090944
+    },
+    {
+      "hour": "2026-09-28T03",
+      "messages": 2219,
+      "input_tokens": 9655565,
+      "output_tokens": 635022,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 258374400
+    },
+    {
+      "hour": "2026-09-28T04",
+      "messages": 2251,
+      "input_tokens": 13051171,
+      "output_tokens": 590919,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 263454918
+    },
+    {
+      "hour": "2026-09-28T05",
+      "messages": 551,
+      "input_tokens": 4696579,
+      "output_tokens": 248537,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 74976448
+    },
+    {
+      "hour": "2026-09-28T06",
+      "messages": 47,
+      "input_tokens": 728679,
+      "output_tokens": 9553,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 8456192
+    },
+    {
+      "hour": "2026-09-28T07",
+      "messages": 18,
+      "input_tokens": 1177525,
+      "output_tokens": 4267,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 2031424
+    },
+    {
+      "hour": "2026-09-28T08",
+      "messages": 16,
+      "input_tokens": 739022,
+      "output_tokens": 2870,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 2469568
     }
   ],
   "models": {
@@ -1113,11 +1113,11 @@
       "cache_read_input_tokens": 0
     },
     "z-ai/glm-5.3-flash": {
-      "messages": 2573,
-      "input_tokens": 30743905,
-      "output_tokens": 1899549,
+      "messages": 7675,
+      "input_tokens": 60792446,
+      "output_tokens": 3390717,
       "cache_creation_input_tokens": 0,
-      "cache_read_input_tokens": 241622386
+      "cache_read_input_tokens": 851385336
     },
     "claude-haiku-4-5-20251001": {
       "messages": 1810,
