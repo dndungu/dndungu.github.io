@@ -1,0 +1,17 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/v1/server-card.schema.json",
+  "schema_version": "1.0",
+  "version": "1.0.0",
+  "name": "com.ndungu.dev.mcp",
+  "title": "ndungu.dev MCP server",
+  "description": "Streamable HTTP MCP endpoint for ndungu.dev trust pages, contact details, and developer resources.",
+  "protocol": "2025-03-26",
+  "websiteUrl": "https://ndungu.dev/",
+  "repository": "https://github.com/dndungu",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://ndungu.dev/mcp"
+    }
+  ]
+}

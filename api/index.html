@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Developer Resources — ndungu.dev</title>
+  <meta name="description" content="Developer references for ndungu.dev: API docs, MCP endpoint, and practical trust contacts." />
+  <link rel="canonical" href="https://ndungu.dev/api/" />
+  <link rel="alternate" type="text/markdown" href="/api/index.md" />
+  <meta property="og:site_name" content="David Ndungu" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Developer Resources — ndungu.dev" />
+  <meta property="og:description" content="Developer references for ndungu.dev: API docs, MCP endpoint, and practical trust contacts." />
+  <meta property="og:url" content="https://ndungu.dev/api/" />
+  <meta property="og:image" content="https://ndungu.dev/og-image.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2315bcdf'/%3E%3Ctext x='50%25' y='52%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial,sans-serif' font-size='30' font-weight='700' fill='%230a0a0a'%3EDN%3C/text%3E%3C/svg%3E" />
+  <style>
+    :root { color-scheme: dark; --bg: hsl(0,0%,10%); --bg-alt:hsl(0,0%,16%); --ink:hsl(0,0%,96%); --ink-soft:hsl(0,0%,75%); --ink-faint:hsl(0,0%,60%); --border:hsl(0,0%,20%); --accent:#15bcdf; }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family: "Sora", -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Helvetica, Arial, sans-serif;font-size:17px;line-height:1.65}
+    .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    header{padding:24px 0 16px;border-bottom:1px solid var(--border)}
+    .card{background:var(--bg-alt);border:1px solid var(--border);border-radius:12px;padding:18px 20px;margin:16px 0}
+    h1{font-size:clamp(28px,4vw,46px);margin:0 0 10px}
+    h2{font-size:22px;margin:0 0 10px}
+    p{color:var(--ink-soft)}
+    ul{margin:8px 0 0 20px;color:var(--ink-soft)}
+    li{margin-bottom:7px}
+    .links{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px}
+    .btn{display:inline-block;background:var(--accent);color:var(--accent-foreground);padding:10px 14px;border-radius:8px;font-weight:700}
+    .btn:hover{text-decoration:none;filter:brightness(1.1)}
+  </style>
+  <link rel="stylesheet" href="/assets/layout.css">
+</head>
+<body>
+  <main class="wrap" style="padding:40px 24px 60px">
+    <header>
+      <p><a href="/">← Home</a> · <a href="/llms.txt">llms.txt</a> · <a href="/sitemap.xml">sitemap.xml</a></p>
+      <h1>Developer resources</h1>
+      <p>Practical references for tool integrations, machine-readable discovery, and agent workflows around ndungu.dev.</p>
+    </header>
+
+    <section class="card">
+      <h2>API</h2>
+      <p>Public API-oriented documentation for agent-relevant endpoints.</p>
+      <div class="links">
+        <a class="btn" href="/api/openapi.yaml">OpenAPI spec (YAML)</a>
+        <a class="btn" href="/llms.txt">Agent machine-readable index</a>
+        <a class="btn" href="/sitemap.xml">Sitemap</a>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>MCP</h2>
+      <p>ndungu.dev MCP server using Streamable HTTP transport.</p>
+      <div class="links">
+        <a class="btn" href="/mcp">MCP endpoint</a>
+        <a class="btn" href="/mcp/server-card">MCP server card</a>
+        <a class="btn" href="/.well-known/ai-catalog.json">AI catalog</a>
+      </div>
+      <ul>
+        <li>Tools available: <code>get_site_navigation</code>, <code>get_developer_resources</code>, <code>get_contact_brief</code>.</li>
+        <li>Transport expectation: streamable HTTP POST negotiation with JSON-RPC messages.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Trust and recovery</h2>
+      <p>Keep agent interactions human-safe and recoverable.</p>
+      <div class="links">
+        <a class="btn" href="/agent-instructions.md">Agent instructions</a>
+        <a class="btn" href="/about/">About</a>
+        <a class="btn" href="/contact/">Contact</a>
+        <a class="btn" href="/privacy/">Privacy</a>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Brand name discoverability</h2>
+      <p>Brand entry points for direct indexing and discoverability:</p>
+      <ul>
+        <li><a href="/sire/">Sire platform page</a></li>
+        <li><a href="/mcp/">MCP landing</a> (developer tools and streaming endpoint)</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>
