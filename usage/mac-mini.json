@@ -1,12 +1,12 @@
 {
   "machine": "mac-mini",
-  "generated_at": "2026-10-05T11:33:31Z",
+  "generated_at": "2026-10-05T17:33:47Z",
   "totals": {
-    "input_tokens": 85224177,
-    "output_tokens": 281550201,
-    "cache_creation_input_tokens": 2639525566,
-    "cache_read_input_tokens": 85207118360,
-    "messages": 439318
+    "input_tokens": 85050483,
+    "output_tokens": 266315674,
+    "cache_creation_input_tokens": 2537752939,
+    "cache_read_input_tokens": 82648406082,
+    "messages": 421824
   },
   "daily": [
     {
@@ -307,11 +307,11 @@
     },
     {
       "date": "2026-09-05",
-      "messages": 37104,
-      "input_tokens": 293374,
-      "output_tokens": 30349522,
-      "cache_creation_input_tokens": 174930376,
-      "cache_read_input_tokens": 6212036061
+      "messages": 19610,
+      "input_tokens": 119680,
+      "output_tokens": 15114995,
+      "cache_creation_input_tokens": 73157749,
+      "cache_read_input_tokens": 3653323783
     },
     {
       "date": "2026-09-06",
