@@ -1,12 +1,12 @@
 {
   "machine": "mac-mini",
-  "generated_at": "2026-10-08T00:09:28Z",
+  "generated_at": "2026-10-08T06:09:39Z",
   "totals": {
-    "input_tokens": 84904763,
-    "output_tokens": 246890696,
-    "cache_creation_input_tokens": 2429220181,
-    "cache_read_input_tokens": 77937494458,
-    "messages": 394178
+    "input_tokens": 84838095,
+    "output_tokens": 227301660,
+    "cache_creation_input_tokens": 2335941771,
+    "cache_read_input_tokens": 73285724521,
+    "messages": 369632
   },
   "daily": [
     {
@@ -307,35 +307,35 @@
     },
     {
       "date": "2026-09-05",
-      "messages": 692,
-      "input_tokens": 3046,
-      "output_tokens": 567284,
-      "cache_creation_input_tokens": 2817175,
-      "cache_read_input_tokens": 116879732
+      "messages": 72,
+      "input_tokens": 1806,
+      "output_tokens": 55415,
+      "cache_creation_input_tokens": 397751,
+      "cache_read_input_tokens": 7292195
     },
     {
       "date": "2026-09-06",
-      "messages": 9670,
-      "input_tokens": 126142,
-      "output_tokens": 7357453,
-      "cache_creation_input_tokens": 33066925,
-      "cache_read_input_tokens": 1907157588
+      "messages": 4534,
+      "input_tokens": 108314,
+      "output_tokens": 4229140,
+      "cache_creation_input_tokens": 16139024,
+      "cache_read_input_tokens": 988483489
     },
     {
       "date": "2026-09-07",
-      "messages": 28863,
-      "input_tokens": 112824,
-      "output_tokens": 23753212,
-      "cache_creation_input_tokens": 102606148,
-      "cache_read_input_tokens": 5927805455
+      "messages": 10377,
+      "input_tokens": 65832,
+      "output_tokens": 8206640,
+      "cache_creation_input_tokens": 30918524,
+      "cache_read_input_tokens": 2332852079
     },
     {
       "date": "2026-09-08",
-      "messages": 12552,
-      "input_tokens": 25102,
-      "output_tokens": 11597942,
-      "cache_creation_input_tokens": 52245707,
-      "cache_read_input_tokens": 2461420869
+      "messages": 12248,
+      "input_tokens": 24494,
+      "output_tokens": 11195660,
+      "cache_creation_input_tokens": 50002246,
+      "cache_read_input_tokens": 2432865944
     },
     {
       "date": "2026-09-09",
