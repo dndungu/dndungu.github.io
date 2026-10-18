@@ -1,12 +1,12 @@
 {
   "machine": "mac-mini",
-  "generated_at": "2026-10-17T18:16:21Z",
+  "generated_at": "2026-10-18T00:17:00Z",
   "totals": {
-    "input_tokens": 84796640,
-    "output_tokens": 211305929,
-    "cache_creation_input_tokens": 2264049257,
-    "cache_read_input_tokens": 70118800168,
-    "messages": 352110
+    "input_tokens": 84796746,
+    "output_tokens": 211468041,
+    "cache_creation_input_tokens": 2264288700,
+    "cache_read_input_tokens": 70122364154,
+    "messages": 352163
   },
   "daily": [
     {
@@ -520,17 +520,17 @@
       "output_tokens": 66974,
       "cache_creation_input_tokens": 0,
       "cache_read_input_tokens": 12529450
+    },
+    {
+      "date": "2026-10-17",
+      "messages": 53,
+      "input_tokens": 106,
+      "output_tokens": 162112,
+      "cache_creation_input_tokens": 239443,
+      "cache_read_input_tokens": 3563986
     }
   ],
   "hourly": [
-    {
-      "hour": "2026-09-26T01",
-      "messages": 112,
-      "input_tokens": 1487927,
-      "output_tokens": 118290,
-      "cache_creation_input_tokens": 0,
-      "cache_read_input_tokens": 9384747
-    },
     {
       "hour": "2026-09-26T02",
       "messages": 189,
@@ -1098,6 +1098,14 @@
       "output_tokens": 29531,
       "cache_creation_input_tokens": 0,
       "cache_read_input_tokens": 5127424
+    },
+    {
+      "hour": "2026-10-17T21",
+      "messages": 53,
+      "input_tokens": 106,
+      "output_tokens": 162112,
+      "cache_creation_input_tokens": 239443,
+      "cache_read_input_tokens": 3563986
     }
   ],
   "models": {
@@ -1158,11 +1166,11 @@
       "cache_read_input_tokens": 2742382734
     },
     "claude-opus-5-5": {
-      "messages": 29600,
-      "input_tokens": 69821,
-      "output_tokens": 18556067,
-      "cache_creation_input_tokens": 160927702,
-      "cache_read_input_tokens": 4915454259
+      "messages": 29653,
+      "input_tokens": 69927,
+      "output_tokens": 18718179,
+      "cache_creation_input_tokens": 161167145,
+      "cache_read_input_tokens": 4919018245
     }
   }
 }
