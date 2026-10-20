@@ -1,12 +1,12 @@
 {
   "machine": "mac-mini",
-  "generated_at": "2026-10-20T12:19:09Z",
+  "generated_at": "2026-10-20T18:19:19Z",
   "totals": {
-    "input_tokens": 84791424,
-    "output_tokens": 205714057,
-    "cache_creation_input_tokens": 2244957323,
-    "cache_read_input_tokens": 69657489413,
-    "messages": 349662
+    "input_tokens": 84791458,
+    "output_tokens": 205729114,
+    "cache_creation_input_tokens": 2245226097,
+    "cache_read_input_tokens": 69658193159,
+    "messages": 349679
   },
   "daily": [
     {
@@ -547,22 +547,14 @@
     },
     {
       "date": "2026-10-20",
-      "messages": 395,
-      "input_tokens": 864,
-      "output_tokens": 268232,
-      "cache_creation_input_tokens": 1606899,
-      "cache_read_input_tokens": 65643697
+      "messages": 412,
+      "input_tokens": 898,
+      "output_tokens": 283289,
+      "cache_creation_input_tokens": 1875673,
+      "cache_read_input_tokens": 66347443
     }
   ],
   "hourly": [
-    {
-      "hour": "2026-09-27T04",
-      "messages": 2097,
-      "input_tokens": 4252,
-      "output_tokens": 2001211,
-      "cache_creation_input_tokens": 12128882,
-      "cache_read_input_tokens": 333190761
-    },
     {
       "hour": "2026-09-27T05",
       "messages": 3028,
@@ -1130,6 +1122,14 @@
       "output_tokens": 288,
       "cache_creation_input_tokens": 540,
       "cache_read_input_tokens": 596164
+    },
+    {
+      "hour": "2026-10-20T14",
+      "messages": 17,
+      "input_tokens": 34,
+      "output_tokens": 15057,
+      "cache_creation_input_tokens": 268774,
+      "cache_read_input_tokens": 703746
     }
   ],
   "models": {
@@ -1190,18 +1190,18 @@
       "cache_read_input_tokens": 2742382734
     },
     "claude-opus-5-5": {
-      "messages": 33282,
-      "input_tokens": 77585,
-      "output_tokens": 22947818,
-      "cache_creation_input_tokens": 175466303,
-      "cache_read_input_tokens": 5555801517
+      "messages": 33286,
+      "input_tokens": 77593,
+      "output_tokens": 22950492,
+      "cache_creation_input_tokens": 175533957,
+      "cache_read_input_tokens": 5555971103
     },
     "claude-sonnet-5-5": {
-      "messages": 51,
-      "input_tokens": 102,
-      "output_tokens": 32655,
-      "cache_creation_input_tokens": 537041,
-      "cache_read_input_tokens": 2435042
+      "messages": 64,
+      "input_tokens": 128,
+      "output_tokens": 45038,
+      "cache_creation_input_tokens": 738161,
+      "cache_read_input_tokens": 2969202
     }
   }
 }
