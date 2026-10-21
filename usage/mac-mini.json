@@ -1,12 +1,12 @@
 {
   "machine": "mac-mini",
-  "generated_at": "2026-10-21T00:19:31Z",
+  "generated_at": "2026-10-21T01:11:45Z",
   "totals": {
-    "input_tokens": 84791458,
-    "output_tokens": 205729114,
-    "cache_creation_input_tokens": 2245226097,
-    "cache_read_input_tokens": 69658193159,
-    "messages": 349679
+    "input_tokens": 84791494,
+    "output_tokens": 205738734,
+    "cache_creation_input_tokens": 2245302958,
+    "cache_read_input_tokens": 69659133445,
+    "messages": 349697
   },
   "daily": [
     {
@@ -552,17 +552,17 @@
       "output_tokens": 283289,
       "cache_creation_input_tokens": 1875673,
       "cache_read_input_tokens": 66347443
+    },
+    {
+      "date": "2026-10-21",
+      "messages": 18,
+      "input_tokens": 36,
+      "output_tokens": 9620,
+      "cache_creation_input_tokens": 76861,
+      "cache_read_input_tokens": 940286
     }
   ],
   "hourly": [
-    {
-      "hour": "2026-09-27T05",
-      "messages": 3028,
-      "input_tokens": 6118,
-      "output_tokens": 1275715,
-      "cache_creation_input_tokens": 16306446,
-      "cache_read_input_tokens": 453614774
-    },
     {
       "hour": "2026-09-27T06",
       "messages": 1398,
@@ -1130,6 +1130,14 @@
       "output_tokens": 15057,
       "cache_creation_input_tokens": 268774,
       "cache_read_input_tokens": 703746
+    },
+    {
+      "hour": "2026-10-21T00",
+      "messages": 18,
+      "input_tokens": 36,
+      "output_tokens": 9620,
+      "cache_creation_input_tokens": 76861,
+      "cache_read_input_tokens": 940286
     }
   ],
   "models": {
@@ -1197,11 +1205,11 @@
       "cache_read_input_tokens": 5555971103
     },
     "claude-sonnet-5-5": {
-      "messages": 64,
-      "input_tokens": 128,
-      "output_tokens": 45038,
-      "cache_creation_input_tokens": 738161,
-      "cache_read_input_tokens": 2969202
+      "messages": 82,
+      "input_tokens": 164,
+      "output_tokens": 54658,
+      "cache_creation_input_tokens": 815022,
+      "cache_read_input_tokens": 3909488
     }
   }
 }
