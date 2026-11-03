@@ -1,12 +1,12 @@
 {
   "machine": "mac-mini",
-  "generated_at": "2026-11-03T06:03:25Z",
+  "generated_at": "2026-11-03T12:03:30Z",
   "totals": {
-    "input_tokens": 81767770,
-    "output_tokens": 206597503,
-    "cache_creation_input_tokens": 2240254067,
-    "cache_read_input_tokens": 68481760013,
-    "messages": 342115
+    "input_tokens": 81769750,
+    "output_tokens": 208963192,
+    "cache_creation_input_tokens": 2244816203,
+    "cache_read_input_tokens": 68695681880,
+    "messages": 343036
   },
   "daily": [
     {
@@ -627,62 +627,14 @@
     },
     {
       "date": "2026-11-03",
-      "messages": 425,
-      "input_tokens": 954,
-      "output_tokens": 1234016,
-      "cache_creation_input_tokens": 5274622,
-      "cache_read_input_tokens": 82029895
+      "messages": 1346,
+      "input_tokens": 2934,
+      "output_tokens": 3599705,
+      "cache_creation_input_tokens": 9836758,
+      "cache_read_input_tokens": 295951762
     }
   ],
   "hourly": [
-    {
-      "hour": "2026-10-22T02",
-      "messages": 13,
-      "input_tokens": 26,
-      "output_tokens": 2888,
-      "cache_creation_input_tokens": 182100,
-      "cache_read_input_tokens": 1306864
-    },
-    {
-      "hour": "2026-10-22T03",
-      "messages": 7,
-      "input_tokens": 14,
-      "output_tokens": 1679,
-      "cache_creation_input_tokens": 717,
-      "cache_read_input_tokens": 816927
-    },
-    {
-      "hour": "2026-10-22T22",
-      "messages": 107,
-      "input_tokens": 215,
-      "output_tokens": 99947,
-      "cache_creation_input_tokens": 1274589,
-      "cache_read_input_tokens": 8342447
-    },
-    {
-      "hour": "2026-10-22T23",
-      "messages": 94,
-      "input_tokens": 188,
-      "output_tokens": 72629,
-      "cache_creation_input_tokens": 389661,
-      "cache_read_input_tokens": 10350606
-    },
-    {
-      "hour": "2026-10-23T00",
-      "messages": 396,
-      "input_tokens": 804,
-      "output_tokens": 361585,
-      "cache_creation_input_tokens": 1560965,
-      "cache_read_input_tokens": 34215201
-    },
-    {
-      "hour": "2026-10-23T01",
-      "messages": 131,
-      "input_tokens": 262,
-      "output_tokens": 98525,
-      "cache_creation_input_tokens": 292110,
-      "cache_read_input_tokens": 18115569
-    },
     {
       "hour": "2026-10-23T03",
       "messages": 4,
@@ -1205,11 +1157,59 @@
     },
     {
       "hour": "2026-11-03T06",
-      "messages": 7,
-      "input_tokens": 14,
-      "output_tokens": 16144,
-      "cache_creation_input_tokens": 50217,
-      "cache_read_input_tokens": 899110
+      "messages": 200,
+      "input_tokens": 416,
+      "output_tokens": 416838,
+      "cache_creation_input_tokens": 991104,
+      "cache_read_input_tokens": 40605222
+    },
+    {
+      "hour": "2026-11-03T07",
+      "messages": 249,
+      "input_tokens": 526,
+      "output_tokens": 810012,
+      "cache_creation_input_tokens": 1003878,
+      "cache_read_input_tokens": 68489913
+    },
+    {
+      "hour": "2026-11-03T08",
+      "messages": 135,
+      "input_tokens": 296,
+      "output_tokens": 282672,
+      "cache_creation_input_tokens": 884218,
+      "cache_read_input_tokens": 24376505
+    },
+    {
+      "hour": "2026-11-03T09",
+      "messages": 208,
+      "input_tokens": 458,
+      "output_tokens": 591188,
+      "cache_creation_input_tokens": 1003000,
+      "cache_read_input_tokens": 50196131
+    },
+    {
+      "hour": "2026-11-03T10",
+      "messages": 48,
+      "input_tokens": 104,
+      "output_tokens": 77203,
+      "cache_creation_input_tokens": 140281,
+      "cache_read_input_tokens": 13955519
+    },
+    {
+      "hour": "2026-11-03T11",
+      "messages": 77,
+      "input_tokens": 172,
+      "output_tokens": 183579,
+      "cache_creation_input_tokens": 558844,
+      "cache_read_input_tokens": 14823566
+    },
+    {
+      "hour": "2026-11-03T12",
+      "messages": 11,
+      "input_tokens": 22,
+      "output_tokens": 20341,
+      "cache_creation_input_tokens": 31028,
+      "cache_read_input_tokens": 2374121
     }
   ],
   "models": {
