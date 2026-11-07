@@ -1,12 +1,12 @@
 {
   "machine": "mac-mini",
-  "generated_at": "2026-11-07T02:48:40Z",
+  "generated_at": "2026-11-07T08:48:51Z",
   "totals": {
-    "input_tokens": 81772230,
-    "output_tokens": 210347309,
-    "cache_creation_input_tokens": 2248177663,
-    "cache_read_input_tokens": 68908649715,
-    "messages": 344096
+    "input_tokens": 81773548,
+    "output_tokens": 210809099,
+    "cache_creation_input_tokens": 2249343957,
+    "cache_read_input_tokens": 69023420939,
+    "messages": 344635
   },
   "daily": [
     {
@@ -643,54 +643,14 @@
     },
     {
       "date": "2026-11-07",
-      "messages": 238,
-      "input_tokens": 634,
-      "output_tokens": 137998,
-      "cache_creation_input_tokens": 318009,
-      "cache_read_input_tokens": 38532013
+      "messages": 777,
+      "input_tokens": 1952,
+      "output_tokens": 599788,
+      "cache_creation_input_tokens": 1484303,
+      "cache_read_input_tokens": 153303237
     }
   ],
   "hourly": [
-    {
-      "hour": "2026-10-23T19",
-      "messages": 104,
-      "input_tokens": 208,
-      "output_tokens": 91438,
-      "cache_creation_input_tokens": 705402,
-      "cache_read_input_tokens": 5156950
-    },
-    {
-      "hour": "2026-10-23T20",
-      "messages": 156,
-      "input_tokens": 312,
-      "output_tokens": 122850,
-      "cache_creation_input_tokens": 878940,
-      "cache_read_input_tokens": 8419576
-    },
-    {
-      "hour": "2026-10-23T21",
-      "messages": 112,
-      "input_tokens": 224,
-      "output_tokens": 108551,
-      "cache_creation_input_tokens": 743334,
-      "cache_read_input_tokens": 5696234
-    },
-    {
-      "hour": "2026-10-23T22",
-      "messages": 64,
-      "input_tokens": 128,
-      "output_tokens": 61864,
-      "cache_creation_input_tokens": 422584,
-      "cache_read_input_tokens": 3674633
-    },
-    {
-      "hour": "2026-10-23T23",
-      "messages": 276,
-      "input_tokens": 578,
-      "output_tokens": 226616,
-      "cache_creation_input_tokens": 2574525,
-      "cache_read_input_tokens": 34461770
-    },
     {
       "hour": "2026-10-24T00",
       "messages": 596,
@@ -1221,11 +1181,51 @@
     },
     {
       "hour": "2026-11-07T02",
-      "messages": 74,
-      "input_tokens": 208,
-      "output_tokens": 38011,
-      "cache_creation_input_tokens": 62694,
-      "cache_read_input_tokens": 11083949
+      "messages": 129,
+      "input_tokens": 352,
+      "output_tokens": 68852,
+      "cache_creation_input_tokens": 112099,
+      "cache_read_input_tokens": 21156893
+    },
+    {
+      "hour": "2026-11-07T03",
+      "messages": 117,
+      "input_tokens": 332,
+      "output_tokens": 65375,
+      "cache_creation_input_tokens": 112099,
+      "cache_read_input_tokens": 27334172
+    },
+    {
+      "hour": "2026-11-07T04",
+      "messages": 116,
+      "input_tokens": 286,
+      "output_tokens": 116104,
+      "cache_creation_input_tokens": 182473,
+      "cache_read_input_tokens": 37032678
+    },
+    {
+      "hour": "2026-11-07T05",
+      "messages": 73,
+      "input_tokens": 180,
+      "output_tokens": 34199,
+      "cache_creation_input_tokens": 146364,
+      "cache_read_input_tokens": 8489719
+    },
+    {
+      "hour": "2026-11-07T07",
+      "messages": 57,
+      "input_tokens": 122,
+      "output_tokens": 78753,
+      "cache_creation_input_tokens": 447807,
+      "cache_read_input_tokens": 6175110
+    },
+    {
+      "hour": "2026-11-07T08",
+      "messages": 121,
+      "input_tokens": 254,
+      "output_tokens": 136518,
+      "cache_creation_input_tokens": 228146,
+      "cache_read_input_tokens": 25666601
     }
   ],
   "models": {
