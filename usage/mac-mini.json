@@ -1,12 +1,12 @@
 {
   "machine": "mac-mini",
-  "generated_at": "2026-11-08T08:49:12Z",
+  "generated_at": "2026-11-08T14:49:17Z",
   "totals": {
-    "input_tokens": 81776566,
-    "output_tokens": 212316600,
-    "cache_creation_input_tokens": 2253952415,
-    "cache_read_input_tokens": 69281141326,
-    "messages": 346056
+    "input_tokens": 81776656,
+    "output_tokens": 212358646,
+    "cache_creation_input_tokens": 2254652548,
+    "cache_read_input_tokens": 69288856114,
+    "messages": 346095
   },
   "daily": [
     {
@@ -651,30 +651,14 @@
     },
     {
       "date": "2026-11-08",
-      "messages": 1221,
-      "input_tokens": 2584,
-      "output_tokens": 1366140,
-      "cache_creation_input_tokens": 3912948,
-      "cache_read_input_tokens": 238450266
+      "messages": 1260,
+      "input_tokens": 2674,
+      "output_tokens": 1408186,
+      "cache_creation_input_tokens": 4613081,
+      "cache_read_input_tokens": 246165054
     }
   ],
   "hourly": [
-    {
-      "hour": "2026-10-29T21",
-      "messages": 24,
-      "input_tokens": 50,
-      "output_tokens": 16657,
-      "cache_creation_input_tokens": 111759,
-      "cache_read_input_tokens": 1444419
-    },
-    {
-      "hour": "2026-10-29T22",
-      "messages": 21,
-      "input_tokens": 56,
-      "output_tokens": 20526,
-      "cache_creation_input_tokens": 629544,
-      "cache_read_input_tokens": 2239645
-    },
     {
       "hour": "2026-10-30T01",
       "messages": 3,
@@ -1234,6 +1218,22 @@
       "output_tokens": 16672,
       "cache_creation_input_tokens": 90765,
       "cache_read_input_tokens": 7359703
+    },
+    {
+      "hour": "2026-11-08T09",
+      "messages": 34,
+      "input_tokens": 80,
+      "output_tokens": 40077,
+      "cache_creation_input_tokens": 616924,
+      "cache_read_input_tokens": 7470193
+    },
+    {
+      "hour": "2026-11-08T12",
+      "messages": 5,
+      "input_tokens": 10,
+      "output_tokens": 1969,
+      "cache_creation_input_tokens": 83209,
+      "cache_read_input_tokens": 244595
     }
   ],
   "models": {
