@@ -1,12 +1,12 @@
 {
   "machine": "mac-mini",
-  "generated_at": "2026-11-10T14:50:01Z",
+  "generated_at": "2026-11-10T20:50:07Z",
   "totals": {
-    "input_tokens": 81783240,
-    "output_tokens": 215117765,
-    "cache_creation_input_tokens": 2268896352,
-    "cache_read_input_tokens": 69869187904,
-    "messages": 349121
+    "input_tokens": 81784094,
+    "output_tokens": 215585983,
+    "cache_creation_input_tokens": 2271006580,
+    "cache_read_input_tokens": 69947274794,
+    "messages": 349511
   },
   "daily": [
     {
@@ -667,30 +667,14 @@
     },
     {
       "date": "2026-11-10",
-      "messages": 991,
-      "input_tokens": 2180,
-      "output_tokens": 843654,
-      "cache_creation_input_tokens": 4837479,
-      "cache_read_input_tokens": 187918144
+      "messages": 1381,
+      "input_tokens": 3034,
+      "output_tokens": 1311872,
+      "cache_creation_input_tokens": 6947707,
+      "cache_read_input_tokens": 266005034
     }
   ],
   "hourly": [
-    {
-      "hour": "2026-11-01T05",
-      "messages": 238,
-      "input_tokens": 512,
-      "output_tokens": 215381,
-      "cache_creation_input_tokens": 565004,
-      "cache_read_input_tokens": 45669395
-    },
-    {
-      "hour": "2026-11-01T06",
-      "messages": 587,
-      "input_tokens": 1222,
-      "output_tokens": 394889,
-      "cache_creation_input_tokens": 1320027,
-      "cache_read_input_tokens": 118913424
-    },
     {
       "hour": "2026-11-01T07",
       "messages": 179,
@@ -1250,6 +1234,22 @@
       "output_tokens": 273459,
       "cache_creation_input_tokens": 988224,
       "cache_read_input_tokens": 43336162
+    },
+    {
+      "hour": "2026-11-10T15",
+      "messages": 95,
+      "input_tokens": 208,
+      "output_tokens": 141598,
+      "cache_creation_input_tokens": 1166690,
+      "cache_read_input_tokens": 26863765
+    },
+    {
+      "hour": "2026-11-10T16",
+      "messages": 295,
+      "input_tokens": 646,
+      "output_tokens": 326620,
+      "cache_creation_input_tokens": 943538,
+      "cache_read_input_tokens": 51223125
     }
   ],
   "models": {
