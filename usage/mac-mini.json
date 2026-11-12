@@ -1,12 +1,12 @@
 {
   "machine": "mac-mini",
-  "generated_at": "2026-11-11T20:50:28Z",
+  "generated_at": "2026-11-12T02:50:35Z",
   "totals": {
-    "input_tokens": 81786172,
-    "output_tokens": 216603627,
-    "cache_creation_input_tokens": 2276073705,
-    "cache_read_input_tokens": 70163063745,
-    "messages": 350501
+    "input_tokens": 81787446,
+    "output_tokens": 217162690,
+    "cache_creation_input_tokens": 2278871553,
+    "cache_read_input_tokens": 70282585357,
+    "messages": 351095
   },
   "daily": [
     {
@@ -675,30 +675,14 @@
     },
     {
       "date": "2026-11-11",
-      "messages": 486,
-      "input_tokens": 1034,
-      "output_tokens": 508314,
-      "cache_creation_input_tokens": 2395296,
-      "cache_read_input_tokens": 101411702
+      "messages": 1080,
+      "input_tokens": 2308,
+      "output_tokens": 1067377,
+      "cache_creation_input_tokens": 5193144,
+      "cache_read_input_tokens": 220933314
     }
   ],
   "hourly": [
-    {
-      "hour": "2026-11-02T07",
-      "messages": 198,
-      "input_tokens": 470,
-      "output_tokens": 539787,
-      "cache_creation_input_tokens": 1733090,
-      "cache_read_input_tokens": 48605696
-    },
-    {
-      "hour": "2026-11-02T21",
-      "messages": 33,
-      "input_tokens": 72,
-      "output_tokens": 40563,
-      "cache_creation_input_tokens": 1256925,
-      "cache_read_input_tokens": 2731791
-    },
     {
       "hour": "2026-11-02T22",
       "messages": 130,
@@ -1258,6 +1242,22 @@
       "output_tokens": 27277,
       "cache_creation_input_tokens": 41419,
       "cache_read_input_tokens": 7331750
+    },
+    {
+      "hour": "2026-11-11T21",
+      "messages": 294,
+      "input_tokens": 634,
+      "output_tokens": 301293,
+      "cache_creation_input_tokens": 1568606,
+      "cache_read_input_tokens": 54351667
+    },
+    {
+      "hour": "2026-11-11T22",
+      "messages": 300,
+      "input_tokens": 640,
+      "output_tokens": 257770,
+      "cache_creation_input_tokens": 1229242,
+      "cache_read_input_tokens": 65169945
     }
   ],
   "models": {
@@ -1339,11 +1339,11 @@
       "cache_read_input_tokens": 0
     },
     "claude-fable-5-2": {
-      "messages": 223,
-      "input_tokens": 498,
-      "output_tokens": 300116,
-      "cache_creation_input_tokens": 1196764,
-      "cache_read_input_tokens": 42176039
+      "messages": 499,
+      "input_tokens": 1118,
+      "output_tokens": 613119,
+      "cache_creation_input_tokens": 3415480,
+      "cache_read_input_tokens": 106709138
     }
   }
 }
