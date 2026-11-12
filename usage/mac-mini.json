@@ -1,12 +1,12 @@
 {
   "machine": "mac-mini",
-  "generated_at": "2026-11-12T02:50:35Z",
+  "generated_at": "2026-11-12T05:08:11Z",
   "totals": {
-    "input_tokens": 81787446,
-    "output_tokens": 217162690,
-    "cache_creation_input_tokens": 2278871553,
-    "cache_read_input_tokens": 70282585357,
-    "messages": 351095
+    "input_tokens": 81787980,
+    "output_tokens": 217414825,
+    "cache_creation_input_tokens": 2281353681,
+    "cache_read_input_tokens": 70346778630,
+    "messages": 351339
   },
   "daily": [
     {
@@ -680,17 +680,17 @@
       "output_tokens": 1067377,
       "cache_creation_input_tokens": 5193144,
       "cache_read_input_tokens": 220933314
+    },
+    {
+      "date": "2026-11-12",
+      "messages": 244,
+      "input_tokens": 534,
+      "output_tokens": 252135,
+      "cache_creation_input_tokens": 2482128,
+      "cache_read_input_tokens": 64193273
     }
   ],
   "hourly": [
-    {
-      "hour": "2026-11-02T22",
-      "messages": 130,
-      "input_tokens": 270,
-      "output_tokens": 340700,
-      "cache_creation_input_tokens": 1337294,
-      "cache_read_input_tokens": 17192715
-    },
     {
       "hour": "2026-11-02T23",
       "messages": 105,
@@ -1258,6 +1258,14 @@
       "output_tokens": 257770,
       "cache_creation_input_tokens": 1229242,
       "cache_read_input_tokens": 65169945
+    },
+    {
+      "hour": "2026-11-12T03",
+      "messages": 244,
+      "input_tokens": 534,
+      "output_tokens": 252135,
+      "cache_creation_input_tokens": 2482128,
+      "cache_read_input_tokens": 64193273
     }
   ],
   "models": {
@@ -1339,11 +1347,11 @@
       "cache_read_input_tokens": 0
     },
     "claude-fable-5-2": {
-      "messages": 499,
-      "input_tokens": 1118,
-      "output_tokens": 613119,
-      "cache_creation_input_tokens": 3415480,
-      "cache_read_input_tokens": 106709138
+      "messages": 566,
+      "input_tokens": 1272,
+      "output_tokens": 701904,
+      "cache_creation_input_tokens": 4667238,
+      "cache_read_input_tokens": 123625805
     }
   }
 }
